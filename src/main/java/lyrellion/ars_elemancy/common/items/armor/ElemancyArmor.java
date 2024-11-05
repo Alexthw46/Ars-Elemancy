@@ -132,7 +132,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
     }
 
     public void addArmorSetDescription(ArmorSet set, List<Component> list) {
-        list.add(Component.translatable("ars_elemental.armor_set." + set.getName() + ".desc").withStyle(ChatFormatting.GRAY));
+        list.add(Component.translatable("ars_elemancy.armor_set." + set.getName() + ".desc").withStyle(ChatFormatting.GRAY));
     }
 
 

@@ -5,8 +5,8 @@
     32
   ],
   "textures": {
-    "0": "ars_elemental:block/spell_mirror",
-    "particle": "ars_elemental:block/spell_mirror"
+    "0": "ars_elemancy:block/spell_mirror",
+    "particle": "ars_elemancy:block/spell_mirror"
   },
   "elements": [
     {

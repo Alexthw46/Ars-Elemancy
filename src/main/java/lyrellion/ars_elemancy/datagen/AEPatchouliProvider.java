@@ -1,8 +1,6 @@
 package lyrellion.ars_elemancy.datagen;
 
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
-import lyrellion.ars_elemancy.common.items.armor.ShockPerk;
-import lyrellion.ars_elemancy.common.items.armor.SporePerk;
 import lyrellion.ars_elemancy.registry.ModItems;
 import lyrellion.ars_elemancy.registry.ModRegistry;
 import com.hollingsworth.arsnouveau.ArsNouveau;
@@ -40,128 +38,22 @@ public class AEPatchouliProvider extends PatchouliProvider {
             addGlyphPage(spell);
         }
 
-        addPage(new PatchouliBuilder(GETTING_STARTED, "elemental_tweaks")
-                        .withIcon(ModItems.DEBUG_ICON.get())
-                        .withTextPage("ars_elemental.page.elemental_tweaks")
-                        .withPage(ImbuementPage(ModItems.MARK_OF_MASTERY.get()))
-                , getPath(GETTING_STARTED, "elemental_tweaks"));
-
-        addPage(new PatchouliBuilder(RESOURCES, "flashing_archwood")
-                        .withIcon(ModItems.FLASHING_ARCHWOOD.get())
-                        .withTextPage("ars_elemental.page1.flashing_archwood")
-                        .withPage(new SpotlightPage(ModItems.FLASHING_POD.get().asItem()).withText("ars_elemental.page2.flashing_archwood").linkRecipe(true))
-                        .withPage(new EntityPage(prefix("flashing_weald_walker").toString()))
-                , getPath(RESOURCES, "flashing_archwood"));
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.CURIO_BAG.get())
-                        .withPage(new CraftingPage(ModItems.CURIO_BAG.get()))
-                        .withPage(new ApparatusPage(ModItems.CASTER_BAG.get())),
-                getPath(EQUIPMENT, "bags"));
-
         addBasicItem(ModItems.ENCHANTER_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.ENCHANTER_BANGLE.get()));
-
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.SPELL_HORN.get())
-                        .withIcon(ModItems.SPELL_HORN.get())
-                        .withTextPage("ars_elemental.page1.spell_horn")
-                        .withPage(new ApparatusPage(ModItems.SPELL_HORN.get()))
-                , getPath(EQUIPMENT, "spell_horn"));
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.NECRO_FOCUS.get())
-                        .withIcon(ModItems.NECRO_FOCUS.get())
-                        .withTextPage("ars_elemental.page1.necrotic_focus")
-                        .withPage(ImbuementPage(ModItems.ANIMA_ESSENCE.get()))
-                        .withTextPage("ars_elemental.page2.necrotic_focus")
-                        .withPage(new ApparatusPage(ModItems.NECRO_FOCUS.get()))
-                        .withTextPage("ars_elemental.page3.necrotic_focus")
-                , getPath(EQUIPMENT, "necrotic_focus")
-        );
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.FIRE_FOCUS.get())
-                        .withIcon(ModItems.FIRE_FOCUS.get())
-                        .withTextPage("ars_elemental.page1.fire_focus")
-                        .withPage(ImbuementPage(ModItems.LESSER_FIRE_FOCUS.get()))
-                        .withPage(new ApparatusPage(ModItems.FIRE_FOCUS.get()))
-                        .withTextPage("ars_elemental.page2.fire_focus")
-                , getPath(EQUIPMENT, "fire_focus")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.FIRE_BANGLE.get())
-                        .withIcon(ModItems.FIRE_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.fire_bangle")
-                        .withPage(new ApparatusPage(ModItems.FIRE_BANGLE.get()))
-                , getPath(EQUIPMENT, "fire_bangle")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.WATER_FOCUS.get())
-                        .withIcon(ModItems.WATER_FOCUS.get())
-                        .withTextPage("ars_elemental.page1.water_focus")
-                        .withPage(ImbuementPage(ModItems.LESSER_WATER_FOCUS.get()))
-                        .withPage(new ApparatusPage(ModItems.WATER_FOCUS.get()))
-                        .withTextPage("ars_elemental.page2.water_focus")
-                , getPath(EQUIPMENT, "water_focus")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.WATER_BANGLE.get())
-                        .withIcon(ModItems.WATER_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.water_bangle")
-                        .withPage(new ApparatusPage(ModItems.WATER_BANGLE.get()))
-                , getPath(EQUIPMENT, "water_bangle")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.AIR_FOCUS.get())
-                        .withIcon(ModItems.AIR_FOCUS.get())
-                        .withTextPage("ars_elemental.page1.air_focus")
-                        .withPage(ImbuementPage(ModItems.LESSER_AIR_FOCUS.get()))
-                        .withPage(new ApparatusPage(ModItems.AIR_FOCUS.get()))
-                        .withTextPage("ars_elemental.page2.air_focus")
-                , getPath(EQUIPMENT, "air_focus")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.AIR_BANGLE.get())
-                        .withIcon(ModItems.AIR_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.air_bangle")
-                        .withPage(new ApparatusPage(ModItems.AIR_BANGLE.get()))
-                , getPath(EQUIPMENT, "air_bangle")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.EARTH_FOCUS.get())
-                        .withIcon(ModItems.EARTH_FOCUS.get())
-                        .withTextPage("ars_elemental.page1.earth_focus")
-                        .withPage(ImbuementPage(ModItems.LESSER_EARTH_FOCUS.get()))
-                        .withPage(new ApparatusPage(ModItems.EARTH_FOCUS.get()))
-                        .withTextPage("ars_elemental.page2.earth_focus")
-                , getPath(EQUIPMENT, "earth_focus")
-        );
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.EARTH_BANGLE.get())
-                        .withIcon(ModItems.EARTH_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.earth_bangle")
-                        .withPage(new ApparatusPage(ModItems.EARTH_BANGLE.get()))
-                , getPath(EQUIPMENT, "earth_bangle")
-        );
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.SUMMON_BANGLE.get())
-                        .withIcon(ModItems.SUMMON_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.summon_bangle")
-                        .withPage(new ApparatusPage(ModItems.SUMMON_BANGLE.get()))
-                , getPath(EQUIPMENT, "summon_bangle")
-        );
-
-        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.ANIMA_BANGLE.get())
-                        .withIcon(ModItems.ANIMA_BANGLE.get())
-                        .withTextPage("ars_elemental.page1.anima_bangle")
-                        .withPage(new ApparatusPage(ModItems.ANIMA_BANGLE.get()))
-                , getPath(EQUIPMENT, "anima_bangle")
-        );
-
-
-        addPerkPage(ShockPerk.INSTANCE);
-        addPerkPage(SporePerk.INSTANCE);
-
-        addArmorPage(ModItems.FIRE_ARMOR);
-        addArmorPage(ModItems.WATER_ARMOR);
-        addArmorPage(ModItems.AIR_ARMOR);
-        addArmorPage(ModItems.EARTH_ARMOR);
-
-
-
-        addEnchantmentPage(ModRegistry.MIRROR);
-        addEnchantmentPage(ModRegistry.SOULBOUND);
-        addPage(new PatchouliBuilder(ENCHANTMENTS, ItemsRegistry.NOVICE_SPELLBOOK.get()).withTextPage("ars_elemental.page.book_protection").withName("tooltip.ars_nouveau.blessed").withPage(new ApparatusPage(prefix("invincible_book").toString())), getPath(ENCHANTMENTS, "invincible_book"));
+//
+//        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.FIRE_FOCUS.get())
+//                        .withIcon(ModItems.FIRE_FOCUS.get())
+//                        .withTextPage("ars_elemancy.page1.fire_focus")
+//                        .withPage(ImbuementPage(ModItems.LESSER_FIRE_FOCUS.get()))
+//                        .withPage(new ApparatusPage(ModItems.FIRE_FOCUS.get()))
+//                        .withTextPage("ars_elemancy.page2.fire_focus")
+//                , getPath(EQUIPMENT, "fire_focus")
+//        );
+//        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.FIRE_BANGLE.get())
+//                        .withIcon(ModItems.FIRE_BANGLE.get())
+//                        .withTextPage("ars_elemancy.page1.fire_bangle")
+//                        .withPage(new ApparatusPage(ModItems.FIRE_BANGLE.get()))
+//                , getPath(EQUIPMENT, "fire_bangle")
+//        );
 
         for (PatchouliPage patchouliPage : pages) {
             saveStable(cache, patchouliPage.build(), patchouliPage.path());
@@ -172,8 +64,8 @@ public class AEPatchouliProvider extends PatchouliProvider {
     private void addArmorPage(ArmorSet armorSet) {
         PatchouliBuilder builder = new PatchouliBuilder(ARMOR, armorSet.getTranslationKey())
                 .withIcon(armorSet.getHat())
-                .withPage(new TextPage("ars_elemental.page.armor_set.wip"))
-                .withPage(new TextPage("ars_elemental.page.armor_set." + armorSet.getName()))
+                .withPage(new TextPage("ars_elemancy.page.armor_set.wip"))
+                .withPage(new TextPage("ars_elemancy.page.armor_set." + armorSet.getName()))
                 .withPage(new AEPage(armorSet.getHat()))
                 .withPage(new AEPage(armorSet.getChest()))
                 .withPage(new AEPage(armorSet.getLegs()))
@@ -207,7 +99,7 @@ public class AEPatchouliProvider extends PatchouliProvider {
     public PatchouliPage addBasicItem(ItemLike item, ResourceLocation category, IPatchouliPage recipePage) {
         PatchouliBuilder builder = new PatchouliBuilder(category, item.asItem().getDescriptionId())
                 .withIcon(item.asItem())
-                .withPage(new TextPage("ars_elemental.page." + getRegistryName(item.asItem()).getPath()))
+                .withPage(new TextPage("ars_elemancy.page." + getRegistryName(item.asItem()).getPath()))
                 .withPage(recipePage);
         var page = new PatchouliPage(builder, getPath(category, getRegistryName(item.asItem()).getPath()));
         this.pages.add(page);
@@ -215,34 +107,21 @@ public class AEPatchouliProvider extends PatchouliProvider {
     }
 
     public void addFamiliarPage(AbstractFamiliarHolder familiarHolder) {
-        PatchouliBuilder builder = new PatchouliBuilder(FAMILIARS, "entity.ars_elemental." + familiarHolder.getRegistryName().getPath())
-                .withIcon("ars_elemental:" + familiarHolder.getRegistryName().getPath())
-                .withTextPage("ars_elemental.familiar_desc." + familiarHolder.getRegistryName().getPath())
+        PatchouliBuilder builder = new PatchouliBuilder(FAMILIARS, "entity.ars_elemancy." + familiarHolder.getRegistryName().getPath())
+                .withIcon("ars_elemancy:" + familiarHolder.getRegistryName().getPath())
+                .withTextPage("ars_elemancy.familiar_desc." + familiarHolder.getRegistryName().getPath())
                 .withPage(new EntityPage(familiarHolder.getRegistryName().toString()));
         this.pages.add(new PatchouliPage(builder, getPath(FAMILIARS, familiarHolder.getRegistryName().getPath())));
     }
 
     public void addRitualPage(AbstractRitual ritual) {
-        PatchouliBuilder builder = new PatchouliBuilder(RITUALS, "item.ars_elemental." + ritual.getRegistryName().getPath())
+        PatchouliBuilder builder = new PatchouliBuilder(RITUALS, "item.ars_elemancy." + ritual.getRegistryName().getPath())
                 .withIcon(ritual.getRegistryName().toString())
                 .withTextPage(ritual.getDescriptionKey())
-                .withPage(new CraftingPage("ars_elemental:tablet_" + ritual.getRegistryName().getPath()));
+                .withPage(new CraftingPage("ars_elemancy:tablet_" + ritual.getRegistryName().getPath()));
 
         this.pages.add(new PatchouliPage(builder, getPath(RITUALS, ritual.getRegistryName().getPath())));
     }
-
-//    public void addEnchantmentPage(ResourceKey<Enchantment> enchantmentKey) {
-//        Enchantment enchantment = ArsNouveau.proxy.getClientWorld().registryAccess().registryOrThrow(Registries.ENCHANTMENT).get(enchantmentKey);
-//        if (enchantment == null) return;
-//        PatchouliBuilder builder = new PatchouliBuilder(ENCHANTMENTS, String.valueOf(enchantment.description()))
-//                .withIcon(getRegistryName(Items.ENCHANTED_BOOK).toString())
-//                .withTextPage("ars_elemental.enchantment_desc." + enchantmentKey.location().getPath());
-//
-//        for (int i = enchantment.getMinLevel(); i <= enchantment.getMaxLevel(); i++) {
-//            builder.withPage(new EnchantingPage("ars_nouveau:" + enchantmentKey.location().getPath() + "_" + i));
-//        }
-//        this.pages.add(new PatchouliPage(builder, getPath(ENCHANTMENTS, enchantmentKey.location().getPath())));
-//    }
 
     public void addGlyphPage(AbstractSpellPart spellPart) {
         ResourceLocation category = switch (spellPart.defaultTier().value) {
@@ -251,10 +130,10 @@ public class AEPatchouliProvider extends PatchouliProvider {
             default -> GLYPHS_3;
         };
         PatchouliBuilder builder = new PatchouliBuilder(category, spellPart.getName())
-                .withName("ars_elemental.glyph_name." + spellPart.getRegistryName().getPath())
+                .withName("ars_elemancy.glyph_name." + spellPart.getRegistryName().getPath())
                 .withIcon(spellPart.getRegistryName().toString())
                 .withSortNum(spellPart instanceof AbstractCastMethod ? 1 : spellPart instanceof AbstractEffect ? 2 : 3)
-                .withPage(new TextPage("ars_elemental.glyph_desc." + spellPart.getRegistryName().getPath()))
+                .withPage(new TextPage("ars_elemancy.glyph_desc." + spellPart.getRegistryName().getPath()))
                 .withPage(new GlyphScribePage(spellPart));
         this.pages.add(new PatchouliPage(builder, getPath(category, spellPart.getRegistryName().getPath())));
     }
@@ -265,11 +144,11 @@ public class AEPatchouliProvider extends PatchouliProvider {
      */
     @Override
     public String getName() {
-        return "Ars Elemental Patchouli Datagen";
+        return "Ars Elemancy Patchouli Datagen";
     }
 
     ImbuementPage ImbuementPage(ItemLike item) {
-        return new ImbuementPage("ars_elemental:imbuement_" + getRegistryName(item.asItem()).getPath());
+        return new ImbuementPage("ars_elemancy:imbuement_" + getRegistryName(item.asItem()).getPath());
     }
 
     private ResourceLocation getRegistryName(Item asItem) {

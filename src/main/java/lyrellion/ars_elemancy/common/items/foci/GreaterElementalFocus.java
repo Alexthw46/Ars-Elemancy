@@ -21,8 +21,6 @@ import top.theillusivec4.curios.api.SlotContext;
 import javax.annotation.Nullable;
 
 import static lyrellion.ars_elemancy.ConfigHandler.COMMON;
-import static lyrellion.ars_elemancy.registry.ModPotions.MAGIC_FIRE;
-
 
 public class GreaterElementalFocus extends ElementalFocus {
     public GreaterElementalFocus(Properties properties, SpellSchool element) {
@@ -49,7 +47,7 @@ public class GreaterElementalFocus extends ElementalFocus {
         if (player.tickCount % 20 == 0) {
             switch (getSchool().getId()) {
                 case "fire" -> {
-                    if (player.isOnFire() || player.isInLava() || player.hasEffect(MAGIC_FIRE))
+                    if (player.isOnFire() || player.isInLava() )
                         player.addEffect(new MobEffectInstance(ModPotions.SPELL_DAMAGE_EFFECT, 200, 1));
                 }
                 case "water" -> {

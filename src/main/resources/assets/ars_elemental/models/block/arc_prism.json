@@ -3,8 +3,8 @@
 	"texture_size": [64, 64],
 	"parent": "block/cube_all",
 	"textures": {
-		"6": "ars_elemental:block/arc_prism",
-		"particle": "ars_elemental:block/arc_prism"
+		"6": "ars_elemancy:block/arc_prism",
+		"particle": "ars_elemancy:block/arc_prism"
 	},
 	"elements": [
 		{

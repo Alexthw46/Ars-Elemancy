@@ -17,12 +17,12 @@ public class AECurioProvider extends CuriosDataProvider {
 
     @Override
     public void generate(HolderLookup.Provider registries, ExistingFileHelper fileHelper) {
-        this.createEntities("ae_curios").addPlayer().addSlots(
-                "bundle", "bracelet"
-        );
-        this.createSlot("bracelet").size(2).icon(ResourceLocation.fromNamespaceAndPath("curios","slot/bangle_slot"));
-        this.createSlot("an_focus").icon(ResourceLocation.fromNamespaceAndPath("curios","slot/an_focus_slot"));
-        this.createSlot("bundle").size(1);
+//        this.createEntities("ae_curios").addPlayer().addSlots(
+//                "bundle", "bracelet"
+//        );
+//        this.createSlot("bracelet").size(2).icon(ResourceLocation.fromNamespaceAndPath("curios","slot/bangle_slot"));
+//        this.createSlot("an_focus").icon(ResourceLocation.fromNamespaceAndPath("curios","slot/an_focus_slot"));
+//        this.createSlot("bundle").size(1);
 
     }
 

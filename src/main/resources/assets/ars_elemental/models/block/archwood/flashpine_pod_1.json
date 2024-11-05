@@ -5,8 +5,8 @@
     32
   ],
   "textures": {
-    "2": "ars_elemental:block/archfruit/flashing_archfruit_pod_1",
-    "particle": "ars_elemental:block/archfruit/flashing_archfruit_pod_1"
+    "2": "ars_elemancy:block/archfruit/flashing_archfruit_pod_1",
+    "particle": "ars_elemancy:block/archfruit/flashing_archfruit_pod_1"
   },
   "render_type": "cutout",
   "elements": [

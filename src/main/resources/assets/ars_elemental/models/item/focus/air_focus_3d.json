@@ -5,8 +5,8 @@
     32
   ],
   "textures": {
-    "0": "ars_elemental:item/air_focus_3d",
-    "particle": "ars_elemental:item/air_focus_3d"
+    "0": "ars_elemancy:item/air_focus_3d",
+    "particle": "ars_elemancy:item/air_focus_3d"
   },
   "elements": [
     {

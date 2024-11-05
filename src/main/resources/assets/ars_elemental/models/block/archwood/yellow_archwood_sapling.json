@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "cutout",
   "textures": {
-    "cross": "ars_elemental:block/yellow_archwood_sapling"
+    "cross": "ars_elemancy:block/yellow_archwood_sapling"
   }
 }

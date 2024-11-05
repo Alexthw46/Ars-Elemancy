@@ -41,7 +41,7 @@ public class ElementalCasterTome extends CasterTome implements ISchoolFocus {
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, List<Component> tooltip2, @NotNull TooltipFlag flagIn) {
-        tooltip2.add(Component.translatable("tooltip.ars_elemental.caster_tome"));
+        tooltip2.add(Component.translatable("tooltip.ars_elemancy.caster_tome"));
         super.appendHoverText(stack, context, tooltip2, flagIn);
     }
 

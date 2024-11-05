@@ -1,9 +1,7 @@
 package lyrellion.ars_elemancy.api.item;
 
-import lyrellion.ars_elemancy.registry.ModItems;
 import lyrellion.ars_elemancy.util.CompatUtils;
 import com.hollingsworth.arsnouveau.api.item.ISpellModifierItem;
-import com.hollingsworth.arsnouveau.api.spell.SpellResolver;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
@@ -40,22 +38,6 @@ public interface ISchoolFocus extends ISpellModifierItem, ISchoolProvider {
     }
 
     double getDiscount();
-
-    static boolean fireCheck(SpellResolver resolver) {
-        return resolver.hasFocus(ModItems.FIRE_FOCUS.get()) || resolver.hasFocus(ModItems.LESSER_FIRE_FOCUS.get());
-    }
-
-    static boolean waterCheck(SpellResolver resolver) {
-        return resolver.hasFocus(ModItems.WATER_FOCUS.get()) || resolver.hasFocus(ModItems.LESSER_WATER_FOCUS.get());
-    }
-
-    static boolean earthCheck(SpellResolver resolver) {
-        return resolver.hasFocus(ModItems.EARTH_FOCUS.get()) || resolver.hasFocus(ModItems.LESSER_EARTH_FOCUS.get());
-    }
-
-    static boolean airCheck(SpellResolver resolver) {
-        return resolver.hasFocus(ModItems.AIR_FOCUS.get()) || resolver.hasFocus(ModItems.LESSER_AIR_FOCUS.get());
-    }
 
 
 }

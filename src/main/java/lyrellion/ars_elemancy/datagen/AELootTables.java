@@ -71,14 +71,7 @@ public class AELootTables extends LootTableProvider {
             Set<DeferredHolder<Block, ? extends Block>> blocks = new HashSet<>(ModItems.BLOCKS.getEntries());
             Datagen.takeAll(blocks, b -> b.get() instanceof LeavesBlock);
             Datagen.takeAll(blocks, b -> !(b.get() instanceof SummonBlock)).forEach(b -> registerDropSelf(b.get()));
-            registerLeavesAndSticks(ModItems.FLASHING_LEAVES.get(), ModItems.FLASHING_SAPLING.get());
-
-
-            list.add(ModItems.POT_FLASHING_SAPLING.get());
-            dropPottedContents(ModItems.POT_FLASHING_SAPLING.get());
-
-            this.add(ModItems.FLASHING_POD.get(), (block) -> LootTable.lootTable().withPool(POD_BUILDER(block.asItem(), block)));
-        }
+       }
 
         public void registerLeavesAndSticks(Block leaves, Block sapling) {
             list.add(leaves);

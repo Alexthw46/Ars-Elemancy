@@ -155,7 +155,7 @@ repositories {
 
 dependencies {
 
-    implementation("com.hollingsworth.ars_nouveau:ars_nouveau-${minecraft_version}:${ars_version}") { transitive = false }
+    implementation("com.hollingsworth.ars_nouveau:ars_nouveau-${minecraft_version}:${ars_version}")
 
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
     implementation "vazkii.patchouli:Patchouli:1.21-${patchouli_version}"
@@ -165,6 +165,9 @@ dependencies {
     implementation 'com.github.glitchfiend:TerraBlender-neoforge:1.21-4.0.0.0'
     implementation "curse.maven:jade-324717:5444008"
     implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+
+    implementation "com.alexthw.ars_elemental:ars_elemental-${minecraft_version}:0.7.0.8.9"
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -176,9 +179,9 @@ jar {
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "alexthw",
+                "Implementation-Vendor"   : "lyrellion",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs"            : "ars_elemental.mixins.json"
+                "MixinConfigs"            : "ars_elemancy.mixins.json"
         ])
     }
 }
