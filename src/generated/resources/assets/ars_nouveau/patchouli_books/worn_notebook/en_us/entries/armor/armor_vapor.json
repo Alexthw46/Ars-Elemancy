@@ -1,0 +1,31 @@
+{
+  "category": "ars_nouveau:armor",
+  "icon": "ars_elemancy:vapor_hat",
+  "name": "ars_elemancy.armor_set.vapor",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ars_elemancy.page.armor_set.wip"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ars_elemancy.page.armor_set.vapor"
+    },
+    {
+      "type": "ars_nouveau:elemental_armor_recipe",
+      "recipe": "ars_elemancy:vapor_hat"
+    },
+    {
+      "type": "ars_nouveau:elemental_armor_recipe",
+      "recipe": "ars_elemancy:vapor_robes"
+    },
+    {
+      "type": "ars_nouveau:elemental_armor_recipe",
+      "recipe": "ars_elemancy:vapor_leggings"
+    },
+    {
+      "type": "ars_nouveau:elemental_armor_recipe",
+      "recipe": "ars_elemancy:vapor_boots"
+    }
+  ]
+}

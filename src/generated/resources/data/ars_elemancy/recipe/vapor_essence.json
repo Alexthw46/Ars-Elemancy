@@ -1,0 +1,19 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "input": {
+    "item": "ars_nouveau:manipulation_essence"
+  },
+  "output": {
+    "count": 1,
+    "id": "ars_elemancy:vapor_essence"
+  },
+  "pedestalItems": [
+    {
+      "item": "ars_nouveau:fire_essence"
+    },
+    {
+      "item": "ars_nouveau:water_essence"
+    }
+  ],
+  "source": 3000
+}

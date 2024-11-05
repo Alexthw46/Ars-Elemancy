@@ -1,0 +1,19 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "input": {
+    "item": "ars_nouveau:manipulation_essence"
+  },
+  "output": {
+    "count": 1,
+    "id": "ars_elemancy:silt_essence"
+  },
+  "pedestalItems": [
+    {
+      "item": "ars_nouveau:air_essence"
+    },
+    {
+      "item": "ars_nouveau:earth_essence"
+    }
+  ],
+  "source": 3000
+}
