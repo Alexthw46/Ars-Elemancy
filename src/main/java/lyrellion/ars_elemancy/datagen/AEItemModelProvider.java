@@ -2,8 +2,6 @@ package lyrellion.ars_elemancy.datagen;
 
 import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.api.item.SpellPrismLens;
-import lyrellion.ars_elemancy.common.items.CasterHolder;
-import lyrellion.ars_elemancy.common.items.caster_tools.SpellHorn;
 import lyrellion.ars_elemancy.registry.ModItems;
 import com.hollingsworth.arsnouveau.common.block.ArchfruitPod;
 import com.hollingsworth.arsnouveau.common.block.StrippableLog;
@@ -11,10 +9,7 @@ import com.hollingsworth.arsnouveau.common.items.AnimBlockItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -46,9 +41,8 @@ public class AEItemModelProvider extends ItemModelProvider {
         Set<DeferredHolder<Item,? extends Item>> items = new HashSet<>(ModItems.ITEMS.getEntries());
 
         takeAll(items, i -> i.get() instanceof AnimBlockItem).forEach(this::blockItem);
-        takeAll(items, i -> i.get() instanceof SpellHorn);
+        takeAll(items, i -> i.get() instanceof ArmorItem);
         takeAll(items, i -> i.get() instanceof SpellPrismLens);
-        takeAll(items, i -> i.get() instanceof CasterHolder);
         takeAll(items, i -> i.get() instanceof BlockItem bi && bi.getBlock() instanceof ArchfruitPod).forEach(this::generatedItem);
         takeAll(items, i -> i.get() instanceof BlockItem bi && bi.getBlock() instanceof FenceBlock).forEach(this::fenceBlockItem);
         takeAll(items, i -> i.get() instanceof BlockItem bi && bi.getBlock() instanceof SaplingBlock).forEach(this::blockGeneratedItem);
@@ -101,6 +95,6 @@ public class AEItemModelProvider extends ItemModelProvider {
     @NotNull
     @Override
     public String getName() {
-        return "Ars Elemental Item Models";
+        return "Ars Elemancy Item Models";
     }
 }

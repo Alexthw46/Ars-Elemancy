@@ -44,7 +44,7 @@ public class ElemancyArmorRecipe extends EnchantingApparatusRecipe implements IT
     }
 
     @Override
-    public @NotNull ItemStack assemble(ApparatusRecipeInput input, HolderLookup.Provider p_346030_) {
+    public @NotNull ItemStack assemble(ApparatusRecipeInput input, HolderLookup.@NotNull Provider p_346030_) {
         ItemStack result = super.assemble(input, p_346030_);
         if (!input.catalyst().isComponentsPatchEmpty()) {
             result.applyComponents(input.catalyst().getComponentsPatch());

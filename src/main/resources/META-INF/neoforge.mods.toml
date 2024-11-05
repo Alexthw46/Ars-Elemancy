@@ -18,7 +18,7 @@ displayName="Ars Elemancy" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://www.curseforge.com/minecraft/mc-mods/ars-elemancy" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile = "ars_elemental_logo.png" #optional
+logoFile = "ars_elemancy_logo.png" #optional
 # A text field displayed in the mod UI
 credits = "Thanks to the Ars Nouveau team" #optional
 # A text field displayed in the mod UI
@@ -28,7 +28,7 @@ description = '''
 This Ars Nouveau add-on expands on Ars Elemental, adding new dual- and quad- elemental gear.
 '''
 [[mixins]]
-config="ars_elemental.mixins.json"
+config="ars_elemancy.mixins.json"
 [[dependencies.ars_elemancy]]
 modId = "minecraft"
 versionRange = "[1.21,)"

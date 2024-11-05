@@ -4,7 +4,7 @@
       "model": "minecraft:block/prismarine"
     },
     "converted=true": {
-      "model": "ars_elemental:block/mermaid_rock"
+      "model": "ars_elemancy:block/mermaid_rock"
     }
   }
 }

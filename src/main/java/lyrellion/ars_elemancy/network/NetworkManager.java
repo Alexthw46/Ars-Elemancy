@@ -26,9 +26,6 @@ public class NetworkManager {
     public static void register(final RegisterPayloadHandlersEvent event) {
         final PayloadRegistrar reg = event.registrar(PROTOCOL_VERSION);
 
-        reg.playToServer(OpenCurioBagPacket.TYPE, OpenCurioBagPacket.CODEC, NetworkManager::handle);
-        reg.playToClient(DischargeEffectPacket.TYPE, DischargeEffectPacket.CODEC, NetworkManager::handle);
-
     }
 
     private static <T extends AbstractPacket> void handle(T message, IPayloadContext ctx) {

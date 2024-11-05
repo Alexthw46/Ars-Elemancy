@@ -56,7 +56,7 @@ public class ArmorSet {
     }
 
     public String getTranslationKey() {
-        return "ars_elemental.armor_set." + this.name;
+        return "ars_elemancy.armor_set." + this.name;
     }
 }
 

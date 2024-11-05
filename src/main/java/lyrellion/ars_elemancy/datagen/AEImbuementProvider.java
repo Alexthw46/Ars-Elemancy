@@ -43,10 +43,6 @@ public class AEImbuementProvider extends ImbuementRecipeProvider {
     @Override
     public void collectJsons(CachedOutput cache) {
 
-        recipes.add(new ImbuementRecipe("anima_essence", RecipeDatagen.SOURCE_GEM, ModItems.ANIMA_ESSENCE.get().getDefaultInstance(), 3000)
-                .withPedestalItem(Items.WITHER_SKELETON_SKULL)
-                .withPedestalItem(Items.BONE_MEAL)
-                .withPedestalItem(Items.GOLDEN_APPLE));
         recipes.add(new ImbuementRecipe("tempest_essence", Ingredient.of(ItemsRegistry.MANIPULATION_ESSENCE), ModItems.TEMPEST_ESSENCE.get().getDefaultInstance(), 3000)
                 .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
                 .withPedestalItem(ItemsRegistry.AIR_ESSENCE));
@@ -66,52 +62,21 @@ public class AEImbuementProvider extends ImbuementRecipeProvider {
                 .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
                 .withPedestalItem(ItemsRegistry.EARTH_ESSENCE));
 
-
-        recipes.add(new ImbuementRecipe("lesser_fire_focus", Ingredient.of(Items.AMETHYST_SHARD), ModItems.LESSER_FIRE_FOCUS.get().getDefaultInstance(), 5000)
-                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
-                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
-                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT));
-        recipes.add(new ImbuementRecipe("lesser_water_focus", Ingredient.of(Items.AMETHYST_SHARD), ModItems.LESSER_WATER_FOCUS.get().getDefaultInstance(), 5000)
-                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
-                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
-                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT));
-        recipes.add(new ImbuementRecipe("lesser_earth_focus", Ingredient.of(Items.AMETHYST_SHARD), ModItems.LESSER_EARTH_FOCUS.get().getDefaultInstance(), 5000)
-                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)
-                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)
-                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT));
-        recipes.add(new ImbuementRecipe("lesser_air_focus", Ingredient.of(Items.AMETHYST_SHARD), ModItems.LESSER_AIR_FOCUS.get().getDefaultInstance(), 5000)
-                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
-                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
-                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT)
-                .withPedestalItem(Items.GOLD_INGOT)
-        );
-
-        recipes.add(new ImbuementRecipe("mark_of_mastery", Ingredient.of(ItemsRegistry.WILDEN_TRIBUTE), new ItemStack(ModItems.MARK_OF_MASTERY.get(), 5), 10000)
-                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)
-                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
-                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
-                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
-                .withPedestalItem(ItemsRegistry.ABJURATION_ESSENCE)
-                .withPedestalItem(ItemsRegistry.CONJURATION_ESSENCE)
-                .withPedestalItem(MANIPULATION_ESSENCE)
-                .withPedestalItem(ModItems.ANIMA_ESSENCE.get())
-        );
+//        recipes.add(new ImbuementRecipe("mark_of_mastery", Ingredient.of(ItemsRegistry.WILDEN_TRIBUTE), new ItemStack(ModItems.MARK_OF_MASTERY.get(), 5), 10000)
+//                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)
+//                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
+//                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
+//                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
+//                .withPedestalItem(ItemsRegistry.ABJURATION_ESSENCE)
+//                .withPedestalItem(ItemsRegistry.CONJURATION_ESSENCE)
+//                .withPedestalItem(MANIPULATION_ESSENCE)
+//                .withPedestalItem(ModItems.ANIMA_ESSENCE.get())
+//        );
 
     }
 
     protected Path getRecipePath(Path pathIn, String str) {
-        return pathIn.resolve("data/ars_elemental/recipe/" + str + ".json");
+        return pathIn.resolve("data/ars_elemancy/recipe/" + str + ".json");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package lyrellion.ars_elemancy.datagen;
 
 import lyrellion.ars_elemancy.ArsElemancy;
-import lyrellion.ars_elemancy.registry.ModAdvTriggers;
 import lyrellion.ars_elemancy.registry.ModItems;
 import com.hollingsworth.arsnouveau.ArsNouveau;
 import com.hollingsworth.arsnouveau.common.datagen.advancement.ANAdvancementBuilder;
@@ -45,30 +44,13 @@ public class AEAdvancementsProvider extends AdvancementProvider {
         }
 
         @Override
-        public void generate(HolderLookup.Provider registries, @NotNull Consumer<AdvancementHolder> con, @NotNull ExistingFileHelper existingFileHelper) {
+        public void generate(HolderLookup.@NotNull Provider registries, @NotNull Consumer<AdvancementHolder> con, @NotNull ExistingFileHelper existingFileHelper) {
             advancementConsumer = con;
+            //AdvancementHolder curioBag = saveBasicItem(ModItems.CURIO_BAG.get(), dummy("magebloom_crop"));
 
-            saveBasicItem(ModItems.MARK_OF_MASTERY.get(), dummy("wilden_tribute"));
+            //AdvancementHolder air = saveBasicItem(ModItems.LESSER_AIR_FOCUS.get(), curioBag);
 
-            builder("mirror_shield").display(ItemsRegistry.ENCHANTERS_SHIELD, AdvancementType.CHALLENGE, true).addCriterion(ModAdvTriggers.MIRROR.get().createCriterion(new PlayerTrigger.TriggerInstance(Optional.empty()))).parent(dummy("enchanting_apparatus")).save(con);
-
-            AdvancementHolder curioBag = saveBasicItem(ModItems.CURIO_BAG.get(), dummy("magebloom_crop"));
-            saveBasicItem(ModItems.CASTER_BAG.get(), curioBag);
-
-            AdvancementHolder air = saveBasicItem(ModItems.LESSER_AIR_FOCUS.get(), curioBag);
-            AdvancementHolder fire = saveBasicItem(ModItems.LESSER_FIRE_FOCUS.get(), curioBag);
-            AdvancementHolder earth = saveBasicItem(ModItems.LESSER_EARTH_FOCUS.get(), curioBag);
-            AdvancementHolder water = saveBasicItem(ModItems.LESSER_WATER_FOCUS.get(), curioBag);
-            buildBasicItem(ModItems.AIR_FOCUS.get(), "air_focus", AdvancementType.CHALLENGE, air).save(con);
-            buildBasicItem(ModItems.FIRE_FOCUS.get(), "fire_focus", AdvancementType.CHALLENGE, fire).save(con);
-            buildBasicItem(ModItems.EARTH_FOCUS.get(), "earth_focus", AdvancementType.CHALLENGE, earth).save(con);
-            buildBasicItem(ModItems.WATER_FOCUS.get(), "water_focus", AdvancementType.CHALLENGE, water).save(con);
-
-
-
-            //path of Air
-            builder("levitation").display(ModItems.AIR_CTOME.get(), AdvancementType.GOAL).addCriterion(ModAdvTriggers.LEVITATE.get().createCriterion(new PlayerTrigger.TriggerInstance(Optional.empty()))).parent(air).save(con);
-
+            //buildBasicItem(ModItems.AIR_FOCUS.get(), "air_focus", AdvancementType.CHALLENGE, air).save(con);
 
         }
 

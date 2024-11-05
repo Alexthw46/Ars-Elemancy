@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ars_elemental:block/air_turret"
+      "model": "ars_elemancy:block/air_turret"
     }
   }
 }

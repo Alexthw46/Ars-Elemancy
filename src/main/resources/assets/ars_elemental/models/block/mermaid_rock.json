@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "ars_elemental:block/siren_shrine"
+		"0": "ars_elemancy:block/siren_shrine"
 	},
 	"render_type": "cutout",
 	"elements": [

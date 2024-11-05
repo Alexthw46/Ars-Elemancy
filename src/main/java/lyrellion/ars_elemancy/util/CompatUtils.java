@@ -9,20 +9,6 @@ import top.theillusivec4.curios.api.SlotResult;
 import java.util.function.Predicate;
 
 public class CompatUtils {
-    static boolean botania = false;
-
-    public static boolean isBotaniaLoaded() {
-        return botania;
-    }
-
-
-    public static void checkCompats() {
-
-        ModList modList = ModList.get();
-
-        botania = modList.isLoaded("botania");
-
-    }
 
     public static SlotResult getCurio(LivingEntity player, Predicate<ItemStack> predicate) {
         var lazy = CuriosApi.getCuriosInventory(player);

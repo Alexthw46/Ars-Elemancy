@@ -44,14 +44,6 @@ public class ElementalFocus extends ElementalCurio implements ISchoolFocus {
         this.element = element;
     }
 
-    @Override
-    public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        if (pContext.getPlayer() instanceof ServerPlayer player && player.getUUID().equals(ArsElemancy.Dev) && player.isCrouching()) {
-            pContext.getLevel().addFreshEntity(new ItemEntity(pContext.getLevel(), player.getX(), player.getY(), player.getZ(), ModItems.DEBUG_ICON.get().getDefaultInstance()));
-        }
-        return super.useOn(pContext);
-    }
-
     public SpellStats.Builder applyItemModifiers(ItemStack stack, SpellStats.Builder builder, AbstractSpellPart spellPart, HitResult rayTraceResult, Level world, @Nullable LivingEntity shooter, SpellContext spellContext) {
         // If the spell is an elemental spell, and the element of the focus is the same as the spell, then amplify the spell.
         if (SpellSchools.ELEMENTAL.isPartOfSchool(spellPart)) {
@@ -76,20 +68,20 @@ public class ElementalFocus extends ElementalCurio implements ISchoolFocus {
 
     double getBoostMultiplier() {
         return switch (element.getId()) {
-            case "fire" -> COMMON.FireMasteryBuff.get();
-            case "water" -> COMMON.WaterMasteryBuff.get();
-            case "air" -> COMMON.AirMasteryBuff.get();
-            case "earth" -> COMMON.EarthMasteryBuff.get();
+//            case "fire" -> COMMON.FireMasteryBuff.get();
+//            case "water" -> COMMON.WaterMasteryBuff.get();
+//            case "air" -> COMMON.AirMasteryBuff.get();
+//            case "earth" -> COMMON.EarthMasteryBuff.get();
             default -> 0;
         };
     }
 
     double getMalusMultiplier() {
         return switch (element.getId()) {
-            case "fire" -> COMMON.FireMasteryDebuff.get();
-            case "water" -> COMMON.WaterMasteryDebuff.get();
-            case "air" -> COMMON.AirMasteryDebuff.get();
-            case "earth" -> COMMON.EarthMasteryDebuff.get();
+//            case "fire" -> COMMON.FireMasteryDebuff.get();
+//            case "water" -> COMMON.WaterMasteryDebuff.get();
+//            case "air" -> COMMON.AirMasteryDebuff.get();
+//            case "earth" -> COMMON.EarthMasteryDebuff.get();
             default -> 0;
         };
     }
@@ -109,10 +101,10 @@ public class ElementalFocus extends ElementalCurio implements ISchoolFocus {
     @Override
     public void appendHoverText(@NotNull ItemStack pStack, @NotNull TooltipContext context, @NotNull List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, context, pTooltipComponents, pIsAdvanced);
-        pTooltipComponents.add(Component.translatable("tooltip.ars_elemental.focus_element"));
+        pTooltipComponents.add(Component.translatable("tooltip.ars_elemancy.focus_element"));
         TooltipUtils.addOnShift(pTooltipComponents, () -> {
-            pTooltipComponents.add(Component.translatable("tooltip.ars_elemental.focus_boost", element.getTextComponent()));
-            pTooltipComponents.add(Component.translatable(this instanceof GreaterElementalFocus ? "tooltip.ars_elemental.focus_element_mana." + element.getId() : "tooltip.ars_elemental.focus_malus"));
+            pTooltipComponents.add(Component.translatable("tooltip.ars_elemancy.focus_boost", element.getTextComponent()));
+            pTooltipComponents.add(Component.translatable(this instanceof GreaterElementalFocus ? "tooltip.ars_elemancy.focus_element_mana." + element.getId() : "tooltip.ars_elemancy.focus_malus"));
         }, "focus");
     }
 }

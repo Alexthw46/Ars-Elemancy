@@ -1,9 +1,9 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "0": "ars_elemental:block/everfull_urn",
-    "1": "ars_elemental:block/everfull_urn_0",
-    "particle": "ars_elemental:block/everfull_urn"
+    "0": "ars_elemancy:block/everfull_urn",
+    "1": "ars_elemancy:block/everfull_urn_0",
+    "particle": "ars_elemancy:block/everfull_urn"
   },
   "elements": [
     {

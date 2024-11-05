@@ -31,33 +31,6 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(@NotNull RecipeOutput consumer) {
 
-
-        RecipeDatagen.makeWood(FLASHING_ARCHWOOD_LOG.get(), FLASHING_ARCHWOOD.get(), 3).save(consumer);
-        strippedLogToWood(consumer, FLASHING_ARCHWOOD_LOG_STRIPPED.get(), FLASHING_ARCHWOOD_STRIPPED.get());
-
-        shapelessBuilder(getRitualItem(ResourceLocation.fromNamespaceAndPath(ArsNouveau.MODID, RitualLib.FLIGHT)))
-                .requires(FLASHING_ARCHWOOD_LOG.get())
-                .requires(ItemsRegistry.WILDEN_WING, 1)
-                .requires(Ingredient.of(Tags.Items.GEMS_DIAMOND), 2)
-                .requires(Items.FEATHER)
-                .save(consumer, prefix("flight_alt"));
-
-
-        shapedBuilder(CURIO_BAG.get())
-                .define('M', ItemsRegistry.MAGE_FIBER)
-                .define('C', Items.CHEST)
-                .pattern("MMM").pattern("MCM").pattern("MMM")
-                .unlockedBy("has_journal", InventoryChangeTrigger.TriggerInstance.hasItems(ItemsRegistry.WORN_NOTEBOOK))
-                .save(consumer, prefix("curio_bag"));
-
-        shapedBuilder(CASTER_BAG.get())
-                .define('M', ItemsRegistry.MAGE_FIBER)
-                .define('C', Items.CHEST)
-                .define('D', Tags.Items.GEMS_DIAMOND)
-                .pattern("MDM").pattern("MCM").pattern("MMM")
-                .unlockedBy("has_journal", InventoryChangeTrigger.TriggerInstance.hasItems(ItemsRegistry.WORN_NOTEBOOK))
-                .save(consumer, prefix("caster_bag"));
-
     }
 
     public Item getRitualItem(ResourceLocation id) {

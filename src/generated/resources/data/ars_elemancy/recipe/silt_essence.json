@@ -9,10 +9,10 @@
   },
   "pedestalItems": [
     {
-      "item": "ars_nouveau:air_essence"
+      "item": "ars_nouveau:earth_essence"
     },
     {
-      "item": "ars_nouveau:earth_essence"
+      "item": "ars_nouveau:air_essence"
     }
   ],
   "source": 3000
