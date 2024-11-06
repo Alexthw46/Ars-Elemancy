@@ -2,7 +2,7 @@ package lyrellion.ars_elemancy.registry;
 
 import com.hollingsworth.arsnouveau.api.spell.SpellSchools;
 import lyrellion.ars_elemancy.ArsNouveauRegistry;
-import lyrellion.ars_elemancy.common.items.FusedEssence;
+import lyrellion.ars_elemancy.common.items.*;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.common.items.bangles.BaseBangle;
 import lyrellion.ars_elemancy.common.items.foci.ElementalFocus;
@@ -49,23 +49,23 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BaseBangle> ENCHANTER_BANGLE;
 
-    public static final DeferredHolder<Item, FusedEssence> TEMPEST_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> SILT_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> MIRE_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> LAVA_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> CINDER_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> VAPOR_ESSENCE;
-    public static final DeferredHolder<Item, FusedEssence> ELEMANCER_ESSENCE;
+    public static final DeferredHolder<Item, TempestEssence> TEMPEST_ESSENCE;
+    public static final DeferredHolder<Item, SiltEssence> SILT_ESSENCE;
+    public static final DeferredHolder<Item, MireEssence> MIRE_ESSENCE;
+    public static final DeferredHolder<Item, LavaEssence> LAVA_ESSENCE;
+    public static final DeferredHolder<Item, CinderEssence> CINDER_ESSENCE;
+    public static final DeferredHolder<Item, VaporEssence> VAPOR_ESSENCE;
+    public static final DeferredHolder<Item, ElemancerEssence> ELEMANCER_ESSENCE;
 
 
     static {
-        TEMPEST_ESSENCE = ITEMS.register("tempest_essence", () -> new FusedEssence(itemProps()));
-        SILT_ESSENCE = ITEMS.register("silt_essence", () -> new FusedEssence(itemProps()));
-        MIRE_ESSENCE = ITEMS.register("mire_essence", () -> new FusedEssence(itemProps()));
-        VAPOR_ESSENCE = ITEMS.register("vapor_essence", () -> new FusedEssence(itemProps()));
-        CINDER_ESSENCE = ITEMS.register("cinder_essence", () -> new FusedEssence(itemProps()));
-        LAVA_ESSENCE = ITEMS.register("lava_essence", () -> new FusedEssence(itemProps()));
-        ELEMANCER_ESSENCE = ITEMS.register("elemancer_essence", () -> new FusedEssence(itemProps()));
+        TEMPEST_ESSENCE = ITEMS.register("tempest_essence", () -> new TempestEssence(itemProps()));
+        SILT_ESSENCE = ITEMS.register("silt_essence", () -> new SiltEssence(itemProps()));
+        MIRE_ESSENCE = ITEMS.register("mire_essence", () -> new MireEssence(itemProps()));
+        VAPOR_ESSENCE = ITEMS.register("vapor_essence", () -> new VaporEssence(itemProps()));
+        CINDER_ESSENCE = ITEMS.register("cinder_essence", () -> new CinderEssence(itemProps()));
+        LAVA_ESSENCE = ITEMS.register("lava_essence", () -> new LavaEssence(itemProps()));
+        ELEMANCER_ESSENCE = ITEMS.register("elemancer_essence", () -> new ElemancerEssence(itemProps()));
 
 
         //curio
