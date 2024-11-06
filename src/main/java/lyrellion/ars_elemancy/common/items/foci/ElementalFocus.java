@@ -68,10 +68,10 @@ public class ElementalFocus extends ElementalCurio implements ISchoolFocus {
 
     double getBoostMultiplier() {
         return switch (element.getId()) {
-//            case "fire" -> COMMON.FireMasteryBuff.get();
-//            case "water" -> COMMON.WaterMasteryBuff.get();
-//            case "air" -> COMMON.AirMasteryBuff.get();
-//            case "earth" -> COMMON.EarthMasteryBuff.get();
+            case "fire" -> COMMON.FireMasteryBuff.get();
+            case "water" -> COMMON.WaterMasteryBuff.get();
+            case "air" -> COMMON.AirMasteryBuff.get();
+            case "earth" -> COMMON.EarthMasteryBuff.get();
             default -> 0;
         };
     }

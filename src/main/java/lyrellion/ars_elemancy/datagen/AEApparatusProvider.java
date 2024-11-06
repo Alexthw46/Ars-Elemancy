@@ -46,6 +46,58 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
         //focus upgrade
 
+        recipes.add(builder()
+                .withResult(ModItems.CINDER_FOCUS.get())
+                .withReagent((ItemLike) ModItems.CINDER_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.FIRE_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.AIR_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.LAVA_FOCUS.get())
+                .withReagent((ItemLike) ModItems.LAVA_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.FIRE_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.EARTH_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.VAPOR_FOCUS.get())
+                .withReagent((ItemLike) ModItems.VAPOR_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.FIRE_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.WATER_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.SILT_FOCUS.get())
+                .withReagent((ItemLike) ModItems.SILT_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.EARTH_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.AIR_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.MIRE_FOCUS.get())
+                .withReagent((ItemLike) ModItems.MIRE_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.EARTH_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.WATER_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.TEMPEST_FOCUS.get())
+                .withReagent((ItemLike) ModItems.TEMPEST_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.WATER_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.AIR_FOCUS)
+                .build()
+        );
+        recipes.add(builder()
+                .withResult(ModItems.ELEMANCER_FOCUS.get())
+                .withReagent((ItemLike) ModItems.ELEMANCER_ESSENCE)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.FIRE_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.AIR_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.EARTH_FOCUS)
+                .withPedestalItem((ItemLike) alexthw.ars_elemental.registry.ModItems.WATER_FOCUS)
+                .build()
+        );
+
 
 
         //mirror shield enchant

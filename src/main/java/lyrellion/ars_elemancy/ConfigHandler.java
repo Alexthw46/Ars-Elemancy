@@ -7,6 +7,11 @@ public class ConfigHandler {
 
     public static class Common {
 
+        public final ModConfigSpec.ConfigValue<Double> FireMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> WaterMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> AirMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> EarthMasteryBuff;
+
         public final ModConfigSpec.ConfigValue<Double> MajorFocusDiscount;
         public final ModConfigSpec.ConfigValue<Double> LesserFocusDiscount;
         public final ModConfigSpec.ConfigValue<Boolean> EnableRegenBonus;
@@ -22,6 +27,14 @@ public class ConfigHandler {
                     .defineInRange("elemental_maj_focus_discount", 0.25D, 0.0D, 0.99D);
             EnableRegenBonus = builder.comment("Enable regen bonus under special conditions").define("regen_bonus", true);
             builder.pop();
+
+            builder.comment("Adjust these values to balance how much a spell gets amplified by the matching spell focus, doubled for major foci.")
+                    .push("Elemental Spell Foci - Amplify");
+
+            FireMasteryBuff = builder.define("fire_focus_buff", 1.0D);
+            WaterMasteryBuff = builder.define("water_focus_buff", 1.0D);
+            AirMasteryBuff = builder.define("air_focus_buff", 1.0D);
+            EarthMasteryBuff = builder.define("earth_focus_buff", 1.0D);
 
             builder.comment("Adjust Elemental Armor Mana Buffs").push("Elemental Armors");
 

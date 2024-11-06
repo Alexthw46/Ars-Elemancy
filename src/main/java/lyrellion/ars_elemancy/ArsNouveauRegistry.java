@@ -1,11 +1,15 @@
 package lyrellion.ars_elemancy;
 
 
+import com.hollingsworth.arsnouveau.api.perk.PerkSlot;
 import com.hollingsworth.arsnouveau.api.registry.*;
 import com.hollingsworth.arsnouveau.api.ritual.AbstractRitual;
 import com.hollingsworth.arsnouveau.api.spell.*;
+import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
+import lyrellion.ars_elemancy.registry.ModItems;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.*;
@@ -13,7 +17,6 @@ import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.*;
 public class ArsNouveauRegistry {
     public static final List<AbstractSpellPart> registeredSpells = new ArrayList<>();
 
-    public static final SpellSchool NECROMANCY = new SpellSchool("necromancy");
     public static final SpellSchool TEMPEST = new SpellSchool("tempest").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_WATER);
     public static final SpellSchool CINDER = new SpellSchool("cinder").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_FIRE);
     public static final SpellSchool SILT = new SpellSchool("silt").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_EARTH);
@@ -27,9 +30,6 @@ public class ArsNouveauRegistry {
         linkDamageResistances();
     }
 
-    private static void registerCasters() {
-        //SpellCasterRegistry.register(ModItems.AIR_CTOME.get(), (stack) -> stack.get(ModRegistry.E_TOME_CASTER.get()));
-    }
 
     private static void linkDamageResistances() {
     }
@@ -47,7 +47,6 @@ public class ArsNouveauRegistry {
     }
 
     public static void postInit() {
-        registerCasters();
 
         ArsNouveauRegistry.addPerkSlots();
     }
@@ -69,14 +68,14 @@ public class ArsNouveauRegistry {
 
     private static void addPerkSlots() {
 
-//        ArmorSet[] medium_armors = {ModItems.AIR_ARMOR, ModItems.FIRE_ARMOR, ModItems.EARTH_ARMOR, ModItems.WATER_ARMOR, ModItems.TEMPEST_ARMOR, ModItems.MIRE_ARMOR, ModItems.VAPOR_ARMOR, ModItems.CINDER_ARMOR, ModItems.LAVA_ARMOR, ModItems.SILT_ARMOR, ModItems.ELEMANCER_ARMOR};
-//        List<PerkSlot> perkSlots = Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE);
-//        for (ArmorSet set : medium_armors) {
-//            PerkRegistry.registerPerkProvider(set.getHat(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
-//            PerkRegistry.registerPerkProvider(set.getChest(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
-//            PerkRegistry.registerPerkProvider(set.getLegs(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
-//            PerkRegistry.registerPerkProvider(set.getBoots(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
-//        }
+        ArmorSet[] medium_armors = {ModItems.TEMPEST_ARMOR, ModItems.MIRE_ARMOR, ModItems.VAPOR_ARMOR, ModItems.CINDER_ARMOR, ModItems.LAVA_ARMOR, ModItems.SILT_ARMOR, ModItems.ELEMANCER_ARMOR};
+        List<PerkSlot> perkSlots = Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE);
+        for (ArmorSet set : medium_armors) {
+            PerkRegistry.registerPerkProvider(set.getHat(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
+            PerkRegistry.registerPerkProvider(set.getChest(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
+            PerkRegistry.registerPerkProvider(set.getLegs(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
+            PerkRegistry.registerPerkProvider(set.getBoots(), List.of(perkSlots, perkSlots, perkSlots, perkSlots));
+        }
 
     }
 

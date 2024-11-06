@@ -55,6 +55,7 @@ public class ModItems {
     public static final DeferredHolder<Item, FusedEssence> LAVA_ESSENCE;
     public static final DeferredHolder<Item, FusedEssence> CINDER_ESSENCE;
     public static final DeferredHolder<Item, FusedEssence> VAPOR_ESSENCE;
+    public static final DeferredHolder<Item, FusedEssence> ELEMANCER_ESSENCE;
 
 
     static {
@@ -64,6 +65,7 @@ public class ModItems {
         VAPOR_ESSENCE = ITEMS.register("vapor_essence", () -> new FusedEssence(itemProps()));
         CINDER_ESSENCE = ITEMS.register("cinder_essence", () -> new FusedEssence(itemProps()));
         LAVA_ESSENCE = ITEMS.register("lava_essence", () -> new FusedEssence(itemProps()));
+        ELEMANCER_ESSENCE = ITEMS.register("elemancer_essence", () -> new FusedEssence(itemProps()));
 
 
         //curio
