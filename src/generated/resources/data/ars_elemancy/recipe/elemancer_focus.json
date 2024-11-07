@@ -1,0 +1,26 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:fire_focus"
+    },
+    {
+      "item": "ars_elemental:air_focus"
+    },
+    {
+      "item": "ars_elemental:earth_focus"
+    },
+    {
+      "item": "ars_elemental:water_focus"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemancy:elemancer_essence"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:elemancer_focus"
+  },
+  "sourceCost": 0
+}

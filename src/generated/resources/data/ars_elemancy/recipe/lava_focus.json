@@ -1,0 +1,20 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:fire_focus"
+    },
+    {
+      "item": "ars_elemental:earth_focus"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemancy:lava_essence"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:lava_focus"
+  },
+  "sourceCost": 0
+}

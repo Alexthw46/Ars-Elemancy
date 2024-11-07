@@ -1,5 +1,5 @@
 {
-  "type": "ars_elemental:armor_upgrade",
+  "type": "ars_elemancy:armor_upgrade",
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"
@@ -15,11 +15,11 @@
     }
   ],
   "reagent": {
-    "tag": "ars_nouveau:robe"
+    "tag": "ars_nouveau:legs"
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:mire_robes"
+    "id": "ars_elemancy:mire_leggings"
   },
   "sourceCost": 7000
 }

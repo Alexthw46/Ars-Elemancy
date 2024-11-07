@@ -1,5 +1,5 @@
 {
-  "type": "ars_elemental:armor_upgrade",
+  "type": "ars_elemancy:armor_upgrade",
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"
@@ -8,18 +8,18 @@
       "item": "minecraft:netherite_ingot"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:vapor_essence"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:vapor_essence"
     }
   ],
   "reagent": {
-    "tag": "ars_nouveau:hood"
+    "tag": "ars_nouveau:robe"
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:silt_hat"
+    "id": "ars_elemancy:vapor_robes"
   },
   "sourceCost": 7000
 }

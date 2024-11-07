@@ -1,11 +1,11 @@
 {
-  "type": "ars_elemental:armor_upgrade",
+  "type": "ars_elemancy:armor_upgrade",
   "pedestalItems": [
     {
-      "item": "ars_elemental:air_boots"
+      "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemental:water_boots"
+      "item": "minecraft:netherite_ingot"
     },
     {
       "item": "ars_elemancy:tempest_essence"
@@ -15,7 +15,7 @@
     }
   ],
   "reagent": {
-    "tag": "ars_elemental:mark_of_mastery"
+    "tag": "ars_nouveau:boot"
   },
   "result": {
     "count": 1,

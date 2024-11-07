@@ -1,5 +1,5 @@
 {
-  "type": "ars_elemental:armor_upgrade",
+  "type": "ars_elemancy:armor_upgrade",
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"
@@ -8,18 +8,18 @@
       "item": "minecraft:netherite_ingot"
     },
     {
-      "item": "ars_elemancy:tempest_essence"
+      "item": "ars_elemancy:silt_essence"
     },
     {
-      "item": "ars_elemancy:tempest_essence"
+      "item": "ars_elemancy:silt_essence"
     }
   ],
   "reagent": {
-    "tag": "ars_nouveau:robe"
+    "tag": "ars_nouveau:legs"
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:tempest_robes"
+    "id": "ars_elemancy:silt_leggings"
   },
   "sourceCost": 7000
 }

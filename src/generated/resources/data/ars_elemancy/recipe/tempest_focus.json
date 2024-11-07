@@ -1,0 +1,20 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:water_focus"
+    },
+    {
+      "item": "ars_elemental:air_focus"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemancy:tempest_essence"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:tempest_focus"
+  },
+  "sourceCost": 0
+}
