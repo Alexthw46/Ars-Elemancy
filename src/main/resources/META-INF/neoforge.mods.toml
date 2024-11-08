@@ -41,4 +41,10 @@ versionRange = "[1.21.1-5.2,)"
 ordering = "AFTER"
 side = "BOTH"
 
+[[dependencies.ars_elemancy]]
+modId = "ars_elemental"
+versionRange = "[0.7.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
 
