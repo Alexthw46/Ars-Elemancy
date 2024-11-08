@@ -1,28 +1,19 @@
 package lyrellion.ars_elemancy.datagen;
 
-import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
-import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
 import lyrellion.ars_elemancy.registry.ModItems;
-import lyrellion.ars_elemancy.registry.ModRegistry;
 import com.hollingsworth.arsnouveau.common.crafting.recipes.EnchantingApparatusRecipe;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeBuilder;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeProvider;
-import com.hollingsworth.arsnouveau.common.datagen.ItemTagProvider;
 import com.hollingsworth.arsnouveau.common.datagen.RecipeDatagen;
-import com.hollingsworth.arsnouveau.setup.registry.BlockRegistry;
 import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
 
 import java.nio.file.Path;
 
 import static alexthw.ars_elemental.registry.ModItems.MARK_OF_MASTERY;
-import static mezz.jei.api.ingredients.subtypes.UidContext.Recipe;
 
 public class AEApparatusProvider extends ApparatusRecipeProvider {
 
@@ -105,8 +96,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -116,8 +106,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -127,8 +116,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -138,8 +126,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -150,8 +137,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -161,8 +147,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -172,8 +157,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -183,8 +167,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -195,8 +178,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -206,8 +188,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -217,8 +198,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -228,8 +208,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -240,8 +219,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -251,8 +229,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -262,8 +239,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -273,8 +249,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -285,8 +260,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -296,8 +270,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -307,8 +280,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -318,8 +290,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -330,8 +301,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -341,8 +311,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -352,8 +321,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
@@ -363,8 +331,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .withReagent(MARK_OF_MASTERY)
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
                 .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withPedestalItem((ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
+                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
                 .withSourceCost(7000)
                 .keepNbtOfReagent(true)
                 .build()
