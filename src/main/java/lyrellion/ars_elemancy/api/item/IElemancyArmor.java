@@ -1,5 +1,6 @@
 package lyrellion.ars_elemancy.api.item;
 
+import alexthw.ars_elemental.api.item.IElementalArmor;
 import lyrellion.ars_elemancy.common.items.armor.AAMaterials;
 import com.hollingsworth.arsnouveau.api.item.ISpellModifierItem;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
@@ -18,11 +19,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 
 import javax.annotation.Nullable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public interface IElemancyArmor extends ISpellModifierItem {
+public interface IElemancyArmor extends IElementalArmor {
 
     Map<SpellSchool, TagKey<DamageType>> damageResistances = new ConcurrentHashMap<>();
 
@@ -65,6 +67,14 @@ public interface IElemancyArmor extends ISpellModifierItem {
     default boolean doAbsorb(DamageSource damageSource) {
         // check if the damage source is in the list of damage sources that this armor can absorb
         return damageResistances.containsKey(getSchool()) && damageSource.is(damageResistances.get(getSchool()));
+    }
+
+    default boolean FillAbsorptions(DamageSource damageSource, HashMap<SpellSchool, Integer> bonusMap)  {
+        if (doAbsorb(damageSource))  {
+            bonusMap.put(getSchool(), bonusMap.getOrDefault(getSchool(), 0) + 1);
+        return true;
+
+        }else return false;
     }
 
 }

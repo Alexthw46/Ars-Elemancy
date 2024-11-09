@@ -1,11 +1,12 @@
 {
-  "type": "ars_elemancy:armor_upgrade",
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
   "pedestalItems": [
     {
-      "item": "ars_elemental:mark_of_mastery"
+      "item": "ars_elemental:air_leggings"
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "item": "ars_elemental:earth_leggings"
     },
     {
       "item": "ars_elemancy:silt_essence"
@@ -15,7 +16,7 @@
     }
   ],
   "reagent": {
-    "tag": "ars_nouveau:legs"
+    "item": "ars_elemental:mark_of_mastery"
   },
   "result": {
     "count": 1,
