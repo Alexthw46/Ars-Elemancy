@@ -14,8 +14,8 @@ public class ElemancyArmorModel<T extends IElemancyArmor & GeoItem> extends GeoM
     public ResourceLocation animationLoc;
 
     public ElemancyArmorModel(String name) {
-        this.modelLocation = ResourceLocation.fromNamespaceAndPath(ArsElemancy.MODID, "geo/" + name + ".geo.json");
-        this.textLoc = ResourceLocation.fromNamespaceAndPath(ArsElemancy.MODID, "textures/armor/" + name + ".png");
+        this.modelLocation = ResourceLocation.fromNamespaceAndPath(ArsElemancy.MODID, "geo/medium_armor_e.geo.json");
+        this.textLoc = ResourceLocation.fromNamespaceAndPath(ArsElemancy.MODID, "textures/armor/medium_armor_" + name + ".png");
     }
 
     @Override
