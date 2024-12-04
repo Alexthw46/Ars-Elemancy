@@ -2,7 +2,6 @@ package lyrellion.ars_elemancy.api.item;
 
 import alexthw.ars_elemental.api.item.IElementalArmor;
 import lyrellion.ars_elemancy.common.items.armor.AAMaterials;
-import com.hollingsworth.arsnouveau.api.item.ISpellModifierItem;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
 import com.hollingsworth.arsnouveau.api.spell.SpellContext;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
@@ -30,13 +29,13 @@ public interface IElemancyArmor extends IElementalArmor {
 
     static Holder<ArmorMaterial> schoolToMaterial(SpellSchool element) {
         return switch (element.getId()) {
-            case "tempest" -> AAMaterials.tempest;
-            case "silt" -> AAMaterials.silt;
-            case "mire" -> AAMaterials.mire;
-            case "vapor" -> AAMaterials.vapor;
-            case "lava" -> AAMaterials.lava;
-            case "cinder" -> AAMaterials.cinder;
-            case "elemancer" -> AAMaterials.elemancer;
+            case "tempest" -> AAMaterials.TEMPEST;
+            case "silt" -> AAMaterials.SILT;
+            case "mire" -> AAMaterials.MIRE;
+            case "vapor" -> AAMaterials.VAPOR;
+            case "lava" -> AAMaterials.LAVA;
+            case "cinder" -> AAMaterials.CINDER;
+            case "elemancer" -> AAMaterials.ELEMANCER;
 
             default -> MaterialRegistry.MEDIUM;
         };
