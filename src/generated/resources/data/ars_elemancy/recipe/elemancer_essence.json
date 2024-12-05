@@ -1,0 +1,25 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "input": {
+    "item": "ars_nouveau:source_gem"
+  },
+  "output": {
+    "count": 1,
+    "id": "ars_elemancy:elemancer_essence"
+  },
+  "pedestalItems": [
+    {
+      "item": "ars_nouveau:air_essence"
+    },
+    {
+      "item": "ars_nouveau:fire_essence"
+    },
+    {
+      "item": "ars_nouveau:water_essence"
+    },
+    {
+      "item": "ars_nouveau:earth_essence"
+    }
+  ],
+  "source": 3000
+}

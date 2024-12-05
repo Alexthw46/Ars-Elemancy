@@ -1,5 +1,9 @@
 package lyrellion.ars_elemancy.datagen;
 
+import com.hollingsworth.arsnouveau.common.items.data.ArmorPerkHolder;
+import com.hollingsworth.arsnouveau.setup.registry.DataComponentRegistry;
+import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
+import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
 import lyrellion.ars_elemancy.registry.ModItems;
 import com.hollingsworth.arsnouveau.common.crafting.recipes.EnchantingApparatusRecipe;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeBuilder;
@@ -8,10 +12,15 @@ import com.hollingsworth.arsnouveau.common.datagen.RecipeDatagen;
 import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 import static alexthw.ars_elemental.registry.ModItems.MARK_OF_MASTERY;
 
@@ -90,260 +99,14 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 .build()
         );
 
-    // Elemancy armors
-        recipes.add(builder()
-                .withResult(ModItems.CINDER_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.CINDER_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.CINDER_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.CINDER_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.CINDER_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-        recipes.add(builder()
-                .withResult(ModItems.MIRE_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.MIRE_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.MIRE_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.MIRE_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.MIRE_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-        recipes.add(builder()
-                .withResult(ModItems.SILT_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.SILT_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.SILT_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.SILT_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.SILT_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-        recipes.add(builder()
-                .withResult(ModItems.TEMPEST_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.TEMPEST_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.TEMPEST_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.TEMPEST_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.TEMPEST_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-        recipes.add(builder()
-                .withResult(ModItems.LAVA_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.LAVA_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.LAVA_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.LAVA_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.LAVA_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-        recipes.add(builder()
-                .withResult(ModItems.VAPOR_ARMOR.getChest())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getChest())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getChest())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.VAPOR_ARMOR.getHat())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getHat())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getHat())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.VAPOR_ARMOR.getBoots())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getBoots())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getBoots())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-        recipes.add(builder()
-                .withResult(ModItems.VAPOR_ARMOR.getLegs())
-                .withReagent(MARK_OF_MASTERY)
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR.getLegs())
-                .withPedestalItem(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR.getLegs())
-                .withPedestalItem(2,(ItemLike) lyrellion.ars_elemancy.registry.ModItems.VAPOR_ESSENCE)
-                .withSourceCost(7000)
-                .keepNbtOfReagent(true)
-                .build()
-        );
-
-
-    //    addArmorRecipes(ModItems.TEMPEST_ARMOR, (ItemLike) ModItems.TEMPEST_ESSENCE);
-    //    addArmorRecipes(ModItems.CINDER_ARMOR, (ItemLike) ModItems.CINDER_ESSENCE);
-    //    addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE);
-    //    addArmorRecipes(ModItems.SILT_ARMOR, (ItemLike) ModItems.SILT_ESSENCE);
-    //    addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE);
-    //    addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE);
+        // Elemancy armors
+        addArmorRecipes(ModItems.TEMPEST_ARMOR, (ItemLike) ModItems.TEMPEST_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
+        addArmorRecipes(ModItems.CINDER_ARMOR, (ItemLike) ModItems.CINDER_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR);
+        addArmorRecipes(ModItems.SILT_ARMOR, (ItemLike) ModItems.SILT_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
+        addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
+        addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
+        addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
 
         Path output = this.generator.getPackOutput().getOutputFolder();
         for (ApparatusRecipeBuilder.RecipeWrapper<? extends EnchantingApparatusRecipe> g : recipes) {
@@ -355,14 +118,49 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     }
 
-    //protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence) {
+    protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, alexthw.ars_elemental.common.items.armor.ArmorSet... bases) {
+        if (bases.length < 2) {
+            throw new IllegalArgumentException("needs at least 2 armor bases");
+        }
 
-    //    recipes.add(Abuilder().withResult(armorSet.getHat()).withReagent(Ingredient.of(AETagsProvider.AEItemTagsProvider.MAGIC_HOOD)).withPedestalItem(MARK_OF_MASTERY.get()).withPedestalItem(Items.NETHERITE_INGOT).withPedestalItem(2, essence).withSourceCost(7000).keepNbtOfReagent(true).build());
-    //    recipes.add(Abuilder().withResult(armorSet.getChest()).withReagent(Ingredient.of(AETagsProvider.AEItemTagsProvider.MAGIC_ROBE)).withPedestalItem(MARK_OF_MASTERY.get()).withPedestalItem(Items.NETHERITE_INGOT).withPedestalItem(2, essence).withSourceCost(7000).keepNbtOfReagent(true).build());
-    //    recipes.add(Abuilder().withResult(armorSet.getLegs()).withReagent(Ingredient.of(AETagsProvider.AEItemTagsProvider.MAGIC_LEG)).withPedestalItem(MARK_OF_MASTERY.get()).withPedestalItem(Items.NETHERITE_INGOT).withPedestalItem(2, essence).withSourceCost(7000).keepNbtOfReagent(true).build());
-    //    recipes.add(Abuilder().withResult(armorSet.getBoots()).withReagent(Ingredient.of(AETagsProvider.AEItemTagsProvider.MAGIC_BOOT)).withPedestalItem(MARK_OF_MASTERY.get()).withPedestalItem(Items.NETHERITE_INGOT).withPedestalItem(2, essence).withSourceCost(7000).keepNbtOfReagent(true).build());
+        ArrayList<Item>[] pieceTypes = new ArrayList[4];
+        for (int i = 0; i < 4; i++) {
+            pieceTypes[i] = new ArrayList<>();
+        }
 
-    // }
+        pieceTypes[0].add(armorSet.getHat());
+        pieceTypes[1].add(armorSet.getChest());
+        pieceTypes[2].add(armorSet.getLegs());
+        pieceTypes[3].add(armorSet.getBoots());
+
+        for (var base : bases) {
+            pieceTypes[0].add(base.getHat());
+            pieceTypes[1].add(base.getChest());
+            pieceTypes[2].add(base.getLegs());
+            pieceTypes[3].add(base.getBoots());
+        }
+
+        for (int i = 0; i < 4; i++) {
+            List<Item> pieces = pieceTypes[i];
+            Item piece = pieces.getFirst();
+
+            var builder = Abuilder()
+                    .withResult(piece)
+                    .withReagent(MARK_OF_MASTERY);
+
+            for (int j = 1; j < pieces.size(); j++) {
+                builder = builder.withPedestalItem(pieces.get(j));
+            }
+
+            recipes.add(
+                    builder
+                            .withPedestalItem(2, essence)
+                            .withSourceCost(7000)
+                            .keepNbtOfReagent(true)
+                            .build()
+            );
+        }
+    }
 
     protected static Path getRecipePath(Path pathIn, String str) {
         return pathIn.resolve("data/ars_elemancy/recipe/" + str + ".json");
@@ -370,20 +168,20 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     @Override
     public String getName() {
-        return "Ars Elemental Apparatus";
+        return "Ars Elemancy Apparatus";
     }
 
-    // ArmorBuilder Abuilder() {
-    //    return new ArmorBuilder();
-    // }
+    ArmorBuilder Abuilder() {
+        return new ArmorBuilder();
+    }
 
-    //public static class ArmorBuilder extends ApparatusRecipeBuilder {
+    public static class ArmorBuilder extends ApparatusRecipeBuilder {
 
-    //     @Override
-    //    public RecipeWrapper<EnchantingApparatusRecipe> build() {
-    //        var wrapper = super.build();
-    //        return new RecipeWrapper<>(wrapper.id(), new Recipe(wrapper.recipe().reagent(), wrapper.recipe().result(), wrapper.recipe().pedestalItems(), wrapper.recipe().sourceCost()), Recipe.CODEC);
-    //    }
-    //}
+        @Override
+        public RecipeWrapper<EnchantingApparatusRecipe> build() {
+            var wrapper = super.build();
+            return new RecipeWrapper<>(wrapper.id(), new ElemancyArmorRecipe(wrapper.recipe().reagent(), wrapper.recipe().result(), wrapper.recipe().pedestalItems(), wrapper.recipe().sourceCost()), ElemancyArmorRecipe.CODEC);
+        }
+    }
 
 }

@@ -1,0 +1,31 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:air_leggings"
+    },
+    {
+      "item": "ars_elemental:fire_leggings"
+    },
+    {
+      "item": "ars_elemental:aqua_leggings"
+    },
+    {
+      "item": "ars_elemental:earth_leggings"
+    },
+    {
+      "item": "ars_elemancy:elemancer_essence"
+    },
+    {
+      "item": "ars_elemancy:elemancer_essence"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:mark_of_mastery"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:elemancer_leggings"
+  },
+  "sourceCost": 7000
+}

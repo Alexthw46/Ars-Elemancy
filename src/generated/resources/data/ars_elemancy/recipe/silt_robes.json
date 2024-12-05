@@ -1,0 +1,25 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:air_robes"
+    },
+    {
+      "item": "ars_elemental:earth_robes"
+    },
+    {
+      "item": "ars_elemancy:silt_essence"
+    },
+    {
+      "item": "ars_elemancy:silt_essence"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:mark_of_mastery"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:silt_robes"
+  },
+  "sourceCost": 7000
+}

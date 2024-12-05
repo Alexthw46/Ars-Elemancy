@@ -1,6 +1,7 @@
 package lyrellion.ars_elemancy.client.patchouli;
 
 
+import com.hollingsworth.arsnouveau.common.items.data.ArmorPerkHolder;
 import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
 import com.hollingsworth.arsnouveau.setup.registry.DataComponentRegistry;
 import net.minecraft.resources.ResourceLocation;
@@ -32,14 +33,17 @@ public class ElemancyArmorProcessor implements IComponentProcessor {
     @Override
     public @NotNull IVariable process(Level level, String key) {
         if (holder == null) return IVariable.empty();
+
         var recipe = holder.value();
         return switch (key) {
-            case "reagent" -> IVariable.wrapList(Arrays.stream(recipe.reagent().getItems())
-                    .peek(i -> i.set(DataComponentRegistry.ARMOR_PERKS, i.get(DataComponentRegistry.ARMOR_PERKS).setTier(2)))
-                    .map(i -> IVariable.from(i, level.registryAccess())).collect(Collectors.toList()), level.registryAccess());
+            case "reagent" -> IVariable.wrapList(Arrays.stream(recipe.reagent().getItems()).map(i -> IVariable.from(i, level.registryAccess())).collect(Collectors.toList()), level.registryAccess());
             case "recipe" -> IVariable.wrap(holder.id().toString(), level.registryAccess());
             case "tier" -> IVariable.wrap(recipe.getOutputComponent().getString(), level.registryAccess());
-            case "output" -> IVariable.from(recipe.result(), level.registryAccess());
+            case "output" -> {
+                var result = recipe.result().copy();
+                result.set(DataComponentRegistry.ARMOR_PERKS, new ArmorPerkHolder().setTier(3));
+                yield IVariable.from(result, level.registryAccess());
+            }
             case "footer" -> IVariable.wrap(recipe.result().getItem().getDescriptionId(), level.registryAccess());
             default -> IVariable.empty();
         };
