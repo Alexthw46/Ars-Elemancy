@@ -64,16 +64,35 @@ public interface IElemancyArmor extends IElementalArmor {
     String getTier();
 
     default boolean doAbsorb(DamageSource damageSource) {
-        // check if the damage source is in the list of damage sources that this armor can absorb
-        return damageResistances.containsKey(getSchool()) && damageSource.is(damageResistances.get(getSchool()));
+        if (damageResistances.containsKey(this.getSchool()) && damageSource.is(damageResistances.get(this.getSchool()))) {
+            return true;
+        }
+
+        for (var school : this.getSchool().getSubSchools()) {
+            if (damageResistances.containsKey(school) && damageSource.is(damageResistances.get(school))) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    default boolean FillAbsorptions(DamageSource damageSource, HashMap<SpellSchool, Integer> bonusMap)  {
-        if (doAbsorb(damageSource))  {
-            bonusMap.put(getSchool(), bonusMap.getOrDefault(getSchool(), 0) + 1);
-        return true;
+    @Override
+    default boolean fillAbsorptions(DamageSource damageSource, HashMap<SpellSchool, Integer> bonusMap) {
+        boolean changed = false;
+        SpellSchool mainSchool = this.getSchool();
+        if (damageResistances.containsKey(mainSchool) && damageSource.is(damageResistances.get(mainSchool))) {
+            bonusMap.put(mainSchool, bonusMap.getOrDefault(mainSchool, 0) + 1);
+            changed = true;
+        }
 
-        }else return false;
+        for (var school : mainSchool.getSubSchools()) {
+            if (damageResistances.containsKey(school) && damageSource.is(damageResistances.get(school))) {
+                bonusMap.put(school, bonusMap.getOrDefault(school, 0) + 1);
+            }
+            changed = true;
+        }
+
+        return changed;
     }
-
 }
