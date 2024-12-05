@@ -38,10 +38,9 @@ public class AEItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        Set<DeferredHolder<Item,? extends Item>> items = new HashSet<>(ModItems.ITEMS.getEntries());
+        Set<DeferredHolder<Item, ? extends Item>> items = new HashSet<>(ModItems.ITEMS.getEntries());
 
         takeAll(items, i -> i.get() instanceof AnimBlockItem).forEach(this::blockItem);
-        takeAll(items, i -> i.get() instanceof ArmorItem);
         takeAll(items, i -> i.get() instanceof SpellPrismLens);
         takeAll(items, i -> i.get() instanceof BlockItem bi && bi.getBlock() instanceof ArchfruitPod).forEach(this::generatedItem);
         takeAll(items, i -> i.get() instanceof BlockItem bi && bi.getBlock() instanceof FenceBlock).forEach(this::fenceBlockItem);
@@ -55,27 +54,47 @@ public class AEItemModelProvider extends ItemModelProvider {
 
     private void spawnEgg(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
-        withExistingParent(name, SPAWN_EGG);
+        try {
+            withExistingParent(name, SPAWN_EGG);
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void handheldItem(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
-        withExistingParent(name, HANDHELD).texture("layer0", ArsElemancy.prefix("item/" + name));
+        try {
+            withExistingParent(name, HANDHELD).texture("layer0", ArsElemancy.prefix("item/" + name));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void generatedItem(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
-        withExistingParent(name, GENERATED).texture("layer0", ArsElemancy.prefix("item/" + name));
+        try {
+            withExistingParent(name, GENERATED).texture("layer0", ArsElemancy.prefix("item/" + name));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void focusModel(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
-        withExistingParent("item/focus/" + name, GENERATED).texture("layer0", ArsElemancy.prefix("item/" + name));
+        try {
+            withExistingParent("item/focus/" + name, GENERATED).texture("layer0", ArsElemancy.prefix("item/" + name));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void blockGeneratedItem(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
-        withExistingParent(name, GENERATED).texture("layer0", ArsElemancy.prefix("block/" + name));
+        try {
+            withExistingParent(name, GENERATED).texture("layer0", ArsElemancy.prefix("block/" + name));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void blockItem(DeferredHolder<Item, ? extends Item> i) {
@@ -83,13 +102,21 @@ public class AEItemModelProvider extends ItemModelProvider {
         String root = "block/";
         if (i.get() instanceof BlockItem bi && (bi.getBlock() instanceof RotatedPillarBlock || bi.getBlock() instanceof LeavesBlock || bi.getBlock() instanceof StrippableLog))
             root = "block/archwood/";
-        getBuilder(name).parent(new ModelFile.UncheckedModelFile(ArsElemancy.prefix(root + name)));
+        try {
+            getBuilder(name).parent(new ModelFile.UncheckedModelFile(ArsElemancy.prefix(root + name)));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     private void fenceBlockItem(DeferredHolder<Item, ? extends Item> i) {
         String name = BuiltInRegistries.ITEM.getKey(i.get()).getPath();
         String baseName = name.substring(0, name.length() - 6);
-        fenceInventory(name, ArsElemancy.prefix("block/" + baseName));
+        try {
+            fenceInventory(name, ArsElemancy.prefix("block/" + baseName));
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Failed to generate model {}", name, e);
+        }
     }
 
     @NotNull

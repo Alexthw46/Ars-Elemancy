@@ -28,9 +28,7 @@ public class Datagen {
         output = gen.getPackOutput();
 
         gen.addProvider(event.includeClient(), new AEBlockStateProvider(gen, existingFileHelper));
-        //TODO this can generate the item model for focus etc. but will crash datagen if the asked texture does not exist
-
-    //    gen.addProvider(event.includeClient(), new AEItemModelProvider(gen, existingFileHelper));
+        gen.addProvider(event.includeClient(), new AEItemModelProvider(gen, existingFileHelper));
 
         BlockTagsProvider BTP = new AETagsProvider.AEBlockTagsProvider(gen, provider, existingFileHelper);
         gen.addProvider(event.includeServer(), BTP);
