@@ -61,6 +61,11 @@ public class AEImbuementProvider extends ImbuementRecipeProvider {
         recipes.add(new ImbuementRecipe("lava_essence", Ingredient.of(ItemsRegistry.MANIPULATION_ESSENCE), ModItems.LAVA_ESSENCE.get().getDefaultInstance(), 3000)
                 .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
                 .withPedestalItem(ItemsRegistry.EARTH_ESSENCE));
+        recipes.add(new ImbuementRecipe("elemancer_essence", Ingredient.of(ItemsRegistry.SOURCE_GEM), ModItems.ELEMANCER_ESSENCE.get().getDefaultInstance(), 3000)
+                .withPedestalItem(ItemsRegistry.AIR_ESSENCE)
+                .withPedestalItem(ItemsRegistry.FIRE_ESSENCE)
+                .withPedestalItem(ItemsRegistry.WATER_ESSENCE)
+                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE));
 
 //        recipes.add(new ImbuementRecipe("mark_of_mastery", Ingredient.of(ItemsRegistry.WILDEN_TRIBUTE), new ItemStack(ModItems.MARK_OF_MASTERY.get(), 5), 10000)
 //                .withPedestalItem(ItemsRegistry.EARTH_ESSENCE)

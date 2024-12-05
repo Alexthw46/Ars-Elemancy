@@ -1,0 +1,25 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:fire_boots"
+    },
+    {
+      "item": "ars_elemental:earth_boots"
+    },
+    {
+      "item": "ars_elemancy:lava_essence"
+    },
+    {
+      "item": "ars_elemancy:lava_essence"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:mark_of_mastery"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:lava_boots"
+  },
+  "sourceCost": 7000
+}

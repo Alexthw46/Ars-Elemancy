@@ -55,12 +55,12 @@ public class ElemancyArmorRecipe extends EnchantingApparatusRecipe implements IT
 
     @Override
     public @NotNull RecipeType<?> getType() {
-        return ModRegistry.ELEMENTAL_ARMOR_UP.get();
+        return ModRegistry.ELEMANCY_ARMOR_UP.get();
     }
 
     @Override
     public @NotNull RecipeSerializer<?> getSerializer() {
-        return ModRegistry.ELEMENTAL_ARMOR_UP_SERIALIZER.get();
+        return ModRegistry.ELEMANCY_ARMOR_UP_SERIALIZER.get();
     }
 
     /**

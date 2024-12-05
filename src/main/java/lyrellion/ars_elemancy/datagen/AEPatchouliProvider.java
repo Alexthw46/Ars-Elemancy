@@ -1,5 +1,6 @@
 package lyrellion.ars_elemancy.datagen;
 
+import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.registry.ModItems;
 import lyrellion.ars_elemancy.registry.ModRegistry;
@@ -55,6 +56,14 @@ public class AEPatchouliProvider extends PatchouliProvider {
 //                , getPath(EQUIPMENT, "fire_bangle")
 //        );
 
+        addArmorPage(ModItems.TEMPEST_ARMOR);
+        addArmorPage(ModItems.MIRE_ARMOR);
+        addArmorPage(ModItems.SILT_ARMOR);
+        addArmorPage(ModItems.LAVA_ARMOR);
+        addArmorPage(ModItems.VAPOR_ARMOR);
+        addArmorPage(ModItems.CINDER_ARMOR);
+        addArmorPage(ModItems.ELEMANCER_ARMOR);
+
         for (PatchouliPage patchouliPage : pages) {
             saveStable(cache, patchouliPage.build(), patchouliPage.path());
         }
@@ -64,7 +73,6 @@ public class AEPatchouliProvider extends PatchouliProvider {
     private void addArmorPage(ArmorSet armorSet) {
         PatchouliBuilder builder = new PatchouliBuilder(ARMOR, armorSet.getTranslationKey())
                 .withIcon(armorSet.getHat())
-                .withPage(new TextPage("ars_elemancy.page.armor_set.wip"))
                 .withPage(new TextPage("ars_elemancy.page.armor_set." + armorSet.getName()))
                 .withPage(new AEPage(armorSet.getHat()))
                 .withPage(new AEPage(armorSet.getChest()))
@@ -81,7 +89,7 @@ public class AEPatchouliProvider extends PatchouliProvider {
 
         @Override
         public ResourceLocation getType() {
-            return ResourceLocation.fromNamespaceAndPath(ArsNouveau.MODID, "elemental_armor_recipe");
+            return ResourceLocation.fromNamespaceAndPath(ArsNouveau.MODID, "elemancy_armor_recipe");
         }
     }
 
