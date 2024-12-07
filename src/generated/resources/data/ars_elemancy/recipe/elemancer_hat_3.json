@@ -1,0 +1,31 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:mark_of_mastery"
+    },
+    {
+      "item": "ars_elemental:air_hat"
+    },
+    {
+      "item": "ars_elemental:fire_hat"
+    },
+    {
+      "item": "ars_elemental:earth_hat"
+    },
+    {
+      "item": "ars_elemancy:elemancer_essence"
+    },
+    {
+      "item": "ars_elemancy:elemancer_essence"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:aqua_hat"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:elemancer_hat"
+  },
+  "sourceCost": 7000
+}

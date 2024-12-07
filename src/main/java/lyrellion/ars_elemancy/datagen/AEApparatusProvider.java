@@ -1,5 +1,6 @@
 package lyrellion.ars_elemancy.datagen;
 
+import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
@@ -136,6 +137,8 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         return new ArmorSetData(set.getHat(), set.getChest(), set.getLegs(), set.getBoots());
     }
 
+    static Object2IntArrayMap<String> REAGENT_USAGE = new Object2IntArrayMap<>();
+
     protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, ArmorSetData... bases) {
         if (bases.length < 2) {
             throw new IllegalArgumentException("needs at least 2 armor bases");
@@ -175,12 +178,14 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                     }
                 }
 
+                String reagentName = BuiltInRegistries.ITEM.getKey(piece).getPath();
+
                 recipes.add(
                         builder
                                 .withPedestalItem(2, essence)
                                 .withSourceCost(7000)
                                 .keepNbtOfReagent(true)
-                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece).getPath() + "_from_" + BuiltInRegistries.ITEM.getKey(reagent).getPath()))
+                                .withId(ArsElemancy.prefix(reagentName + "_" + REAGENT_USAGE.compute(reagentName, (k, v) -> v == null ? 1 : v + 1)))
                                 .build()
                 );
             }
