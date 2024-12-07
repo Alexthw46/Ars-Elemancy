@@ -130,7 +130,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         return new ArmorSetData(set.getHat(), set.getChest(), set.getLegs(), set.getBoots());
     }
 
-    static Object2IntArrayMap<String> REAGENT_USAGE = new Object2IntArrayMap<>();
+    static Object2IntArrayMap<Item> OUTPUT_COUNTER = new Object2IntArrayMap<>();
 
     protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, ArmorSetData... bases) {
         if (bases.length < 2) {
@@ -171,14 +171,12 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                     }
                 }
 
-                String reagentName = BuiltInRegistries.ITEM.getKey(piece).getPath();
-
                 recipes.add(
                         builder
                                 .withPedestalItem(2, essence)
                                 .withSourceCost(7000)
                                 .keepNbtOfReagent(true)
-                                .withId(ArsElemancy.prefix(reagentName + "_" + REAGENT_USAGE.compute(reagentName, (k, v) -> v == null ? 1 : v + 1)))
+                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece).getPath() + "_" + OUTPUT_COUNTER.compute(piece, (k, v) -> v == null ? 1 : v + 1)))
                                 .build()
                 );
             }
