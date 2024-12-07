@@ -5,23 +5,17 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemental:air_robes"
-    },
-    {
-      "item": "ars_elemental:fire_robes"
-    },
-    {
-      "item": "ars_elemental:aqua_robes"
-    },
-    {
       "item": "ars_elemancy:elemancer_essence"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
+    },
+    {
+      "item": "ars_elemancy:cinder_robes"
     }
   ],
   "reagent": {
-    "item": "ars_elemental:earth_robes"
+    "item": "ars_elemancy:mire_robes"
   },
   "result": {
     "count": 1,
