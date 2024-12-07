@@ -5,13 +5,7 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemental:air_leggings"
-    },
-    {
-      "item": "ars_elemental:aqua_leggings"
-    },
-    {
-      "item": "ars_elemental:earth_leggings"
+      "item": "ars_elemancy:tempest_leggings"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
@@ -21,7 +15,7 @@
     }
   ],
   "reagent": {
-    "item": "ars_elemental:fire_leggings"
+    "item": "ars_elemancy:lava_leggings"
   },
   "result": {
     "count": 1,

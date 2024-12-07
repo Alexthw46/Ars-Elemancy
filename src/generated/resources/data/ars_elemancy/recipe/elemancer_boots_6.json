@@ -5,7 +5,7 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:tempest_boots"
+      "item": "ars_elemancy:silt_boots"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
@@ -15,7 +15,7 @@
     }
   ],
   "reagent": {
-    "item": "ars_elemancy:lava_boots"
+    "item": "ars_elemancy:vapor_boots"
   },
   "result": {
     "count": 1,

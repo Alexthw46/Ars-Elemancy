@@ -105,16 +105,9 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
         addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
         addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
         addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.TEMPEST_ARMOR), armorSet(ModItems.LAVA_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR), armorSet(ModItems.LAVA_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.TEMPEST_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR));
         addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.CINDER_ARMOR), armorSet(ModItems.MIRE_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(ModItems.MIRE_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.CINDER_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
         addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.SILT_ARMOR), armorSet(ModItems.VAPOR_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(ModItems.VAPOR_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.SILT_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
 
 
         Path output = this.generator.getPackOutput().getOutputFolder();

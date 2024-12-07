@@ -5,13 +5,7 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemental:fire_hat"
-    },
-    {
-      "item": "ars_elemental:aqua_hat"
-    },
-    {
-      "item": "ars_elemental:earth_hat"
+      "item": "ars_elemancy:lava_hat"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
@@ -21,7 +15,7 @@
     }
   ],
   "reagent": {
-    "item": "ars_elemental:air_hat"
+    "item": "ars_elemancy:tempest_hat"
   },
   "result": {
     "count": 1,

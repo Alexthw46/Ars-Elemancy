@@ -5,7 +5,7 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:tempest_robes"
+      "item": "ars_elemancy:silt_robes"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
@@ -15,7 +15,7 @@
     }
   ],
   "reagent": {
-    "item": "ars_elemancy:lava_robes"
+    "item": "ars_elemancy:vapor_robes"
   },
   "result": {
     "count": 1,
