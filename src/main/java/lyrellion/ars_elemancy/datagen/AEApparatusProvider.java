@@ -98,13 +98,17 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         );
 
         // Elemancy armors
-        addArmorRecipes(ModItems.TEMPEST_ARMOR, (ItemLike) ModItems.TEMPEST_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
-        addArmorRecipes(ModItems.CINDER_ARMOR, (ItemLike) ModItems.CINDER_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR);
-        addArmorRecipes(ModItems.SILT_ARMOR, (ItemLike) ModItems.SILT_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
-        addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
-        addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR);
-        addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, alexthw.ars_elemental.registry.ModItems.AIR_ARMOR, alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR, alexthw.ars_elemental.registry.ModItems.WATER_ARMOR, alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR);
+        addArmorRecipes(ModItems.TEMPEST_ARMOR, (ItemLike) ModItems.TEMPEST_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
+        addArmorRecipes(ModItems.CINDER_ARMOR, (ItemLike) ModItems.CINDER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR));
+        addArmorRecipes(ModItems.SILT_ARMOR, (ItemLike) ModItems.SILT_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
+        addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
+        addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
+        addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.TEMPEST_ARMOR), armorSet(ModItems.LAVA_ARMOR));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.CINDER_ARMOR), armorSet(ModItems.MIRE_ARMOR));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.SILT_ARMOR), armorSet(ModItems.VAPOR_ARMOR));
+
 
         Path output = this.generator.getPackOutput().getOutputFolder();
         for (ApparatusRecipeBuilder.RecipeWrapper<? extends EnchantingApparatusRecipe> g : recipes) {
@@ -116,7 +120,17 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     }
 
-    protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, alexthw.ars_elemental.common.items.armor.ArmorSet... bases) {
+    record ArmorSetData(Item hat, Item chest, Item legs, Item boots) {}
+
+    ArmorSetData armorSet(alexthw.ars_elemental.common.items.armor.ArmorSet set) {
+        return new ArmorSetData(set.getHat(), set.getChest(), set.getLegs(), set.getBoots());
+    }
+
+    ArmorSetData armorSet(ArmorSet set) {
+        return new ArmorSetData(set.getHat(), set.getChest(), set.getLegs(), set.getBoots());
+    }
+
+    protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, ArmorSetData... bases) {
         if (bases.length < 2) {
             throw new IllegalArgumentException("needs at least 2 armor bases");
         }
@@ -132,21 +146,21 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         pieceTypes[3].add(armorSet.getBoots());
 
         for (var base : bases) {
-            pieceTypes[0].add(base.getHat());
-            pieceTypes[1].add(base.getChest());
-            pieceTypes[2].add(base.getLegs());
-            pieceTypes[3].add(base.getBoots());
+            pieceTypes[0].add(base.hat);
+            pieceTypes[1].add(base.chest);
+            pieceTypes[2].add(base.legs);
+            pieceTypes[3].add(base.boots);
         }
 
         for (int i = 0; i < 4; i++) {
             List<Item> pieces = pieceTypes[i];
             Item piece = pieces.getFirst();
             for (int j = 1; j < pieces.size(); j++) {
-                var inner = pieces.get(j);
+                var reagent = pieces.get(j);
 
                 var builder = Abuilder()
                         .withResult(piece)
-                        .withReagent(inner)
+                        .withReagent(reagent)
                         .withPedestalItem(MARK_OF_MASTERY);
 
                 for (int k = 1; k < pieces.size(); k++) {
@@ -160,7 +174,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                                 .withPedestalItem(2, essence)
                                 .withSourceCost(7000)
                                 .keepNbtOfReagent(true)
-                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece.asItem()).getPath() + "_" + j))
+                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece).getPath() + "_from_" + BuiltInRegistries.ITEM.getKey(reagent).getPath()))
                                 .build()
                 );
             }
