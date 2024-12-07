@@ -5,7 +5,10 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:mire_leggings"
+      "item": "ars_elemental:earth_leggings"
+    },
+    {
+      "item": "ars_elemental:aqua_leggings"
     },
     {
       "item": "ars_elemancy:elemancer_essence"

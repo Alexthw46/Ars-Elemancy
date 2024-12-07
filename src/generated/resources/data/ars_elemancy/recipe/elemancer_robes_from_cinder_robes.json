@@ -5,7 +5,10 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:mire_robes"
+      "item": "ars_elemental:earth_robes"
+    },
+    {
+      "item": "ars_elemental:aqua_robes"
     },
     {
       "item": "ars_elemancy:elemancer_essence"
