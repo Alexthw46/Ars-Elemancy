@@ -1,7 +1,6 @@
 package lyrellion.ars_elemancy.datagen;
 
-import com.hollingsworth.arsnouveau.common.items.data.ArmorPerkHolder;
-import com.hollingsworth.arsnouveau.setup.registry.DataComponentRegistry;
+import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
 import lyrellion.ars_elemancy.registry.ModItems;
@@ -10,12 +9,11 @@ import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeBuilder;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeProvider;
 import com.hollingsworth.arsnouveau.common.datagen.RecipeDatagen;
 import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 
 import java.nio.file.Path;
@@ -143,22 +141,29 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         for (int i = 0; i < 4; i++) {
             List<Item> pieces = pieceTypes[i];
             Item piece = pieces.getFirst();
-
-            var builder = Abuilder()
-                    .withResult(piece)
-                    .withReagent(MARK_OF_MASTERY);
-
             for (int j = 1; j < pieces.size(); j++) {
-                builder = builder.withPedestalItem(pieces.get(j));
-            }
+                var inner = pieces.get(j);
 
-            recipes.add(
-                    builder
-                            .withPedestalItem(2, essence)
-                            .withSourceCost(7000)
-                            .keepNbtOfReagent(true)
-                            .build()
-            );
+                var builder = Abuilder()
+                        .withResult(piece)
+                        .withReagent(inner)
+                        .withPedestalItem(MARK_OF_MASTERY);
+
+                for (int k = 1; k < pieces.size(); k++) {
+                    if (j != k) {
+                        builder = builder.withPedestalItem(pieces.get(k));
+                    }
+                }
+
+                recipes.add(
+                        builder
+                                .withPedestalItem(2, essence)
+                                .withSourceCost(7000)
+                                .keepNbtOfReagent(true)
+                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece.asItem()).getPath() + "_" + j))
+                                .build()
+                );
+            }
         }
     }
 

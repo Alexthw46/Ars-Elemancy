@@ -27,20 +27,10 @@ import java.util.List;
 
 public class ElemancyArmorRecipe extends EnchantingApparatusRecipe implements ITextOutput {
 
-    public int tier = 3; // 0 indexed
+    public int tier = 4;
 
     public ElemancyArmorRecipe(Ingredient reagent, ItemStack result, List<Ingredient> pedestalItems, int cost) {
         super(reagent, result, pedestalItems, cost, true);
-        //this.tier = tier;
-    }
-
-    @Override
-    public boolean matches(ApparatusRecipeInput input, Level level) {
-        ArmorPerkHolder perkHolder = PerkUtil.getPerkHolder(input.catalyst());
-        if (!(perkHolder instanceof ArmorPerkHolder armorPerkHolder)) {
-            return false;
-        }
-        return armorPerkHolder.getTier() == 2 && super.matches(input, level);
     }
 
     @Override
