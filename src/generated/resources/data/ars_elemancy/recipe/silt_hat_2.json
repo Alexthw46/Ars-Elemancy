@@ -5,13 +5,13 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
+      "item": "ars_elemancy:silt_essence"
+    },
+    {
+      "item": "ars_elemancy:silt_essence"
+    },
+    {
       "item": "ars_elemental:air_hat"
-    },
-    {
-      "item": "ars_elemancy:silt_essence"
-    },
-    {
-      "item": "ars_elemancy:silt_essence"
     }
   ],
   "reagent": {

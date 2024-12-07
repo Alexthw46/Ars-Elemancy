@@ -5,13 +5,13 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
+      "item": "ars_elemancy:elemancer_essence"
+    },
+    {
+      "item": "ars_elemancy:elemancer_essence"
+    },
+    {
       "item": "ars_elemancy:silt_boots"
-    },
-    {
-      "item": "ars_elemancy:elemancer_essence"
-    },
-    {
-      "item": "ars_elemancy:elemancer_essence"
     }
   ],
   "reagent": {

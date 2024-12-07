@@ -5,13 +5,13 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
+      "item": "ars_elemancy:tempest_essence"
+    },
+    {
+      "item": "ars_elemancy:tempest_essence"
+    },
+    {
       "item": "ars_elemental:air_leggings"
-    },
-    {
-      "item": "ars_elemancy:tempest_essence"
-    },
-    {
-      "item": "ars_elemancy:tempest_essence"
     }
   ],
   "reagent": {

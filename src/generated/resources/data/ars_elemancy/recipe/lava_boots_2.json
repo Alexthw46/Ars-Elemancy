@@ -5,13 +5,13 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
+      "item": "ars_elemancy:lava_essence"
+    },
+    {
+      "item": "ars_elemancy:lava_essence"
+    },
+    {
       "item": "ars_elemental:fire_boots"
-    },
-    {
-      "item": "ars_elemancy:lava_essence"
-    },
-    {
-      "item": "ars_elemancy:lava_essence"
     }
   ],
   "reagent": {

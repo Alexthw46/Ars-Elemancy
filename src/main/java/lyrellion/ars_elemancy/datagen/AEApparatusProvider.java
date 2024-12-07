@@ -163,7 +163,11 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                 var builder = Abuilder()
                         .withResult(piece)
                         .withReagent(reagent)
-                        .withPedestalItem(MARK_OF_MASTERY);
+                        .withPedestalItem(MARK_OF_MASTERY)
+                        .withPedestalItem(2, essence)
+                        .withSourceCost(7000)
+                        .keepNbtOfReagent(true)
+                        .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece).getPath() + "_" + OUTPUT_COUNTER.compute(piece, (k, v) -> v == null ? 1 : v + 1)));
 
                 for (int k = 1; k < pieces.size(); k++) {
                     if (j != k) {
@@ -171,14 +175,7 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
                     }
                 }
 
-                recipes.add(
-                        builder
-                                .withPedestalItem(2, essence)
-                                .withSourceCost(7000)
-                                .keepNbtOfReagent(true)
-                                .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(piece).getPath() + "_" + OUTPUT_COUNTER.compute(piece, (k, v) -> v == null ? 1 : v + 1)))
-                                .build()
-                );
+                recipes.add(builder.build());
             }
         }
     }

@@ -5,13 +5,13 @@
       "item": "ars_elemental:mark_of_mastery"
     },
     {
+      "item": "ars_elemancy:vapor_essence"
+    },
+    {
+      "item": "ars_elemancy:vapor_essence"
+    },
+    {
       "item": "ars_elemental:fire_robes"
-    },
-    {
-      "item": "ars_elemancy:vapor_essence"
-    },
-    {
-      "item": "ars_elemancy:vapor_essence"
     }
   ],
   "reagent": {
