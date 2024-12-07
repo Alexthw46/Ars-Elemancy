@@ -1,12 +1,14 @@
 package lyrellion.ars_elemancy;
 
 
+import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
 import com.hollingsworth.arsnouveau.api.perk.PerkSlot;
 import com.hollingsworth.arsnouveau.api.registry.*;
 import com.hollingsworth.arsnouveau.api.ritual.AbstractRitual;
 import com.hollingsworth.arsnouveau.api.spell.*;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.registry.ModItems;
+import lyrellion.ars_elemancy.registry.ModRegistry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,8 +49,8 @@ public class ArsNouveauRegistry {
     }
 
     public static void postInit() {
-
         ArsNouveauRegistry.addPerkSlots();
+        ArsNouveauAPI.getInstance().getEnchantingRecipeTypes().add(ModRegistry.ELEMANCY_ARMOR_UP.get());
     }
 
     public static void addSchool(AbstractSpellPart part, SpellSchool school) {

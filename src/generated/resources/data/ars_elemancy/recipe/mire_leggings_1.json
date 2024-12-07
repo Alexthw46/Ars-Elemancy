@@ -1,0 +1,25 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:mark_of_mastery"
+    },
+    {
+      "item": "ars_elemental:aqua_leggings"
+    },
+    {
+      "item": "ars_elemancy:mire_essence"
+    },
+    {
+      "item": "ars_elemancy:mire_essence"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:earth_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:mire_leggings"
+  },
+  "sourceCost": 7000
+}
