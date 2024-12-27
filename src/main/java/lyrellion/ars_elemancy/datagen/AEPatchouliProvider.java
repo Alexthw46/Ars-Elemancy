@@ -39,7 +39,14 @@ public class AEPatchouliProvider extends PatchouliProvider {
             addGlyphPage(spell);
         }
 
-        addBasicItem(ModItems.ENCHANTER_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.ENCHANTER_BANGLE.get()));
+        addBasicItem(ModItems.TEMPEST_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.TEMPEST_BANGLE.get()));
+        addBasicItem(ModItems.MIRE_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.MIRE_BANGLE.get()));
+        addBasicItem(ModItems.VAPOR_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.VAPOR_BANGLE.get()));
+        addBasicItem(ModItems.SILT_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.SILT_BANGLE.get()));
+        addBasicItem(ModItems.LAVA_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.LAVA_BANGLE.get()));
+        addBasicItem(ModItems.CINDER_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.CINDER_BANGLE.get()));
+        addBasicItem(ModItems.ELEMANCER_BANGLE.get(), EQUIPMENT, new ApparatusPage(ModItems.ELEMANCER_BANGLE.get()));
+
 //
 //        addPage(new PatchouliBuilder(EQUIPMENT, ModItems.FIRE_FOCUS.get())
 //                        .withIcon(ModItems.FIRE_FOCUS.get())

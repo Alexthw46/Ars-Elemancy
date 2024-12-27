@@ -56,12 +56,31 @@ public class AETagsProvider {
 
         @Override
         protected void addTags(HolderLookup.@NotNull Provider provider) {
-            tag(CURIO_SPELL_FOCUS).add(ModItems.TEMPEST_FOCUS.get()); //TODO add the other
-            tag(CURIO_BANGLE);
-            tag(MAGIC_HOOD).add(ItemsRegistry.BATTLEMAGE_HOOD.get(), ItemsRegistry.ARCANIST_HOOD.get(), ItemsRegistry.SORCERER_HOOD.get());
-            tag(MAGIC_ROBE).add(ItemsRegistry.BATTLEMAGE_ROBES.get(), ItemsRegistry.ARCANIST_ROBES.get(), ItemsRegistry.SORCERER_ROBES.get());
-            tag(MAGIC_LEG).add(ItemsRegistry.BATTLEMAGE_LEGGINGS.get(), ItemsRegistry.ARCANIST_LEGGINGS.get(), ItemsRegistry.SORCERER_LEGGINGS.get());
-            tag(MAGIC_BOOT).add(ItemsRegistry.BATTLEMAGE_BOOTS.get(), ItemsRegistry.ARCANIST_BOOTS.get(), ItemsRegistry.SORCERER_BOOTS.get());
+            tag(CURIO_SPELL_FOCUS)
+                    .add(ModItems.TEMPEST_FOCUS.get())
+                    .add(ModItems.MIRE_FOCUS.get())
+                    .add(ModItems.SILT_FOCUS.get())
+                    .add(ModItems.LAVA_FOCUS.get())
+                    .add(ModItems.VAPOR_FOCUS.get())
+                    .add(ModItems.CINDER_FOCUS.get())
+                    .add(ModItems.ELEMANCER_FOCUS.get());
+
+            tag(CURIO_BANGLE)
+                    .add(ModItems.TEMPEST_BANGLE.get())
+                    .add(ModItems.MIRE_BANGLE.get())
+                    .add(ModItems.SILT_BANGLE.get())
+                    .add(ModItems.LAVA_BANGLE.get())
+                    .add(ModItems.VAPOR_BANGLE.get())
+                    .add(ModItems.CINDER_BANGLE.get())
+                    .add(ModItems.ELEMANCER_BANGLE.get());
+
+            addArmorTags(ModItems.TEMPEST_ARMOR);
+            addArmorTags(ModItems.MIRE_ARMOR);
+            addArmorTags(ModItems.SILT_ARMOR);
+            addArmorTags(ModItems.LAVA_ARMOR);
+            addArmorTags(ModItems.VAPOR_ARMOR);
+            addArmorTags(ModItems.CINDER_ARMOR);
+            addArmorTags(ModItems.ELEMANCER_ARMOR);
         }
 
         public void addArmorTags(ArmorSet set) {

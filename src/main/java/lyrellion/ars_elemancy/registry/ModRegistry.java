@@ -55,7 +55,7 @@ public class ModRegistry {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ELEMANCY_TAB;
     public static final DeferredHolder<RecipeType<?>, RecipeType<ElemancyArmorRecipe>> ELEMANCY_ARMOR_UP;
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ElemancyArmorRecipe>> ELEMANCY_ARMOR_UP_SERIALIZER;
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<SchoolCasterTomeData>> E_TOME_CASTER = D_COMPONENTS.register("elemental_tome_caster", () -> DataComponentType.<SchoolCasterTomeData>builder().persistent(SchoolCasterTomeData.CODEC.codec()).networkSynchronized(SchoolCasterTomeData.STREAM_CODEC).build());
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<SchoolCasterTomeData>> E_TOME_CASTER = D_COMPONENTS.register("elemancy_tome_caster", () -> DataComponentType.<SchoolCasterTomeData>builder().persistent(SchoolCasterTomeData.CODEC.codec()).networkSynchronized(SchoolCasterTomeData.STREAM_CODEC).build());
 
     static {
         ELEMANCY_ARMOR_UP = RECIPES.register("armor_upgrade", () -> RecipeType.simple(prefix("armor_upgrade")));

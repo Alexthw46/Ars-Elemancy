@@ -6,7 +6,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import static lyrellion.ars_elemancy.registry.ModItems.ArmorProp;
+import static lyrellion.ars_elemancy.registry.ModItems.armorProps;
 import static lyrellion.ars_elemancy.registry.ModItems.ITEMS;
 
 
@@ -19,10 +19,10 @@ public class ArmorSet {
 
     public ArmorSet(String name, SpellSchool element) {
         this.name = name;
-        this.head = ITEMS.register(name + "_hat", () -> new ElemancyArmor(ArmorItem.Type.HELMET, element, ArmorProp()));
-        this.chest = ITEMS.register(name + "_robes", () -> new ElemancyArmor(ArmorItem.Type.CHESTPLATE, element, ArmorProp()));
-        this.legs = ITEMS.register(name + "_leggings", () -> new ElemancyArmor(ArmorItem.Type.LEGGINGS, element, ArmorProp()));
-        this.feet = ITEMS.register(name + "_boots", () -> new ElemancyArmor(ArmorItem.Type.BOOTS, element, ArmorProp()));
+        this.head = ITEMS.register(name + "_hat", () -> new ElemancyArmor(ArmorItem.Type.HELMET, element, armorProps()));
+        this.chest = ITEMS.register(name + "_robes", () -> new ElemancyArmor(ArmorItem.Type.CHESTPLATE, element, armorProps()));
+        this.legs = ITEMS.register(name + "_leggings", () -> new ElemancyArmor(ArmorItem.Type.LEGGINGS, element, armorProps()));
+        this.feet = ITEMS.register(name + "_boots", () -> new ElemancyArmor(ArmorItem.Type.BOOTS, element, armorProps()));
     }
 
     DeferredHolder<Item,ElemancyArmor> head;

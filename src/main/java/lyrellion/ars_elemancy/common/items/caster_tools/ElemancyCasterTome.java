@@ -1,5 +1,6 @@
 package lyrellion.ars_elemancy.common.items.caster_tools;
 
+import alexthw.ars_elemental.common.items.caster_tools.ElementalCasterTome;
 import lyrellion.ars_elemancy.api.item.ISchoolFocus;
 import lyrellion.ars_elemancy.common.components.SchoolCasterTomeData;
 import lyrellion.ars_elemancy.registry.ModRegistry;
@@ -25,10 +26,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ElementalCasterTome extends CasterTome implements ISchoolFocus {
+public class ElemancyCasterTome extends CasterTome implements ISchoolFocus {
     private final SpellSchool school;
 
-    public ElementalCasterTome(Properties properties, SpellSchool school) {
+    public ElemancyCasterTome(Properties properties, SpellSchool school) {
         super(properties.component(ModRegistry.E_TOME_CASTER, new SchoolCasterTomeData()));
         this.school = school;
     }

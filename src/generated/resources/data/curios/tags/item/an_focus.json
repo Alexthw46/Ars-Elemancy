@@ -1,5 +1,11 @@
 {
   "values": [
-    "ars_elemancy:tempest_focus"
+    "ars_elemancy:tempest_focus",
+    "ars_elemancy:mire_focus",
+    "ars_elemancy:silt_focus",
+    "ars_elemancy:lava_focus",
+    "ars_elemancy:vapor_focus",
+    "ars_elemancy:cinder_focus",
+    "ars_elemancy:elemancer_focus"
   ]
 }

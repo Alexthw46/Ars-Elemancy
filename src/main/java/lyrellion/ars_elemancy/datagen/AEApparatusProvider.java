@@ -8,14 +8,13 @@ import lyrellion.ars_elemancy.registry.ModItems;
 import com.hollingsworth.arsnouveau.common.crafting.recipes.EnchantingApparatusRecipe;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeBuilder;
 import com.hollingsworth.arsnouveau.common.datagen.ApparatusRecipeProvider;
-import com.hollingsworth.arsnouveau.common.datagen.RecipeDatagen;
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -31,18 +30,16 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     @Override
     public void collectJsons(CachedOutput cache) {
-
-
-        recipes.add(builder()
-                .withResult(ModItems.ENCHANTER_BANGLE.get())
-                .withReagent(ItemsRegistry.RING_OF_POTENTIAL)
-                .withPedestalItem(RecipeDatagen.SOURCE_GEM_BLOCK)
-                .withPedestalItem(Items.GOLD_BLOCK)
-                .withPedestalItem(Items.GOLD_BLOCK)
-                .withPedestalItem(Items.END_CRYSTAL)
-                .build()
-        );
-
+        // Bangles
+        addCombinedRecipes(ModItems.TEMPEST_BANGLE, ModItems.TEMPEST_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.AIR_BANGLE, alexthw.ars_elemental.registry.ModItems.WATER_BANGLE));
+        addCombinedRecipes(ModItems.CINDER_BANGLE, ModItems.CINDER_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.AIR_BANGLE, alexthw.ars_elemental.registry.ModItems.FIRE_BANGLE));
+        addCombinedRecipes(ModItems.SILT_BANGLE, ModItems.SILT_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.AIR_BANGLE, alexthw.ars_elemental.registry.ModItems.EARTH_BANGLE));
+        addCombinedRecipes(ModItems.MIRE_BANGLE, ModItems.MIRE_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.EARTH_BANGLE, alexthw.ars_elemental.registry.ModItems.WATER_BANGLE));
+        addCombinedRecipes(ModItems.VAPOR_BANGLE, ModItems.VAPOR_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.FIRE_BANGLE, alexthw.ars_elemental.registry.ModItems.WATER_BANGLE));
+        addCombinedRecipes(ModItems.LAVA_BANGLE, ModItems.LAVA_ESSENCE, 7000, List.of(alexthw.ars_elemental.registry.ModItems.FIRE_BANGLE, alexthw.ars_elemental.registry.ModItems.EARTH_BANGLE));
+        addCombinedRecipes(ModItems.ELEMANCER_BANGLE, ModItems.ELEMANCER_ESSENCE, 7000, List.of(ModItems.TEMPEST_BANGLE, ModItems.LAVA_BANGLE));
+        addCombinedRecipes(ModItems.ELEMANCER_BANGLE, ModItems.ELEMANCER_ESSENCE, 7000, List.of(ModItems.CINDER_BANGLE, ModItems.MIRE_BANGLE));
+        addCombinedRecipes(ModItems.ELEMANCER_BANGLE, ModItems.ELEMANCER_ESSENCE, 7000, List.of(ModItems.SILT_BANGLE, ModItems.VAPOR_BANGLE));
 
         //focus upgrade
 
@@ -99,15 +96,15 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
         );
 
         // Elemancy armors
-        addArmorRecipes(ModItems.TEMPEST_ARMOR, (ItemLike) ModItems.TEMPEST_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
-        addArmorRecipes(ModItems.CINDER_ARMOR, (ItemLike) ModItems.CINDER_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR));
-        addArmorRecipes(ModItems.SILT_ARMOR, (ItemLike) ModItems.SILT_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
-        addArmorRecipes(ModItems.MIRE_ARMOR, (ItemLike) ModItems.MIRE_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
-        addArmorRecipes(ModItems.VAPOR_ARMOR, (ItemLike) ModItems.VAPOR_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR));
-        addArmorRecipes(ModItems.LAVA_ARMOR, (ItemLike) ModItems.LAVA_ESSENCE, armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.TEMPEST_ARMOR), armorSet(ModItems.LAVA_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.CINDER_ARMOR), armorSet(ModItems.MIRE_ARMOR));
-        addArmorRecipes(ModItems.ELEMANCER_ARMOR, (ItemLike) ModItems.ELEMANCER_ESSENCE, armorSet(ModItems.SILT_ARMOR), armorSet(ModItems.VAPOR_ARMOR));
+        addArmorRecipes(ModItems.TEMPEST_ARMOR, ModItems.TEMPEST_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR)));
+        addArmorRecipes(ModItems.CINDER_ARMOR, ModItems.CINDER_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR)));
+        addArmorRecipes(ModItems.SILT_ARMOR, ModItems.SILT_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.AIR_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR)));
+        addArmorRecipes(ModItems.MIRE_ARMOR, ModItems.MIRE_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR)));
+        addArmorRecipes(ModItems.VAPOR_ARMOR, ModItems.VAPOR_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.WATER_ARMOR)));
+        addArmorRecipes(ModItems.LAVA_ARMOR, ModItems.LAVA_ESSENCE, List.of(armorSet(alexthw.ars_elemental.registry.ModItems.FIRE_ARMOR), armorSet(alexthw.ars_elemental.registry.ModItems.EARTH_ARMOR)));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, ModItems.ELEMANCER_ESSENCE, List.of(armorSet(ModItems.TEMPEST_ARMOR), armorSet(ModItems.LAVA_ARMOR)));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, ModItems.ELEMANCER_ESSENCE, List.of(armorSet(ModItems.CINDER_ARMOR), armorSet(ModItems.MIRE_ARMOR)));
+        addArmorRecipes(ModItems.ELEMANCER_ARMOR, ModItems.ELEMANCER_ESSENCE, List.of(armorSet(ModItems.SILT_ARMOR), armorSet(ModItems.VAPOR_ARMOR)));
 
 
         Path output = this.generator.getPackOutput().getOutputFolder();
@@ -120,7 +117,8 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     }
 
-    record ArmorSetData(Item hat, Item chest, Item legs, Item boots) {}
+    public record ArmorSetData(Item hat, Item chest, Item legs, Item boots) {
+    }
 
     ArmorSetData armorSet(alexthw.ars_elemental.common.items.armor.ArmorSet set) {
         return new ArmorSetData(set.getHat(), set.getChest(), set.getLegs(), set.getBoots());
@@ -132,11 +130,12 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
     static Object2IntArrayMap<Item> OUTPUT_COUNTER = new Object2IntArrayMap<>();
 
-    protected void addArmorRecipes(ArmorSet armorSet, ItemLike essence, ArmorSetData... bases) {
-        if (bases.length < 2) {
+    protected void addArmorRecipes(ArmorSet armorSet, DeferredHolder<Item, ?> essenceHolder, List<ArmorSetData> bases) {
+        if (bases.size() < 2) {
             throw new IllegalArgumentException("needs at least 2 armor bases");
         }
 
+        var essence = essenceHolder.get();
         ArrayList<Item>[] pieceTypes = new ArrayList[4];
         for (int i = 0; i < 4; i++) {
             pieceTypes[i] = new ArrayList<>();
@@ -177,6 +176,35 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
 
                 recipes.add(builder.build());
             }
+        }
+    }
+
+    protected void addCombinedRecipes(DeferredHolder<Item, ?> resultHolder, DeferredHolder<Item, ?> essenceHolder, int source, List<DeferredHolder<Item, ?>> bases) {
+        if (bases.size() < 2) {
+            throw new IllegalArgumentException("needs at least 2 bases");
+        }
+
+        var result = resultHolder.get();
+        var essence = essenceHolder.get();
+        for (int j = 0; j < bases.size(); j++) {
+            var reagent = bases.get(j).get();
+
+            var builder = Abuilder()
+                    .withResult(result)
+                    .withReagent(reagent)
+                    .withPedestalItem(MARK_OF_MASTERY)
+                    .withPedestalItem(2, essence)
+                    .withSourceCost(source)
+                    .keepNbtOfReagent(true)
+                    .withId(ArsElemancy.prefix(BuiltInRegistries.ITEM.getKey(result).getPath() + "_" + OUTPUT_COUNTER.compute(result, (k, v) -> v == null ? 1 : v + 1)));
+
+            for (int k = 0; k < bases.size(); k++) {
+                if (j != k) {
+                    builder = builder.withPedestalItem(bases.get(k).get());
+                }
+            }
+
+            recipes.add(builder.build());
         }
     }
 

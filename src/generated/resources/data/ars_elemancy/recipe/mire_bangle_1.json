@@ -1,0 +1,25 @@
+{
+  "type": "ars_elemancy:armor_upgrade",
+  "pedestalItems": [
+    {
+      "item": "ars_elemental:mark_of_mastery"
+    },
+    {
+      "item": "ars_elemancy:mire_essence"
+    },
+    {
+      "item": "ars_elemancy:mire_essence"
+    },
+    {
+      "item": "ars_elemental:water_bangle"
+    }
+  ],
+  "reagent": {
+    "item": "ars_elemental:earth_bangle"
+  },
+  "result": {
+    "count": 1,
+    "id": "ars_elemancy:mire_bangle"
+  },
+  "sourceCost": 7000
+}
