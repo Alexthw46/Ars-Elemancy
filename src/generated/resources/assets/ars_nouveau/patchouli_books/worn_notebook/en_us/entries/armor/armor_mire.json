@@ -9,19 +9,35 @@
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:mire_hat"
+      "recipe": "ars_elemancy:mire_hat_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:mire_robes"
+      "recipe": "ars_elemancy:mire_hat_2"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:mire_leggings"
+      "recipe": "ars_elemancy:mire_robes_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:mire_boots"
+      "recipe": "ars_elemancy:mire_robes_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:mire_leggings_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:mire_leggings_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:mire_boots_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:mire_boots_2"
     }
   ]
 }

@@ -9,19 +9,35 @@
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:lava_hat"
+      "recipe": "ars_elemancy:lava_hat_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:lava_robes"
+      "recipe": "ars_elemancy:lava_hat_2"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:lava_leggings"
+      "recipe": "ars_elemancy:lava_robes_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:lava_boots"
+      "recipe": "ars_elemancy:lava_robes_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:lava_leggings_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:lava_leggings_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:lava_boots_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:lava_boots_2"
     }
   ]
 }

@@ -1,9 +1,7 @@
 package lyrellion.ars_elemancy.datagen;
 
-import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.registry.ModItems;
-import lyrellion.ars_elemancy.registry.ModRegistry;
 import com.hollingsworth.arsnouveau.ArsNouveau;
 import com.hollingsworth.arsnouveau.api.familiar.AbstractFamiliarHolder;
 import com.hollingsworth.arsnouveau.api.perk.IPerk;
@@ -15,7 +13,6 @@ import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
 import com.hollingsworth.arsnouveau.common.datagen.PatchouliProvider;
 import com.hollingsworth.arsnouveau.common.datagen.patchouli.*;
 import com.hollingsworth.arsnouveau.common.items.PerkItem;
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
@@ -23,7 +20,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 
-import static lyrellion.ars_elemancy.ArsElemancy.prefix;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.stream.Stream;
+
 import static lyrellion.ars_elemancy.ArsNouveauRegistry.registeredSpells;
 
 public class AEPatchouliProvider extends PatchouliProvider {
@@ -73,18 +74,22 @@ public class AEPatchouliProvider extends PatchouliProvider {
     private void addArmorPage(ArmorSet armorSet) {
         PatchouliBuilder builder = new PatchouliBuilder(ARMOR, armorSet.getTranslationKey())
                 .withIcon(armorSet.getHat())
-                .withPage(new TextPage("ars_elemancy.page.armor_set." + armorSet.getName()))
-                .withPage(new AEPage(armorSet.getHat()))
-                .withPage(new AEPage(armorSet.getChest()))
-                .withPage(new AEPage(armorSet.getLegs()))
-                .withPage(new AEPage(armorSet.getBoots()));
+                .withPage(new TextPage("ars_elemancy.page.armor_set." + armorSet.getName()));
+
+        for (Item piece : new Item[]{armorSet.getHat(), armorSet.getChest(), armorSet.getLegs(), armorSet.getBoots()}) {
+            for (var wrapper : AEApparatusProvider.RECIPES) {
+                if (wrapper.recipe().result().is(piece)) {
+                    builder = builder.withPage(new AEPage(wrapper.id().toString()));
+                }
+            }
+        }
 
         this.pages.add(new PatchouliPage(builder, getPath(ARMOR, "armor_" + armorSet.getName())));
     }
 
     static class AEPage extends ApparatusPage {
-        public AEPage(Item itemLike) {
-            super(itemLike);
+        public AEPage(String recipe) {
+            super(recipe);
         }
 
         @Override
