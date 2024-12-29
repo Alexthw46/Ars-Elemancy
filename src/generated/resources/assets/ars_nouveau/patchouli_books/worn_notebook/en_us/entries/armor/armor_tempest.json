@@ -9,19 +9,35 @@
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:tempest_hat"
+      "recipe": "ars_elemancy:tempest_hat_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:tempest_robes"
+      "recipe": "ars_elemancy:tempest_hat_2"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:tempest_leggings"
+      "recipe": "ars_elemancy:tempest_robes_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:tempest_boots"
+      "recipe": "ars_elemancy:tempest_robes_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:tempest_leggings_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:tempest_leggings_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:tempest_boots_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:tempest_boots_2"
     }
   ]
 }

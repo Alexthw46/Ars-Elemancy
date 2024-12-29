@@ -9,19 +9,35 @@
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:silt_hat"
+      "recipe": "ars_elemancy:silt_hat_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:silt_robes"
+      "recipe": "ars_elemancy:silt_hat_2"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:silt_leggings"
+      "recipe": "ars_elemancy:silt_robes_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:silt_boots"
+      "recipe": "ars_elemancy:silt_robes_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:silt_leggings_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:silt_leggings_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:silt_boots_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:silt_boots_2"
     }
   ]
 }

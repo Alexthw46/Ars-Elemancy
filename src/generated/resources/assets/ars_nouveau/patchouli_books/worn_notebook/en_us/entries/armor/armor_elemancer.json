@@ -9,19 +9,99 @@
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:elemancer_hat"
+      "recipe": "ars_elemancy:elemancer_hat_1"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:elemancer_robes"
+      "recipe": "ars_elemancy:elemancer_hat_2"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:elemancer_leggings"
+      "recipe": "ars_elemancy:elemancer_hat_3"
     },
     {
       "type": "ars_nouveau:elemancy_armor_recipe",
-      "recipe": "ars_elemancy:elemancer_boots"
+      "recipe": "ars_elemancy:elemancer_hat_4"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_hat_5"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_hat_6"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_3"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_4"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_5"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_robes_6"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_3"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_4"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_5"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_leggings_6"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_1"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_2"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_3"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_4"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_5"
+    },
+    {
+      "type": "ars_nouveau:elemancy_armor_recipe",
+      "recipe": "ars_elemancy:elemancer_boots_6"
     }
   ]
 }

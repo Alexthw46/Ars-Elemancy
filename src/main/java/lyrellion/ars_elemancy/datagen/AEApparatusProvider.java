@@ -1,6 +1,7 @@
 package lyrellion.ars_elemancy.datagen;
 
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
+import it.unimi.dsi.fastutil.objects.ObjectImmutableList;
 import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
@@ -18,11 +19,13 @@ import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import static alexthw.ars_elemental.registry.ModItems.MARK_OF_MASTERY;
 
 public class AEApparatusProvider extends ApparatusRecipeProvider {
+    public static List<ApparatusRecipeBuilder.RecipeWrapper<? extends EnchantingApparatusRecipe>> RECIPES = List.of();
 
     public AEApparatusProvider(DataGenerator generatorIn) {
         super(generatorIn);
@@ -115,6 +118,8 @@ public class AEApparatusProvider extends ApparatusRecipeProvider {
             }
         }
 
+        RECIPES = new ArrayList<>(recipes);
+        RECIPES.sort(Comparator.comparing(w -> w.id().getPath()));
     }
 
     public record ArmorSetData(Item hat, Item chest, Item legs, Item boots) {
