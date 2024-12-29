@@ -1,7 +1,14 @@
-// 1.21.1	2024-11-05T18:09:40.5336286	Ars Elemental Item Tags
-f4df44c664b9190c5385bc3d96382af26add802b data/ars_nouveau/tags/item/boot.json
-a6f57b5698003165658cebac60702657955e2733 data/ars_nouveau/tags/item/hood.json
-0c442262894975c5a4a45bf93b6d70503c166856 data/ars_nouveau/tags/item/legs.json
-ac42f29459995dfce1ddd28eb24c261e8cc6a67a data/ars_nouveau/tags/item/robe.json
-bf1f2d2eae0b2d625f35ce3c0884a100454a1843 data/curios/tags/item/an_focus.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/bracelet.json
+// 1.21.1	2024-12-27T14:41:22.252298942	Ars Elemental Item Tags
+84cfc3d34c1234d9d7d750ab071b7a47c9148315 data/curios/tags/item/an_focus.json
+e3c508ba74d150b90c047e919f8b176303e1ac90 data/curios/tags/item/bracelet.json
+f33563452cdcd40d0078184fb92b3817783ce678 data/minecraft/tags/item/chest_armor.json
+4d52e587c4e7a9f75099427ef36cb96b99585fbe data/minecraft/tags/item/enchantable/armor.json
+f33563452cdcd40d0078184fb92b3817783ce678 data/minecraft/tags/item/enchantable/chest_armor.json
+4d52e587c4e7a9f75099427ef36cb96b99585fbe data/minecraft/tags/item/enchantable/durability.json
+4d52e587c4e7a9f75099427ef36cb96b99585fbe data/minecraft/tags/item/enchantable/equippable.json
+629e381875cfcd6a7a6f5596e0bcdf055b01500d data/minecraft/tags/item/enchantable/foot_armor.json
+bb4659ffce5ee7321d9801913af1307e9ea10a52 data/minecraft/tags/item/enchantable/head_armor.json
+cefecffc2e8da7e5eaedb2ef3e441eb26d738252 data/minecraft/tags/item/enchantable/leg_armor.json
+629e381875cfcd6a7a6f5596e0bcdf055b01500d data/minecraft/tags/item/foot_armor.json
+bb4659ffce5ee7321d9801913af1307e9ea10a52 data/minecraft/tags/item/head_armor.json
+cefecffc2e8da7e5eaedb2ef3e441eb26d738252 data/minecraft/tags/item/leg_armor.json

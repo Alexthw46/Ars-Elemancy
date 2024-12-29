@@ -1,3 +1,11 @@
 {
-  "values": []
+  "values": [
+    "ars_elemancy:tempest_bangle",
+    "ars_elemancy:mire_bangle",
+    "ars_elemancy:silt_bangle",
+    "ars_elemancy:lava_bangle",
+    "ars_elemancy:vapor_bangle",
+    "ars_elemancy:cinder_bangle",
+    "ars_elemancy:elemancer_bangle"
+  ]
 }

@@ -1,6 +1,6 @@
 package lyrellion.ars_elemancy.common.components;
 
-import lyrellion.ars_elemancy.common.items.caster_tools.ElementalCasterTome;
+import lyrellion.ars_elemancy.common.items.caster_tools.ElemancyCasterTome;
 import lyrellion.ars_elemancy.registry.ModRegistry;
 import com.hollingsworth.arsnouveau.api.spell.*;
 import com.mojang.serialization.MapCodec;
@@ -41,7 +41,7 @@ public class SchoolCasterTomeData extends AbstractCaster<SchoolCasterTomeData> {
 
     @Override
     public SpellResolver getSpellResolver(SpellContext context, Level worldIn, LivingEntity playerIn, InteractionHand handIn) {
-        return new ElementalCasterTome.ETomeResolver(context, context.getCasterTool().getItem() instanceof ElementalCasterTome tome ? tome.getSchool() : SpellSchools.ELEMENTAL);
+        return new ElemancyCasterTome.ETomeResolver(context, context.getCasterTool().getItem() instanceof ElemancyCasterTome tome ? tome.getSchool() : SpellSchools.ELEMENTAL);
     }
 
     @Override
