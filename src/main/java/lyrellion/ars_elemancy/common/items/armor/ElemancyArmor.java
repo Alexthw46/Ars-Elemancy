@@ -90,6 +90,9 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
         Player player = ArsNouveau.proxy.getPlayer();
         if (player != null) {
             ArmorSet set = getArmorSetFromElement(this.element);
+            if (set == null) {
+                return;
+            }
             List<Component> equippedList = new ArrayList<>();
             //check if the player have all the armor pieces of the set. Color the text green if they do, gray if they don't
             int equippedCounter = 0;
@@ -122,7 +125,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
             case "vapor" -> ModItems.VAPOR_ARMOR;
             case "lava" -> ModItems.LAVA_ARMOR;
             case "cinder" -> ModItems.CINDER_ARMOR;
-            case "elemancer" -> ModItems.ELEMANCER_ARMOR;
+            case "elemental" -> ModItems.ELEMANCER_ARMOR;
             default -> null;
         };
     }
