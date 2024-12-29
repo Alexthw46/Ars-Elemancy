@@ -24,9 +24,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public interface IElemancyArmor extends IElementalArmor {
-
-    Map<SpellSchool, TagKey<DamageType>> damageResistances = new ConcurrentHashMap<>();
-
     static Holder<ArmorMaterial> schoolToMaterial(SpellSchool element) {
         return switch (element.getId()) {
             case "tempest" -> AAMaterials.TEMPEST;
