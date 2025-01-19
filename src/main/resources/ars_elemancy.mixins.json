@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "ars_elemancy.refmap.json",
   "mixins": [
-
+    "SchoolFocusMixin"
   ],
   "minVersion": "0.8",
   "client": [
