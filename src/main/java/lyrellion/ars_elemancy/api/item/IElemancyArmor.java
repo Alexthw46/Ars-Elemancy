@@ -32,7 +32,7 @@ public interface IElemancyArmor extends IElementalArmor {
             case "vapor" -> AAMaterials.VAPOR;
             case "lava" -> AAMaterials.LAVA;
             case "cinder" -> AAMaterials.CINDER;
-            case "elemancer" -> AAMaterials.ELEMANCER;
+            case "elemental" -> AAMaterials.ELEMANCER;
 
             default -> MaterialRegistry.MEDIUM;
         };

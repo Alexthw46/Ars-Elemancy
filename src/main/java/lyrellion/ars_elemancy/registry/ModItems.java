@@ -45,7 +45,7 @@ public class ModItems {
     public static final ArmorSet LAVA_ARMOR = new ArmorSet("lava", ArsNouveauRegistry.LAVA);
     public static final ArmorSet VAPOR_ARMOR = new ArmorSet("vapor", ArsNouveauRegistry.VAPOR);
     public static final ArmorSet CINDER_ARMOR = new ArmorSet("cinder", ArsNouveauRegistry.CINDER);
-    public static final ArmorSet ELEMANCER_ARMOR = new ArmorSet("elemancer", SpellSchools.ELEMENTAL);
+    public static final ArmorSet ELEMANCER_ARMOR = new ArmorSet("elemancer", ArsNouveauRegistry.ELEMENTAL);
 
     // Essences
     public static final DeferredHolder<Item, TempestEssence> TEMPEST_ESSENCE = ITEMS.register("tempest_essence", () -> new TempestEssence(itemProps()));

@@ -25,6 +25,7 @@ public class ArsNouveauRegistry {
     public static final SpellSchool MIRE = new SpellSchool("mire").withSubSchool(ELEMENTAL_EARTH).withSubSchool(ELEMENTAL_WATER);
     public static final SpellSchool VAPOR = new SpellSchool("vapor").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_WATER);
     public static final SpellSchool LAVA = new SpellSchool("lava").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_EARTH);
+    public static final SpellSchool ELEMENTAL = new SpellSchool("elemental").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_EARTH).withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_WATER);
 
     public static void init() {
         registerGlyphs();
