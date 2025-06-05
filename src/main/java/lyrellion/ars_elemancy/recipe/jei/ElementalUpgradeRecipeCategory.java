@@ -19,6 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,14 +34,14 @@ public class ElementalUpgradeRecipeCategory extends EnchantingApparatusRecipeCat
         List<Ingredient> inputs = provider.input();
         double angleBetweenEach = 360.0 / inputs.size();
         if (provider.optionalCenter() != null) {
-            var stacks = provider.optionalCenter().getItems();
+            var stacks = Arrays.stream(provider.optionalCenter().getItems()).map(ItemStack::copy).toList();
             for (ItemStack stack : stacks) {
                 ArmorPerkHolder armorPerkHolder = PerkUtil.getPerkHolder(stack);
                 if (armorPerkHolder != null) {
                     stack.set(DataComponentRegistry.ARMOR_PERKS, armorPerkHolder.setTier(2));
                 }
             }
-            builder.addSlot(RecipeIngredientRole.INPUT, 48, 45).addItemStacks(List.of(stacks));
+            builder.addSlot(RecipeIngredientRole.INPUT, 48, 45).addItemStacks((stacks));
         }
         for (Ingredient input : inputs) {
             builder.addSlot(RecipeIngredientRole.INPUT, (int) point.x, (int) point.y).addIngredients(input);
