@@ -1,23 +1,19 @@
 package lyrellion.ars_elemancy.client.patchouli;
 
-import com.google.common.collect.ImmutableList;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
 import com.hollingsworth.arsnouveau.client.patchouli.component.RotatingItemListComponent;
 import com.hollingsworth.arsnouveau.common.armor.AnimatedMagicArmor;
-import com.hollingsworth.arsnouveau.common.crafting.recipes.EnchantingApparatusRecipe;
 import com.hollingsworth.arsnouveau.common.crafting.recipes.IEnchantingRecipe;
 import com.hollingsworth.arsnouveau.common.items.data.ArmorPerkHolder;
 import com.hollingsworth.arsnouveau.setup.registry.DataComponentRegistry;
-import com.hollingsworth.arsnouveau.setup.registry.RecipeRegistry;
 import lyrellion.ars_elemancy.recipe.ElemancyArmorRecipe;
 import lyrellion.ars_elemancy.registry.ModRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,12 +34,17 @@ public class ElemancyArmorRotatingItemListComponent extends RotatingItemListComp
             }
         }
 
-        return recipe == null ? ImmutableList.of() : recipe.pedestalItems().stream().peek(ing -> {
+        return recipe == null ? List.of() : recipe.pedestalItems().stream().reduce(new ArrayList<>(),(list, ing) -> {
             for (var stack : ing.getItems()) {
-                if (stack.getItem() instanceof AnimatedMagicArmor) {
-                    stack.set(DataComponentRegistry.ARMOR_PERKS, new ArmorPerkHolder().setTier(3));
-                }
+                if (stack.getItem() instanceof AnimatedMagicArmor magicArmor) {
+                    list.add(DataComponentIngredient.of(false, DataComponentRegistry.ARMOR_PERKS, new ArmorPerkHolder().setTier(3), magicArmor));
+                } else list.add(Ingredient.of(stack));
             }
-        }).toList();
+            return list;
+        }, (list1, list2) -> {
+            var combined = new ArrayList<>(list1);
+            combined.addAll(list2);
+            return combined;
+        });
     }
 }
