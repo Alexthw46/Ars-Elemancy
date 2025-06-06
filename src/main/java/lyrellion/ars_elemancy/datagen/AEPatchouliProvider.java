@@ -13,6 +13,7 @@ import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
 import com.hollingsworth.arsnouveau.common.datagen.PatchouliProvider;
 import com.hollingsworth.arsnouveau.common.datagen.patchouli.*;
 import com.hollingsworth.arsnouveau.common.items.PerkItem;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
@@ -20,17 +21,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.stream.Stream;
+import java.util.concurrent.CompletableFuture;
 
 import static lyrellion.ars_elemancy.ArsNouveauRegistry.registeredSpells;
 
 public class AEPatchouliProvider extends PatchouliProvider {
 
-    public AEPatchouliProvider(DataGenerator generatorIn) {
-        super(generatorIn);
+    public AEPatchouliProvider(DataGenerator generatorIn, CompletableFuture<HolderLookup.Provider> provider) {
+        super(generatorIn, provider);
     }
 
     @Override
