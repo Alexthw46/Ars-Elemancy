@@ -47,10 +47,13 @@ public class ElemancyFocus extends alexthw.ars_elemental.common.items.foci.Great
 
     double getBoostMultiplier() {
         return switch (element.getId()) {
-            case "fire" -> COMMON.FireMasteryBuff.get();
-            case "water" -> COMMON.WaterMasteryBuff.get();
-            case "air" -> COMMON.AirMasteryBuff.get();
-            case "earth" -> COMMON.EarthMasteryBuff.get();
+            case "tempest" -> COMMON.TempestMasteryBuff.get();
+            case "vapor" -> COMMON.VaporMasteryBuff.get();
+            case "silt" -> COMMON.SiltMasteryBuff.get();
+            case "mire" -> COMMON.MireMasteryBuff.get();
+            case "cinder" -> COMMON.CinderMasteryBuff.get();
+            case "lava" -> COMMON.LavaMasteryBuff.get();
+            case "elemancer" -> COMMON.ElementalMasteryBuff.get();
             default -> 0;
         };
     }
