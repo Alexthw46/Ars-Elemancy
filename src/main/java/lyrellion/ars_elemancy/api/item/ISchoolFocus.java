@@ -1,5 +1,7 @@
 package lyrellion.ars_elemancy.api.item;
 
+import alexthw.ars_elemental.registry.ModItems;
+import com.hollingsworth.arsnouveau.api.spell.SpellResolver;
 import lyrellion.ars_elemancy.util.CompatUtils;
 import com.hollingsworth.arsnouveau.api.item.ISpellModifierItem;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
@@ -11,6 +13,9 @@ import org.jetbrains.annotations.NotNull;
 import top.theillusivec4.curios.api.SlotResult;
 
 import javax.annotation.Nullable;
+
+import static alexthw.ars_elemental.api.item.ISchoolFocus.getFociSchools;
+import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.*;
 
 public interface ISchoolFocus extends ISpellModifierItem, ISchoolProvider {
     static @Nullable SpellSchool hasFocus(Entity entity) {
@@ -38,6 +43,5 @@ public interface ISchoolFocus extends ISpellModifierItem, ISchoolProvider {
     }
 
     double getDiscount();
-
 
 }

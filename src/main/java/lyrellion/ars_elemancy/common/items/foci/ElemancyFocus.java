@@ -11,16 +11,20 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.List;
+import java.util.logging.Level;
 
 import static lyrellion.ars_elemancy.ConfigHandler.COMMON;
 
@@ -32,6 +36,23 @@ public class ElemancyFocus extends alexthw.ars_elemental.common.items.foci.Great
     @Override
     public double getDiscount() {
         return COMMON.MajorFocusDiscount.get();
+    }
+
+    public SpellStats.Builder applyItemModifiers(ItemStack stack, SpellStats.Builder builder, AbstractSpellPart spellPart, HitResult rayTraceResult, Level world, @Nullable LivingEntity shooter, SpellContext spellContext) {
+        if (element.isPartOfSchool(spellPart)) {
+            builder.addAmplification(getBoostMultiplier() * 2);
+        }
+        return builder;
+    }
+
+    double getBoostMultiplier() {
+        return switch (element.getId()) {
+            case "fire" -> COMMON.FireMasteryBuff.get();
+            case "water" -> COMMON.WaterMasteryBuff.get();
+            case "air" -> COMMON.AirMasteryBuff.get();
+            case "earth" -> COMMON.EarthMasteryBuff.get();
+            default -> 0;
+        };
     }
 
     @Override

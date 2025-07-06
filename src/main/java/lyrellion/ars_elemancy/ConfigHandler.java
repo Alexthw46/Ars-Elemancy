@@ -12,7 +12,16 @@ public class ConfigHandler {
         public static ModConfigSpec.IntValue ARMOR_MAX_MANA;
         public static ModConfigSpec.IntValue ARMOR_MANA_REGEN;
 
+        public final ModConfigSpec.ConfigValue<Double> FireMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> WaterMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> AirMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> EarthMasteryBuff;
+
         public Common(ModConfigSpec.Builder builder) {
+            FireMasteryBuff = builder.define("fire_focus_buff", 1.0D);
+            WaterMasteryBuff = builder.define("water_focus_buff", 1.0D);
+            AirMasteryBuff = builder.define("air_focus_buff", 1.0D);
+            EarthMasteryBuff = builder.define("earth_focus_buff", 1.0D);
             builder.comment("Enable or disable the passive bonus of the foci").push("Elemental Spell Foci - Abilities");
             MajorFocusDiscount = builder.comment("Adjust this value to define how much the matching spell cost gets discounted by the greater focus")
                     .defineInRange("elemental_maj_focus_discount", 0.25D, 0.0D, 0.99D);
@@ -51,7 +60,7 @@ public class ConfigHandler {
 
     static {
 
-        final Pair<Common, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(Common::new);
+        final Pair<Common, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure((java.util.function.Function<ModConfigSpec.Builder, Common>) Common::new);
         COMMON_SPEC = specPair.getRight();
         COMMON = specPair.getLeft();
 
