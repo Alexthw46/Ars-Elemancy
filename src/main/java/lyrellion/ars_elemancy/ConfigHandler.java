@@ -13,12 +13,13 @@ public class ConfigHandler {
         public static ModConfigSpec.IntValue ARMOR_MANA_REGEN;
 
         public final ModConfigSpec.ConfigValue<Double> TempestMasteryBuff;
-        public final ModConfigSpec.ConfigValue<Double> VaporMasteryBuff;
         public final ModConfigSpec.ConfigValue<Double> SiltMasteryBuff;
-        public final ModConfigSpec.ConfigValue<Double> MireMasteryBuff;
-        public final ModConfigSpec.ConfigValue<Double> CinderMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> VaporMasteryBuff;
         public final ModConfigSpec.ConfigValue<Double> LavaMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> CinderMasteryBuff;
+        public final ModConfigSpec.ConfigValue<Double> MireMasteryBuff;
         public final ModConfigSpec.ConfigValue<Double> ElementalMasteryBuff;
+
 
         public Common(ModConfigSpec.Builder builder) {
 
@@ -31,12 +32,12 @@ public class ConfigHandler {
             builder.comment("Adjust these values to balance how much a spell gets amplified by the matching spell focus, doubled for major foci.")
                     .push("Elemental Spell Foci - Amplify");
             TempestMasteryBuff = builder.define("tempest_focus_buff", 1.0D);
-            VaporMasteryBuff = builder.define("vapor_focus_buff", 1.0D);
             SiltMasteryBuff = builder.define("silt_focus_buff", 1.0D);
+            VaporMasteryBuff = builder.define("vapor_focus_buff", 1.0D);
             MireMasteryBuff = builder.define("mire_focus_buff", 1.0D);
+            LavaMasteryBuff = builder.define("fire_focus_buff", 1.0D);
             CinderMasteryBuff = builder.define("cinder_focus_buff", 1.0D);
-            LavaMasteryBuff = builder.define("lava_focus_buff", 1.0D);
-            ElementalMasteryBuff = builder.define("elemental_focus_buff", 1.0D);
+            ElementalMasteryBuff = builder.define("fire_focus_buff", 1.0D);
 
             builder.comment("Adjust Elemental Armor Mana Buffs").push("Elemental Armors");
 
