@@ -1,6 +1,6 @@
 package lyrellion.ars_elemancy.mixin;
 
-import alexthw.ars_elemental.api.item.ISchoolFocus;
+import alexthw.ars_elemental.util.CompatUtils;
 import com.hollingsworth.arsnouveau.api.spell.SpellResolver;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import lyrellion.ars_elemancy.registry.ModItems;
@@ -8,8 +8,8 @@ import lyrellion.ars_elemancy.util.FocusHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(ISchoolFocus.class)
-public interface SchoolFocusMixin {
+@Mixin(CompatUtils.class)
+public class SchoolFocusMixin {
 
     @ModifyReturnValue(method = "fireCheck", at = @At("RETURN"))
     private static boolean fireCheck(boolean original, SpellResolver resolver) {

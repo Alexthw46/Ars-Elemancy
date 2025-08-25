@@ -1,7 +1,7 @@
 package lyrellion.ars_elemancy.client;
 
+import com.alexthw.sauce.api.item.ISchoolFocus;
 import lyrellion.ars_elemancy.ArsElemancy;
-import lyrellion.ars_elemancy.api.item.ISchoolFocus;
 import lyrellion.ars_elemancy.util.ParticleUtil;
 import lyrellion.ars_elemancy.util.ParticleUtil.ParticleBuilder;
 import com.mojang.blaze3d.vertex.PoseStack;

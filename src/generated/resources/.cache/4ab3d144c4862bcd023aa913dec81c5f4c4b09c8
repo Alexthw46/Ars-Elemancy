@@ -1,21 +1,4 @@
-<<<<<< feat/bangles-and-fixed-foci
-// 1.21.1	2024-12-27T14:29:53.211531758	Ars Elemancy Patchouli Datagen
-172cdb108f6eab91508578c58cda0dae7f528495 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_cinder.json
-b9a2155bf98629cc387c30dc42d9ee8b9b0090eb assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_elemancer.json
-1e1e2b28bfe5f3308022b17ba3011fe39d7c977d assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_lava.json
-7458973f3d76652c28fd8318f810e96313a1af00 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_mire.json
-0533a0ec2f22cb763493cfa2b9278772870cadac assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_silt.json
-42c7a9ca72278d8fc62967dcc4b95c135b54afe2 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_tempest.json
-db43b6efe2faf98b90f7ba8ba7d4596721b11e60 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_vapor.json
-25201c14b7dc6dcc36ac8a16a44058811e9af980 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/cinder_bangle.json
-11d6dabc24639c596ccb17a1147bba53c8221ab8 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/elemancer_bangle.json
-b24bc5cb2f14a34c89b19067b77972b224c2e624 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/lava_bangle.json
-114ac647459182129203489c1c1533e57b6a6c63 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/mire_bangle.json
-76fad021d3f622a180eb193f2a525994b8ee7b25 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/silt_bangle.json
-73136380056f24ddd9129e5a085394cd6ce8c0a1 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/tempest_bangle.json
-0ccb6718c5f2d2a8a79f266e8f288ecdaa2728b2 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/vapor_bangle.json
-======
-// 1.21.1	2024-12-27T16:01:10.94286192	Ars Elemancy Patchouli Datagen
+// 1.21.1	2025-08-25T17:53:18.0443511	Ars Elemancy Patchouli Datagen
 c23149003434c79cbdf3e8b69936f361ecf371fa assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_cinder.json
 17bc23f6c0ff908838eb7266da75f715b14beeb0 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_elemancer.json
 760934599f6ae9fab4818ddd4d9812d7c07c5ebf assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_lava.json
@@ -23,5 +6,10 @@ c23149003434c79cbdf3e8b69936f361ecf371fa assets/ars_nouveau/patchouli_books/worn
 810a061364039ff343c3ebdb764ba8ecdad0ba16 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_silt.json
 1b7610ddab399117fa3383b802aa8fcba5768027 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_tempest.json
 b6f51cb0ef11a991959cde6562c76efbc4206f82 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/armor/armor_vapor.json
-e7276a9ccbb6b08ef02d276e87054bb0329f5b55 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/base_bangle.json
->>>>>> main
+25201c14b7dc6dcc36ac8a16a44058811e9af980 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/cinder_bangle.json
+11d6dabc24639c596ccb17a1147bba53c8221ab8 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/elemancer_bangle.json
+b24bc5cb2f14a34c89b19067b77972b224c2e624 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/lava_bangle.json
+114ac647459182129203489c1c1533e57b6a6c63 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/mire_bangle.json
+76fad021d3f622a180eb193f2a525994b8ee7b25 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/silt_bangle.json
+73136380056f24ddd9129e5a085394cd6ce8c0a1 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/tempest_bangle.json
+0ccb6718c5f2d2a8a79f266e8f288ecdaa2728b2 assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/vapor_bangle.json

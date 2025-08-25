@@ -168,6 +168,12 @@ dependencies {
 
     implementation "com.alexthw.ars_elemental:ars_elemental-${minecraft_version}:${elemental_version}"
 
+    jarJar(implementation("com.alexthw.sauce:sauce-${minecraft_version}") {
+        version {
+            strictly '[0.0.4,)'
+            prefer sauce_version
+        }
+    }) { transitive = false }
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
