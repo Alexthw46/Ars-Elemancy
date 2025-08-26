@@ -1,8 +1,7 @@
 package lyrellion.ars_elemancy.common.items.foci;
 
-import alexthw.ars_elemental.client.TooltipUtils;
-import alexthw.ars_elemental.common.items.ElementalCurio;
 import alexthw.ars_elemental.common.items.foci.GreaterElementalFocus;
+import com.alexthw.sauce.util.TooltipUtils;
 import com.google.common.collect.Multimap;
 import com.hollingsworth.arsnouveau.api.spell.*;
 import com.hollingsworth.arsnouveau.setup.registry.ModPotions;
@@ -24,11 +23,10 @@ import org.jetbrains.annotations.Nullable;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.List;
-import java.util.logging.Level;
 
 import static lyrellion.ars_elemancy.ConfigHandler.COMMON;
 
-public class ElemancyFocus extends alexthw.ars_elemental.common.items.foci.GreaterElementalFocus {
+public class ElemancyFocus extends GreaterElementalFocus {
     public ElemancyFocus(Properties properties, SpellSchool element) {
         super(properties, element);
     }
@@ -38,14 +36,15 @@ public class ElemancyFocus extends alexthw.ars_elemental.common.items.foci.Great
         return COMMON.MajorFocusDiscount.get();
     }
 
-    public SpellStats.Builder applyItemModifiers(ItemStack stack, SpellStats.Builder builder, AbstractSpellPart spellPart, HitResult rayTraceResult, Level world, @Nullable LivingEntity shooter, SpellContext spellContext) {
+    @Override
+    public SpellStats.Builder applyItemModifiers(ItemStack stack, SpellStats.Builder builder, AbstractSpellPart spellPart, HitResult rayTraceResult, net.minecraft.world.level.Level world, @Nullable LivingEntity shooter, SpellContext spellContext) {
         if (element.isPartOfSchool(spellPart)) {
             builder.addAmplification(getBoostMultiplier() * 2);
         }
         return builder;
     }
 
-    double getBoostMultiplier() {
+    protected double getBoostMultiplier() {
         return switch (element.getId()) {
             case "tempest" -> COMMON.TempestMasteryBuff.get();
             case "silt" -> COMMON.SiltMasteryBuff.get();
