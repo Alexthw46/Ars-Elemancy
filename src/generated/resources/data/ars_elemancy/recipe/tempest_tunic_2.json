@@ -11,15 +11,15 @@
       "item": "ars_elemancy:tempest_essence"
     },
     {
-      "item": "ars_elemental:air_chestplate"
+      "item": "ars_elemental:air_tunic"
     }
   ],
   "reagent": {
-    "item": "ars_elemental:aqua_chestplate"
+    "item": "ars_elemental:aqua_tunic"
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:tempest_chestplate"
+    "id": "ars_elemancy:tempest_tunic"
   },
   "sourceCost": 7000
 }
