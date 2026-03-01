@@ -6,6 +6,20 @@
     "ars_elemancy:lava_boots",
     "ars_elemancy:vapor_boots",
     "ars_elemancy:cinder_boots",
-    "ars_elemancy:elemancer_boots"
+    "ars_elemancy:elemancer_boots",
+    "ars_elemancy:tempest_shoes",
+    "ars_elemancy:mire_shoes",
+    "ars_elemancy:silt_shoes",
+    "ars_elemancy:lava_shoes",
+    "ars_elemancy:vapor_shoes",
+    "ars_elemancy:cinder_shoes",
+    "ars_elemancy:elemancer_shoes",
+    "ars_elemancy:tempest_boots_heavy",
+    "ars_elemancy:mire_boots_heavy",
+    "ars_elemancy:silt_boots_heavy",
+    "ars_elemancy:lava_boots_heavy",
+    "ars_elemancy:vapor_boots_heavy",
+    "ars_elemancy:cinder_boots_heavy",
+    "ars_elemancy:elemancer_boots_heavy"
   ]
 }

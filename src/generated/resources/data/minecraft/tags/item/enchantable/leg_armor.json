@@ -6,6 +6,20 @@
     "ars_elemancy:lava_leggings",
     "ars_elemancy:vapor_leggings",
     "ars_elemancy:cinder_leggings",
-    "ars_elemancy:elemancer_leggings"
+    "ars_elemancy:elemancer_leggings",
+    "ars_elemancy:tempest_leggings_heavy",
+    "ars_elemancy:mire_leggings_heavy",
+    "ars_elemancy:silt_leggings_heavy",
+    "ars_elemancy:lava_leggings_heavy",
+    "ars_elemancy:vapor_leggings_heavy",
+    "ars_elemancy:cinder_leggings_heavy",
+    "ars_elemancy:elemancer_leggings_heavy",
+    "ars_elemancy:tempest_pants",
+    "ars_elemancy:mire_pants",
+    "ars_elemancy:silt_pants",
+    "ars_elemancy:lava_pants",
+    "ars_elemancy:vapor_pants",
+    "ars_elemancy:cinder_pants",
+    "ars_elemancy:elemancer_pants"
   ]
 }

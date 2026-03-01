@@ -129,7 +129,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
                 case "lava" -> ModItems.LAVA_ARMOR_L;
                 case "cinder" -> ModItems.CINDER_ARMOR_L;
                 case "elemental" -> ModItems.ELEMANCER_ARMOR_L;
-                default -> new ArmorSet.Light("necro", SpellSchools.NECROMANCY);
+                default -> new ArmorSet.Light("elemental", SpellSchools.ELEMENTAL);
             };
             case "heavy" -> switch (school.getId()) {
                 case "tempest" -> ModItems.TEMPEST_ARMOR_H;
@@ -139,7 +139,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
                 case "lava" -> ModItems.LAVA_ARMOR_H;
                 case "cinder" -> ModItems.CINDER_ARMOR_H;
                 case "elemental" -> ModItems.ELEMANCER_ARMOR_H;
-                default -> new ArmorSet.Heavy("necro", SpellSchools.NECROMANCY);
+                default -> new ArmorSet.Heavy("elemental", SpellSchools.ELEMENTAL);
             };
             default -> switch (school.getId()) {
                 case "tempest" -> ModItems.TEMPEST_ARMOR;
@@ -149,7 +149,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
                 case "lava" -> ModItems.LAVA_ARMOR;
                 case "cinder" -> ModItems.CINDER_ARMOR;
                 case "elemental" -> ModItems.ELEMANCER_ARMOR;
-                default -> new ArmorSet.Medium("necro", SpellSchools.NECROMANCY);
+                default -> new ArmorSet.Medium("elemental", SpellSchools.ELEMENTAL);
             };
         };
     }

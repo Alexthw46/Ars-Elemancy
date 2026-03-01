@@ -6,6 +6,20 @@
     "ars_elemancy:lava_hat",
     "ars_elemancy:vapor_hat",
     "ars_elemancy:cinder_hat",
-    "ars_elemancy:elemancer_hat"
+    "ars_elemancy:elemancer_hat",
+    "ars_elemancy:tempest_hood",
+    "ars_elemancy:mire_hood",
+    "ars_elemancy:silt_hood",
+    "ars_elemancy:lava_hood",
+    "ars_elemancy:vapor_hood",
+    "ars_elemancy:cinder_hood",
+    "ars_elemancy:elemancer_hood",
+    "ars_elemancy:tempest_helmet",
+    "ars_elemancy:mire_helmet",
+    "ars_elemancy:silt_helmet",
+    "ars_elemancy:lava_helmet",
+    "ars_elemancy:vapor_helmet",
+    "ars_elemancy:cinder_helmet",
+    "ars_elemancy:elemancer_helmet"
   ]
 }
