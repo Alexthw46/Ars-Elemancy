@@ -61,21 +61,21 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
         put("mire_heavy", AAMaterials.h_mire);
         put("cinder_heavy", AAMaterials.h_cinder);
         put("lava_heavy", AAMaterials.h_lava);
-        put("elemancer_heavy", AAMaterials.h_elemancer);
+        put("elemental_heavy", AAMaterials.h_elemental);
         put("tempest", AAMaterials.tempest);
         put("silt", AAMaterials.silt);
         put("lava", AAMaterials.lava);
         put("vapor", AAMaterials.vapor);
         put("mire", AAMaterials.mire);
         put("cinder", AAMaterials.cinder);
-        put("elemancer", AAMaterials.elemancer);
+        put("elemental", AAMaterials.elemental);
         put("tempest_light", AAMaterials.l_tempest);
         put("silt_light", AAMaterials.l_silt);
         put("lava_light", AAMaterials.l_lava);
         put("vapor_light", AAMaterials.l_vapor);
         put("mire_light", AAMaterials.l_mire);
         put("cinder_light", AAMaterials.l_cinder);
-        put("elemancer_light", AAMaterials.l_elemancer);
+        put("elemental_light", AAMaterials.l_elemental);
     }};
 
     @Override
@@ -122,24 +122,24 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
     public static ArmorSet getArmorSetFromElement(SpellSchool school, String tier) {
         return switch (tier) {
             case "light" -> switch (school.getId()) {
-                case "tempest" -> ModItems.TEMPEST_ARMOR_L;
-                case "silt" -> ModItems.SILT_ARMOR_L;
-                case "mire" -> ModItems.MIRE_ARMOR_L;
-                case "vapor" -> ModItems.VAPOR_ARMOR_L;
-                case "lava" -> ModItems.LAVA_ARMOR_L;
-                case "cinder" -> ModItems.CINDER_ARMOR_L;
-                case "elemental" -> ModItems.ELEMANCER_ARMOR_L;
-                default -> new ArmorSet.Light("elemental", SpellSchools.ELEMENTAL);
+                case "l_tempest" -> ModItems.TEMPEST_ARMOR_L;
+                case "l_silt" -> ModItems.SILT_ARMOR_L;
+                case "l_mire" -> ModItems.MIRE_ARMOR_L;
+                case "l_vapor" -> ModItems.VAPOR_ARMOR_L;
+                case "l_lava" -> ModItems.LAVA_ARMOR_L;
+                case "l_cinder" -> ModItems.CINDER_ARMOR_L;
+                case "l_elemental" -> ModItems.ELEMANCER_ARMOR_L;
+                default -> new ArmorSet.Light("l_elemental", SpellSchools.ELEMENTAL);
             };
             case "heavy" -> switch (school.getId()) {
-                case "tempest" -> ModItems.TEMPEST_ARMOR_H;
-                case "silt" -> ModItems.SILT_ARMOR_H;
-                case "mire" -> ModItems.MIRE_ARMOR_H;
-                case "vapor" -> ModItems.VAPOR_ARMOR_H;
-                case "lava" -> ModItems.LAVA_ARMOR_H;
-                case "cinder" -> ModItems.CINDER_ARMOR_H;
-                case "elemental" -> ModItems.ELEMANCER_ARMOR_H;
-                default -> new ArmorSet.Heavy("elemental", SpellSchools.ELEMENTAL);
+                case "h_tempest" -> ModItems.TEMPEST_ARMOR_H;
+                case "h_silt" -> ModItems.SILT_ARMOR_H;
+                case "h_mire" -> ModItems.MIRE_ARMOR_H;
+                case "h_vapor" -> ModItems.VAPOR_ARMOR_H;
+                case "h_lava" -> ModItems.LAVA_ARMOR_H;
+                case "h_cinder" -> ModItems.CINDER_ARMOR_H;
+                case "h_elemental" -> ModItems.ELEMANCER_ARMOR_H;
+                default -> new ArmorSet.Heavy("h_elemental", SpellSchools.ELEMENTAL);
             };
             default -> switch (school.getId()) {
                 case "tempest" -> ModItems.TEMPEST_ARMOR;

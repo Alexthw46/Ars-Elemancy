@@ -1,5 +1,6 @@
 {
-  "type": "ars_elemancy:armor_upgrade",
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"

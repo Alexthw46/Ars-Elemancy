@@ -1,17 +1,18 @@
 {
-  "type": "ars_elemancy:armor_upgrade",
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:mire_essence"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:mire_essence"
     },
     {
-      "item": "ars_elemental:air_bangle"
+      "item": "ars_elemental:water_bangle"
     }
   ],
   "reagent": {
@@ -19,7 +20,7 @@
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:silt_bangle"
+    "id": "ars_elemancy:mire_bangle"
   },
   "sourceCost": 7000
 }

@@ -1,25 +1,26 @@
 {
-  "type": "ars_elemancy:armor_upgrade",
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
   "pedestalItems": [
     {
       "item": "ars_elemental:mark_of_mastery"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:lava_essence"
     },
     {
-      "item": "ars_elemancy:silt_essence"
+      "item": "ars_elemancy:lava_essence"
     },
     {
       "item": "ars_elemental:earth_bangle"
     }
   ],
   "reagent": {
-    "item": "ars_elemental:air_bangle"
+    "item": "ars_elemental:fire_bangle"
   },
   "result": {
     "count": 1,
-    "id": "ars_elemancy:silt_bangle"
+    "id": "ars_elemancy:lava_bangle"
   },
   "sourceCost": 7000
 }
