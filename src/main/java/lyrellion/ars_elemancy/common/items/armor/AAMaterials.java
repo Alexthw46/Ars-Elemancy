@@ -25,7 +25,15 @@ public class AAMaterials {
 
     public static final DeferredRegister<ArmorMaterial> A_MATERIALS = DeferredRegister.create(BuiltInRegistries.ARMOR_MATERIAL, MODID);
 
-    public static final EnumMap<ArmorItem.Type, Integer> ARMOR_SLOT_PROTECTION = Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+    public static final EnumMap<ArmorItem.Type, Integer> ARMOR_SLOT_PROTECTION_L = Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 2);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 6);
+        map.put(ArmorItem.Type.HELMET, 2);
+        map.put(ArmorItem.Type.BODY, 4);
+    });
+
+    public static final EnumMap<ArmorItem.Type, Integer> ARMOR_SLOT_PROTECTION_M = Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -33,12 +41,34 @@ public class AAMaterials {
         map.put(ArmorItem.Type.BODY, 4);
     });
 
-    public final static Holder<ArmorMaterial> FIRE = A_MATERIALS.register("medium_fire", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION
-            , 40, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(), 2.0f, 0));
-    public final static Holder<ArmorMaterial> WATER = A_MATERIALS.register("medium_water", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION
-            , 40, new Holder.Direct<>(SoundEvents.BREWING_STAND_BREW), () -> Ingredient.EMPTY, List.of(), 2.0f, 0));
-    public final static Holder<ArmorMaterial> EARTH = A_MATERIALS.register("medium_earth", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION, 40, new Holder.Direct<>(SoundEvents.ANVIL_PLACE), () -> Ingredient.EMPTY, List.of(), 2.0f, 0.02F));
-    public final static Holder<ArmorMaterial> AIR = A_MATERIALS.register("medium_air", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION, 40, SoundEvents.ARMOR_EQUIP_ELYTRA, () -> Ingredient.EMPTY, List.of(), 2.0f, 0));
+    public static final EnumMap<ArmorItem.Type, Integer> ARMOR_SLOT_PROTECTION_H = Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 4);
+        map.put(ArmorItem.Type.LEGGINGS, 7);
+        map.put(ArmorItem.Type.CHESTPLATE, 10);
+        map.put(ArmorItem.Type.HELMET, 4);
+        map.put(ArmorItem.Type.BODY, 4);
+    });
+
+    public final static Holder<ArmorMaterial> l_fire = A_MATERIALS.register("light_fire", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
+            , 50, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_fire"))), 1.0f, 0));
+    public final static Holder<ArmorMaterial> l_water = A_MATERIALS.register("light_water", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
+            , 50, new Holder.Direct<>(SoundEvents.BREWING_STAND_BREW), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_water"))), 1.0f, 0));
+    public final static Holder<ArmorMaterial> l_earth = A_MATERIALS.register("light_earth", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L, 50, new Holder.Direct<>(SoundEvents.GLASS_PLACE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_earth"))), 1.0f, 0));
+    public final static Holder<ArmorMaterial> l_air = A_MATERIALS.register("light_air", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L, 50, SoundEvents.ARMOR_EQUIP_ELYTRA, () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_air"))), 1.0f, 0));
+
+    public final static Holder<ArmorMaterial> fire = A_MATERIALS.register("medium_fire", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
+            , 40, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_fire"))), 2.0f, 0.025F));
+    public final static Holder<ArmorMaterial> water = A_MATERIALS.register("medium_water", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
+            , 40, new Holder.Direct<>(SoundEvents.BREWING_STAND_BREW), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_water"))), 2.0f, 0.025F));
+    public final static Holder<ArmorMaterial> earth = A_MATERIALS.register("medium_earth", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M, 40, new Holder.Direct<>(SoundEvents.GLASS_PLACE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_earth"))), 2.0f, 0.05F));
+    public final static Holder<ArmorMaterial> air = A_MATERIALS.register("medium_air", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M, 40, SoundEvents.ARMOR_EQUIP_ELYTRA, () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_air"))), 2.0f, 0.025F));
+
+    public final static Holder<ArmorMaterial> h_fire = A_MATERIALS.register("heavy_fire", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
+            , 30, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_fire"))), 4.0f, 0.05F));
+    public final static Holder<ArmorMaterial> h_water = A_MATERIALS.register("heavy_water", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
+            , 30, new Holder.Direct<>(SoundEvents.BREWING_STAND_BREW), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_water"))), 4.0f, 0.05F));
+    public final static Holder<ArmorMaterial> h_earth = A_MATERIALS.register("heavy_earth", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H, 30, new Holder.Direct<>(SoundEvents.GLASS_PLACE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_earth"))), 4.0f, 0.1F));
+    public final static Holder<ArmorMaterial> h_air = A_MATERIALS.register("heavy_air", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H, 30, SoundEvents.ARMOR_EQUIP_ELYTRA, () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_air"))), 4.0f, 0.05F));
 
     public final static Holder<ArmorMaterial> l_tempest = A_MATERIALS.register("light_tempest", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L, 50, new Holder.Direct<>(SoundEvents.SLIME_JUMP), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_tempest"))), 1.0f, 0));
     public final static Holder<ArmorMaterial> l_silt =  A_MATERIALS.register("light_silt", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L, 50, new Holder.Direct<>(SoundEvents.SLIME_JUMP), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_silt"))), 1.0f, 0));
@@ -49,7 +79,7 @@ public class AAMaterials {
             , 50, new Holder.Direct<>(SoundEvents.LAVA_AMBIENT), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_lava"))), 1.0f, 0));
     public final static Holder<ArmorMaterial> l_cinder = A_MATERIALS.register("light_cinder", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
             , 50, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_cinder"))), 1.0f, 0));
-    public final static Holder<ArmorMaterial> l_elemancer = A_MATERIALS.register("light_elemancer", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
+    public final static Holder<ArmorMaterial> l_elemental = A_MATERIALS.register("light_elemancer", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
             , 50, new Holder.Direct<>(SoundEvents.AMETHYST_BLOCK_RESONATE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_elemancer"))), 1.0f, 0));
 
     public final static Holder<ArmorMaterial> tempest = A_MATERIALS.register("medium_tempest", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
@@ -64,7 +94,7 @@ public class AAMaterials {
             , 40, new Holder.Direct<>(SoundEvents.LAVA_AMBIENT), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_lava"))), 2.0f, 0.05F));
     public final static Holder<ArmorMaterial> cinder = A_MATERIALS.register("medium_cinder", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
             , 40, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_cinder"))), 2.0f, 0.025F));
-    public final static Holder<ArmorMaterial> elemancer = A_MATERIALS.register("medium_elemancer", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
+    public final static Holder<ArmorMaterial> elemental = A_MATERIALS.register("medium_elemental", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
             , 40, new Holder.Direct<>(SoundEvents.AMETHYST_BLOCK_RESONATE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("medium_elemancer"))), 2.0f, 0.05F));
 
     public final static Holder<ArmorMaterial> h_tempest = A_MATERIALS.register("heavy_tempest", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
@@ -79,7 +109,7 @@ public class AAMaterials {
             , 30, new Holder.Direct<>(SoundEvents.LAVA_AMBIENT), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_lava"))), 4.0f, 0.1F));
     public final static Holder<ArmorMaterial> h_cinder = A_MATERIALS.register("heavy_cinder", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
             , 30, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_cinder"))), 4.0f, 0.05F));
-    public final static Holder<ArmorMaterial> h_elemancer = A_MATERIALS.register("heavy_elemancer", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
+    public final static Holder<ArmorMaterial> h_elemental = A_MATERIALS.register("heavy_elemental", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_H
             , 30, new Holder.Direct<>(SoundEvents.AMETHYST_BLOCK_RESONATE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("heavy_elemancer"))), 4.0f, 0.05F));
 
 
