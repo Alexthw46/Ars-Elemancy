@@ -11,12 +11,11 @@
       "item": "ars_elemancy:cinder_essence"
     },
     {
-      "item": "ars_elemental:air_shoes"
+      "item": "ars_elemental:fire_shoes"
     }
-
   ],
   "reagent": {
-    "item": "ars_elemental:fire_shoes"
+    "item": "ars_elemental:air_shoes"
   },
   "result": {
     "count": 1,

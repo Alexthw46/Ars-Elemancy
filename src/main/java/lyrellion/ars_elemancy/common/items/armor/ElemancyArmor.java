@@ -122,24 +122,22 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
     public static ArmorSet getArmorSetFromElement(SpellSchool school, String tier) {
         return switch (tier) {
             case "light" -> switch (school.getId()) {
-                case "l_tempest" -> ModItems.TEMPEST_ARMOR_L;
-                case "l_silt" -> ModItems.SILT_ARMOR_L;
-                case "l_mire" -> ModItems.MIRE_ARMOR_L;
-                case "l_vapor" -> ModItems.VAPOR_ARMOR_L;
-                case "l_lava" -> ModItems.LAVA_ARMOR_L;
-                case "l_cinder" -> ModItems.CINDER_ARMOR_L;
-                case "l_elemental" -> ModItems.ELEMANCER_ARMOR_L;
-                default -> new ArmorSet.Light("l_elemental", SpellSchools.ELEMENTAL);
+                case "tempest" -> ModItems.TEMPEST_ARMOR_L;
+                case "silt" -> ModItems.SILT_ARMOR_L;
+                case "mire" -> ModItems.MIRE_ARMOR_L;
+                case "vapor" -> ModItems.VAPOR_ARMOR_L;
+                case "lava" -> ModItems.LAVA_ARMOR_L;
+                case "cinder" -> ModItems.CINDER_ARMOR_L;
+                default -> ModItems.ELEMANCER_ARMOR_L;
             };
             case "heavy" -> switch (school.getId()) {
-                case "h_tempest" -> ModItems.TEMPEST_ARMOR_H;
-                case "h_silt" -> ModItems.SILT_ARMOR_H;
-                case "h_mire" -> ModItems.MIRE_ARMOR_H;
-                case "h_vapor" -> ModItems.VAPOR_ARMOR_H;
-                case "h_lava" -> ModItems.LAVA_ARMOR_H;
-                case "h_cinder" -> ModItems.CINDER_ARMOR_H;
-                case "h_elemental" -> ModItems.ELEMANCER_ARMOR_H;
-                default -> new ArmorSet.Heavy("h_elemental", SpellSchools.ELEMENTAL);
+                case "tempest" -> ModItems.TEMPEST_ARMOR_H;
+                case "silt" -> ModItems.SILT_ARMOR_H;
+                case "mire" -> ModItems.MIRE_ARMOR_H;
+                case "vapor" -> ModItems.VAPOR_ARMOR_H;
+                case "lava" -> ModItems.LAVA_ARMOR_H;
+                case "cinder" -> ModItems.CINDER_ARMOR_H;
+                default -> ModItems.ELEMANCER_ARMOR_H;
             };
             default -> switch (school.getId()) {
                 case "tempest" -> ModItems.TEMPEST_ARMOR;
@@ -148,8 +146,7 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
                 case "vapor" -> ModItems.VAPOR_ARMOR;
                 case "lava" -> ModItems.LAVA_ARMOR;
                 case "cinder" -> ModItems.CINDER_ARMOR;
-                case "elemental" -> ModItems.ELEMANCER_ARMOR;
-                default -> new ArmorSet.Medium("elemental", SpellSchools.ELEMENTAL);
+                default -> ModItems.ELEMANCER_ARMOR;
             };
         };
     }

@@ -79,7 +79,7 @@ public class AAMaterials {
             , 50, new Holder.Direct<>(SoundEvents.LAVA_AMBIENT), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_lava"))), 1.0f, 0));
     public final static Holder<ArmorMaterial> l_cinder = A_MATERIALS.register("light_cinder", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
             , 50, new Holder.Direct<>(SoundEvents.GENERIC_BURN), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_cinder"))), 1.0f, 0));
-    public final static Holder<ArmorMaterial> l_elemental = A_MATERIALS.register("light_elemancer", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
+    public final static Holder<ArmorMaterial> l_elemental = A_MATERIALS.register("light_elemental", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_L
             , 50, new Holder.Direct<>(SoundEvents.AMETHYST_BLOCK_RESONATE), () -> Ingredient.EMPTY, List.of(new ArmorMaterial.Layer(ArsElemental.prefix("light_elemancer"))), 1.0f, 0));
 
     public final static Holder<ArmorMaterial> tempest = A_MATERIALS.register("medium_tempest", () -> new ArmorMaterial(ARMOR_SLOT_PROTECTION_M
