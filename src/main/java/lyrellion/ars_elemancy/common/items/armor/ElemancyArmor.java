@@ -160,7 +160,16 @@ public class ElemancyArmor extends AnimatedMagicArmor implements IElemancyArmor,
     }
 
     public void addArmorSetDescription(ArmorSet set, List<Component> list) {
+        list.add(Component.literal(Component.translatable("ars_elemental.armor_set." + getSchool().getId() + ".name").getString() + " " + Component.translatable("ars_elemental.armor_set.school_set.desc").getString()).withStyle(ChatFormatting.AQUA));
         list.add(Component.translatable("ars_elemental.armor_set." + set.getName() + ".desc").withStyle(ChatFormatting.GRAY));
+        String armor_type = switch (set) {
+            case ArmorSet.Heavy ignored -> "heavy";
+            case ArmorSet.Light ignored -> "light";
+            default -> "medium";
+        };
+        list.add(Component.literal(Component.translatable("ars_elemental.armor_set." + armor_type + ".name").getString() + " " + Component.translatable("ars_elemental.armor_set.set_bonus.desc").getString()).withStyle(ChatFormatting.GOLD));
+        list.add(Component.translatable("ars_elemental.armor_set." + armor_type + ".desc").withStyle(ChatFormatting.GRAY));
+
     }
 
     @Override

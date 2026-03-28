@@ -52,7 +52,7 @@ public class ElemancyFocus extends GreaterElementalFocus {
             case "mire" -> COMMON.MireMasteryBuff.get();
             case "lava" -> COMMON.LavaMasteryBuff.get();
             case "cinder" -> COMMON.CinderMasteryBuff.get();
-            case "elemancy" -> COMMON.ElementalMasteryBuff.get();
+            case "elemental" -> COMMON.ElementalMasteryBuff.get();
             default -> 0;
         };
     }
