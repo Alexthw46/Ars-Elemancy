@@ -8,20 +8,11 @@ import lyrellion.ars_elemancy.common.items.*;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.common.items.bangles.ElemancyBangle;
 import lyrellion.ars_elemancy.common.items.foci.ElemancyFocus;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 import static lyrellion.ars_elemancy.ArsElemancy.MODID;
 
@@ -121,25 +112,6 @@ public class ModItems {
 
     public static Item.Properties ArmorProp() {
         return itemProps().stacksTo(1).rarity(Rarity.EPIC).component(DataComponentRegistry.ARMOR_PERKS, new ArmorPerkHolder());
-    }
-
-    static DeferredHolder<Block, ? extends Block> addBlock(String name, Supplier<Block> blockSupp) {
-        DeferredHolder<Block, ? extends Block> block = BLOCKS.register(name, blockSupp);
-        ITEMS.register(name, () -> new BlockItem(block.get(), itemProps()));
-        return block;
-    }
-
-
-    static BlockBehaviour.Properties blockProps(Block copyFrom, MapColor color) {
-        return BlockBehaviour.Properties.ofFullCopy(copyFrom).mapColor(color);
-    }
-
-    private static Boolean allowsSpawnOnLeaves(BlockState state, BlockGetter reader, BlockPos pos, EntityType<?> entity) {
-        return entity == EntityType.OCELOT || entity == EntityType.PARROT;
-    }
-
-    private static boolean isntSolid(BlockState state, BlockGetter reader, BlockPos pos) {
-        return false;
     }
 
 }

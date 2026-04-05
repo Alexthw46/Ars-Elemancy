@@ -69,12 +69,11 @@ public class ArsNouveauRegistry {
 
     }
 
+    public static ArmorSet[] medium_armors = {ModItems.TEMPEST_ARMOR, ModItems.SILT_ARMOR, ModItems.MIRE_ARMOR, ModItems.VAPOR_ARMOR, ModItems.CINDER_ARMOR, ModItems.LAVA_ARMOR, ModItems.ELEMANCER_ARMOR};
+    public static ArmorSet[] heavy_armors = {ModItems.TEMPEST_ARMOR_H, ModItems.SILT_ARMOR_H, ModItems.MIRE_ARMOR_H, ModItems.VAPOR_ARMOR_H, ModItems.CINDER_ARMOR_H, ModItems.LAVA_ARMOR_H, ModItems.ELEMANCER_ARMOR_H};
+    public static ArmorSet[] light_armors = {ModItems.TEMPEST_ARMOR_L, ModItems.SILT_ARMOR_L, ModItems.MIRE_ARMOR_L, ModItems.VAPOR_ARMOR_L, ModItems.CINDER_ARMOR_L, ModItems.LAVA_ARMOR_L, ModItems.ELEMANCER_ARMOR_L};
 
     private static void addPerkSlots() {
-
-        ArmorSet[] medium_armors = {ModItems.TEMPEST_ARMOR, ModItems.SILT_ARMOR, ModItems.MIRE_ARMOR, ModItems.VAPOR_ARMOR, ModItems.CINDER_ARMOR, ModItems.LAVA_ARMOR, ModItems.ELEMANCER_ARMOR};
-        ArmorSet[] heavy_armors = {ModItems.TEMPEST_ARMOR_H, ModItems.SILT_ARMOR_H, ModItems.MIRE_ARMOR_H, ModItems.VAPOR_ARMOR_H, ModItems.CINDER_ARMOR_H, ModItems.LAVA_ARMOR_H, ModItems.ELEMANCER_ARMOR_H};
-        ArmorSet[] light_armors = {ModItems.TEMPEST_ARMOR_L, ModItems.SILT_ARMOR_L, ModItems.MIRE_ARMOR_L, ModItems.VAPOR_ARMOR_L, ModItems.CINDER_ARMOR_L, ModItems.LAVA_ARMOR_L, ModItems.ELEMANCER_ARMOR_L};
 
 
         for (ArmorSet set : medium_armors) {
@@ -97,7 +96,6 @@ public class ArsNouveauRegistry {
             PerkRegistry.registerPerkProvider(set.getLegs(), makePerkList(Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE)));
             PerkRegistry.registerPerkProvider(set.getBoots(), makePerkList(Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.TWO)));
         }
-
 
     }
 
