@@ -1,6 +1,7 @@
 package lyrellion.ars_elemancy.registry;
 
 import com.alexthw.sauce.common.recipe.ElementalArmorRecipe;
+import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 import com.hollingsworth.arsnouveau.setup.registry.CreativeTabRegistry;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Registry;
@@ -20,6 +21,10 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
+import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.ELEMENTAL_AIR;
+import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.ELEMENTAL_EARTH;
+import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.ELEMENTAL_FIRE;
+import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.ELEMENTAL_WATER;
 import static lyrellion.ars_elemancy.ArsElemancy.MODID;
 import static lyrellion.ars_elemancy.ArsElemancy.prefix;
 import static lyrellion.ars_elemancy.common.items.armor.AAMaterials.A_MATERIALS;
@@ -39,6 +44,13 @@ public class ModRegistry {
     public static TagKey<DamageType> EARTH_DAMAGE = TagKey.create(Registries.DAMAGE_TYPE, prefix("earth_damage"));
     public static TagKey<DamageType> AIR_DAMAGE = TagKey.create(Registries.DAMAGE_TYPE, prefix("air_damage"));
 
+
+    public static final SpellSchool TEMPEST = new SpellSchool("tempest").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_WATER);
+    public static final SpellSchool CINDER = new SpellSchool("cinder").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_FIRE);
+    public static final SpellSchool SILT = new SpellSchool("silt").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_EARTH);
+    public static final SpellSchool MIRE = new SpellSchool("mire").withSubSchool(ELEMENTAL_EARTH).withSubSchool(ELEMENTAL_WATER);
+    public static final SpellSchool VAPOR = new SpellSchool("vapor").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_WATER);
+    public static final SpellSchool LAVA = new SpellSchool("lava").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_EARTH);
 
     public static void registerRegistries(IEventBus bus) {
         A_MATERIALS.register(bus);

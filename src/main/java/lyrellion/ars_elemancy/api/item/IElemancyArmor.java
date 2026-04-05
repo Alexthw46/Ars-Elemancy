@@ -21,31 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public interface IElemancyArmor extends IElementalArmor {
 
-    Map<SpellSchool, TagKey<DamageType>> damageResistances = new ConcurrentHashMap<>();
-
-
-    @Override
-    default SpellStats.Builder applyItemModifiers(ItemStack stack, SpellStats.Builder builder, AbstractSpellPart spellPart, HitResult rayTraceResult, Level world, @Nullable LivingEntity shooter, SpellContext spellContext) {
-        if (getSchool().isPartOfSchool(spellPart)) {
-            builder.addAmplification(0.5);
-        }
-        return builder;
-    }
-
-    default double getDiscount(List<AbstractSpellPart> recipe) {
-        // check if the recipe contains a glyph from the same school as this armor
-        double sum = 0;
-        for (AbstractSpellPart part : recipe) {
-            if (getSchool().isPartOfSchool(part))
-                sum += 0.2 * part.getCastingCost();
-        }
-        return sum;
-    }
-
-    SpellSchool getSchool();
-
-    String getTier();
-
     default boolean doAbsorb(DamageSource damageSource) {
         if (damageResistances.containsKey(this.getSchool()) && damageSource.is(damageResistances.get(this.getSchool()))) {
             return true;
@@ -72,10 +47,11 @@ public interface IElemancyArmor extends IElementalArmor {
         for (var school : mainSchool.getSubSchools()) {
             if (damageResistances.containsKey(school) && damageSource.is(damageResistances.get(school))) {
                 bonusMap.put(school, bonusMap.getOrDefault(school, 0) + 1);
+                changed = true;
             }
-            changed = true;
         }
 
         return changed;
     }
+
 }
