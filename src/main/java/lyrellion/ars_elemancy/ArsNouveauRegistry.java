@@ -15,17 +15,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.hollingsworth.arsnouveau.api.spell.SpellSchools.*;
-
 public class ArsNouveauRegistry {
     public static final List<AbstractSpellPart> registeredSpells = new ArrayList<>();
-
-    public static final SpellSchool TEMPEST = new SpellSchool("tempest").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_WATER);
-    public static final SpellSchool CINDER = new SpellSchool("cinder").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_FIRE);
-    public static final SpellSchool SILT = new SpellSchool("silt").withSubSchool(ELEMENTAL_AIR).withSubSchool(ELEMENTAL_EARTH);
-    public static final SpellSchool MIRE = new SpellSchool("mire").withSubSchool(ELEMENTAL_EARTH).withSubSchool(ELEMENTAL_WATER);
-    public static final SpellSchool VAPOR = new SpellSchool("vapor").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_WATER);
-    public static final SpellSchool LAVA = new SpellSchool("lava").withSubSchool(ELEMENTAL_FIRE).withSubSchool(ELEMENTAL_EARTH);
 
     public static void init() {
         registerGlyphs();
@@ -74,7 +65,6 @@ public class ArsNouveauRegistry {
     public static ArmorSet[] light_armors = {ModItems.TEMPEST_ARMOR_L, ModItems.SILT_ARMOR_L, ModItems.MIRE_ARMOR_L, ModItems.VAPOR_ARMOR_L, ModItems.CINDER_ARMOR_L, ModItems.LAVA_ARMOR_L, ModItems.ELEMANCER_ARMOR_L};
 
     private static void addPerkSlots() {
-
 
         for (ArmorSet set : medium_armors) {
             PerkRegistry.registerPerkProvider(set.getHat(), makePerkList(Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE)));

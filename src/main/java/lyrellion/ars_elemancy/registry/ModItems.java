@@ -3,7 +3,6 @@ package lyrellion.ars_elemancy.registry;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchools;
 import com.hollingsworth.arsnouveau.common.items.data.ArmorPerkHolder;
 import com.hollingsworth.arsnouveau.setup.registry.DataComponentRegistry;
-import lyrellion.ars_elemancy.ArsNouveauRegistry;
 import lyrellion.ars_elemancy.common.items.*;
 import lyrellion.ars_elemancy.common.items.armor.ArmorSet;
 import lyrellion.ars_elemancy.common.items.bangles.ElemancyBangle;
@@ -23,21 +22,21 @@ public class ModItems {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.createBlocks(MODID);
 
     // Curios
-    public static final DeferredHolder<Item, ElemancyFocus> TEMPEST_FOCUS = ITEMS.register("tempest_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.TEMPEST));
-    public static final DeferredHolder<Item, ElemancyFocus> SILT_FOCUS = ITEMS.register("silt_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.SILT));
-    public static final DeferredHolder<Item, ElemancyFocus> MIRE_FOCUS = ITEMS.register("mire_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.MIRE));
-    public static final DeferredHolder<Item, ElemancyFocus> LAVA_FOCUS = ITEMS.register("lava_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.LAVA));
-    public static final DeferredHolder<Item, ElemancyFocus> CINDER_FOCUS = ITEMS.register("cinder_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.CINDER));
-    public static final DeferredHolder<Item, ElemancyFocus> VAPOR_FOCUS = ITEMS.register("vapor_focus", () -> new ElemancyFocus(focusProps(), ArsNouveauRegistry.VAPOR));
+    public static final DeferredHolder<Item, ElemancyFocus> TEMPEST_FOCUS = ITEMS.register("tempest_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.TEMPEST));
+    public static final DeferredHolder<Item, ElemancyFocus> SILT_FOCUS = ITEMS.register("silt_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.SILT));
+    public static final DeferredHolder<Item, ElemancyFocus> MIRE_FOCUS = ITEMS.register("mire_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.MIRE));
+    public static final DeferredHolder<Item, ElemancyFocus> LAVA_FOCUS = ITEMS.register("lava_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.LAVA));
+    public static final DeferredHolder<Item, ElemancyFocus> CINDER_FOCUS = ITEMS.register("cinder_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.CINDER));
+    public static final DeferredHolder<Item, ElemancyFocus> VAPOR_FOCUS = ITEMS.register("vapor_focus", () -> new ElemancyFocus(focusProps(), ModRegistry.VAPOR));
     public static final DeferredHolder<Item, ElemancyFocus> ELEMANCER_FOCUS = ITEMS.register("elemancer_focus", () -> new ElemancyFocus(focusProps(), SpellSchools.ELEMENTAL));
 
     // Armor Sets
-    public static final ArmorSet TEMPEST_ARMOR = new ArmorSet.Medium("tempest", ArsNouveauRegistry.TEMPEST);
-    public static final ArmorSet MIRE_ARMOR = new ArmorSet.Medium("mire", ArsNouveauRegistry.MIRE);
-    public static final ArmorSet SILT_ARMOR = new ArmorSet.Medium("silt", ArsNouveauRegistry.SILT);
-    public static final ArmorSet LAVA_ARMOR = new ArmorSet.Medium("lava", ArsNouveauRegistry.LAVA);
-    public static final ArmorSet VAPOR_ARMOR = new ArmorSet.Medium("vapor", ArsNouveauRegistry.VAPOR);
-    public static final ArmorSet CINDER_ARMOR = new ArmorSet.Medium("cinder", ArsNouveauRegistry.CINDER);
+    public static final ArmorSet TEMPEST_ARMOR = new ArmorSet.Medium("tempest", ModRegistry.TEMPEST);
+    public static final ArmorSet MIRE_ARMOR = new ArmorSet.Medium("mire", ModRegistry.MIRE);
+    public static final ArmorSet SILT_ARMOR = new ArmorSet.Medium("silt", ModRegistry.SILT);
+    public static final ArmorSet LAVA_ARMOR = new ArmorSet.Medium("lava", ModRegistry.LAVA);
+    public static final ArmorSet VAPOR_ARMOR = new ArmorSet.Medium("vapor", ModRegistry.VAPOR);
+    public static final ArmorSet CINDER_ARMOR = new ArmorSet.Medium("cinder", ModRegistry.CINDER);
     public static final ArmorSet ELEMANCER_ARMOR = new ArmorSet.Medium("elemancer", SpellSchools.ELEMENTAL);
 
     public static final ArmorSet TEMPEST_ARMOR_L;
@@ -67,29 +66,29 @@ public class ModItems {
     public static final DeferredHolder<Item, ElemancerEssence> ELEMANCER_ESSENCE = ITEMS.register("elemancer_essence", () -> new ElemancerEssence(itemProps()));
 
     // Bangles
-    public static final DeferredHolder<Item, ElemancyBangle> TEMPEST_BANGLE = ITEMS.register("tempest_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.TEMPEST));
-    public static final DeferredHolder<Item, ElemancyBangle> MIRE_BANGLE = ITEMS.register("mire_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.MIRE));
-    public static final DeferredHolder<Item, ElemancyBangle> VAPOR_BANGLE = ITEMS.register("vapor_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.VAPOR));
-    public static final DeferredHolder<Item, ElemancyBangle> SILT_BANGLE = ITEMS.register("silt_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.SILT));
-    public static final DeferredHolder<Item, ElemancyBangle> LAVA_BANGLE = ITEMS.register("lava_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.LAVA));
-    public static final DeferredHolder<Item, ElemancyBangle> CINDER_BANGLE = ITEMS.register("cinder_bangle", () -> new ElemancyBangle(bangleProps(), ArsNouveauRegistry.CINDER));
+    public static final DeferredHolder<Item, ElemancyBangle> TEMPEST_BANGLE = ITEMS.register("tempest_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.TEMPEST));
+    public static final DeferredHolder<Item, ElemancyBangle> MIRE_BANGLE = ITEMS.register("mire_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.MIRE));
+    public static final DeferredHolder<Item, ElemancyBangle> VAPOR_BANGLE = ITEMS.register("vapor_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.VAPOR));
+    public static final DeferredHolder<Item, ElemancyBangle> SILT_BANGLE = ITEMS.register("silt_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.SILT));
+    public static final DeferredHolder<Item, ElemancyBangle> LAVA_BANGLE = ITEMS.register("lava_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.LAVA));
+    public static final DeferredHolder<Item, ElemancyBangle> CINDER_BANGLE = ITEMS.register("cinder_bangle", () -> new ElemancyBangle(bangleProps(), ModRegistry.CINDER));
     public static final DeferredHolder<Item, ElemancyBangle> ELEMANCER_BANGLE = ITEMS.register("elemancer_bangle", () -> new ElemancyBangle(bangleProps(), SpellSchools.ELEMENTAL));
 
     static {
 
-        TEMPEST_ARMOR_H = new ArmorSet.Heavy("tempest",ArsNouveauRegistry.TEMPEST);
-        SILT_ARMOR_H = new ArmorSet.Heavy("silt",ArsNouveauRegistry.SILT);
-        VAPOR_ARMOR_H = new ArmorSet.Heavy("vapor",ArsNouveauRegistry.VAPOR);
-        MIRE_ARMOR_H = new ArmorSet.Heavy("mire",ArsNouveauRegistry.MIRE);
-        CINDER_ARMOR_H = new ArmorSet.Heavy("cinder",ArsNouveauRegistry.CINDER);
-        LAVA_ARMOR_H = new ArmorSet.Heavy("lava",ArsNouveauRegistry.LAVA);
+        TEMPEST_ARMOR_H = new ArmorSet.Heavy("tempest",ModRegistry.TEMPEST);
+        SILT_ARMOR_H = new ArmorSet.Heavy("silt",ModRegistry.SILT);
+        VAPOR_ARMOR_H = new ArmorSet.Heavy("vapor",ModRegistry.VAPOR);
+        MIRE_ARMOR_H = new ArmorSet.Heavy("mire",ModRegistry.MIRE);
+        CINDER_ARMOR_H = new ArmorSet.Heavy("cinder",ModRegistry.CINDER);
+        LAVA_ARMOR_H = new ArmorSet.Heavy("lava",ModRegistry.LAVA);
         ELEMANCER_ARMOR_H = new ArmorSet.Heavy("elemancer",SpellSchools.ELEMENTAL);
-        TEMPEST_ARMOR_L = new ArmorSet.Light("tempest",ArsNouveauRegistry.TEMPEST);
-        SILT_ARMOR_L = new ArmorSet.Light("silt",ArsNouveauRegistry.SILT);
-        VAPOR_ARMOR_L = new ArmorSet.Light("vapor",ArsNouveauRegistry.VAPOR);
-        MIRE_ARMOR_L = new ArmorSet.Light("mire",ArsNouveauRegistry.MIRE);
-        CINDER_ARMOR_L = new ArmorSet.Light("cinder",ArsNouveauRegistry.CINDER);
-        LAVA_ARMOR_L = new ArmorSet.Light("lava",ArsNouveauRegistry.LAVA);
+        TEMPEST_ARMOR_L = new ArmorSet.Light("tempest",ModRegistry.TEMPEST);
+        SILT_ARMOR_L = new ArmorSet.Light("silt",ModRegistry.SILT);
+        VAPOR_ARMOR_L = new ArmorSet.Light("vapor",ModRegistry.VAPOR);
+        MIRE_ARMOR_L = new ArmorSet.Light("mire",ModRegistry.MIRE);
+        CINDER_ARMOR_L = new ArmorSet.Light("cinder",ModRegistry.CINDER);
+        LAVA_ARMOR_L = new ArmorSet.Light("lava",ModRegistry.LAVA);
         ELEMANCER_ARMOR_L = new ArmorSet.Light("elemancer",SpellSchools.ELEMENTAL);
 
     };

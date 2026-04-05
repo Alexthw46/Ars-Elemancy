@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.88'
+    id 'net.neoforged.moddev' version '2.0+'
 }
 
 
@@ -170,7 +170,7 @@ dependencies {
 
     jarJar(implementation("com.alexthw.sauce:sauce-${minecraft_version}") {
         version {
-            strictly '[0.0.4,)'
+            strictly '[0.0.29,)'
             prefer sauce_version
         }
     }) { transitive = false }
