@@ -1,27 +1,16 @@
 package lyrellion.ars_elemancy.common.items.armor;
 
 import alexthw.ars_elemental.ArsElemental;
-import alexthw.ars_elemental.ConfigHandler;
 import com.alexthw.sauce.event.AttributeEventHandler;
-import alexthw.ars_elemental.common.items.armor.ElementalArmor;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchools;
-import lyrellion.ars_elemancy.ArsElemancy;
-import lyrellion.ars_elemancy.api.item.IElemancyArmor;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-
-import static alexthw.ars_elemental.ConfigHandler.*;
-import static lyrellion.ars_elemancy.common.items.armor.ArmorSet.resistanceMap;
 import static lyrellion.ars_elemancy.common.items.armor.ArmorSet.weaknessMap;
 
 public class HeavyArmorE extends ElemancyArmor {

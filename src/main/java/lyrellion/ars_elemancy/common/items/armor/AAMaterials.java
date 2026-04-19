@@ -10,16 +10,13 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.RegisterEvent;
 
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static alexthw.ars_elemental.common.items.armor.AAMaterials.*;
 import static lyrellion.ars_elemancy.ArsElemancy.MODID;
-import static net.minecraft.core.Holder.*;
 
 public class AAMaterials {
 

@@ -2,7 +2,6 @@ package lyrellion.ars_elemancy.client.armor;
 
 import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.api.item.IElemancyArmor;
-import com.hollingsworth.arsnouveau.ArsNouveau;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.model.GeoModel;

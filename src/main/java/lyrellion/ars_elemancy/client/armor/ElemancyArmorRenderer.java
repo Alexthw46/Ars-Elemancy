@@ -4,10 +4,7 @@ import lyrellion.ars_elemancy.ArsElemancy;
 import com.hollingsworth.arsnouveau.client.renderer.item.ArmorRenderer;
 import com.hollingsworth.arsnouveau.common.armor.AnimatedMagicArmor;
 import lyrellion.ars_elemancy.api.item.IElemancyArmor;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
-import org.checkerframework.checker.signature.qual.Identifier;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.model.GeoModel;
 
 

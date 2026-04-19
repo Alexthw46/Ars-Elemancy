@@ -1,6 +1,5 @@
 package lyrellion.ars_elemancy.common.items.armor;
 
-import alexthw.ars_elemental.common.items.armor.ElementalArmor;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchools;
 import net.minecraft.world.entity.EquipmentSlot;

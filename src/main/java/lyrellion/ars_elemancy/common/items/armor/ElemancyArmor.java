@@ -1,7 +1,5 @@
 package lyrellion.ars_elemancy.common.items.armor;
 
-import alexthw.ars_elemental.ArsElemental;
-import com.hollingsworth.arsnouveau.api.spell.SpellSchools;
 import com.hollingsworth.arsnouveau.setup.registry.MaterialRegistry;
 import lyrellion.ars_elemancy.ArsElemancy;
 import lyrellion.ars_elemancy.api.item.IElemancyArmor;
@@ -11,9 +9,7 @@ import lyrellion.ars_elemancy.client.armor.ElemancyArmorRenderer;
 import lyrellion.ars_elemancy.registry.ModItems;
 import com.hollingsworth.arsnouveau.ArsNouveau;
 import com.hollingsworth.arsnouveau.api.mana.IManaDiscountEquipment;
-import com.hollingsworth.arsnouveau.api.perk.IPerk;
 import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
-import com.hollingsworth.arsnouveau.api.perk.PerkInstance;
 import com.hollingsworth.arsnouveau.api.spell.Spell;
 import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 import com.hollingsworth.arsnouveau.api.util.PerkUtil;
